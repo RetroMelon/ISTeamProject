@@ -55,22 +55,27 @@ var globalRestaurantData = {
   // (got halfway down Google "restaurants near glasgow").
 };
 
-var ctx;
 
+// Global variable defenitions
 var totalImages = 1;
 var loadedImages = 0;
 
+var keywordPatternData = {};
+var pizzaChartContext;
 var thePieChart;
 
 var tableOfKeywords = {};
 var keywordsChosenSoFar = [];
 
+// This function creates or updates the
+// pie chart in the global variable "thePieChart"
+// with data in pieData.
 function updateChart(pieData) {
   if (thePieChart !== undefined) {
     thePieChart.destroy();
   }
 
-  thePieChart = new Chart(ctx).Pie(pieData, {});
+  thePieChart = new Chart(pizzaChartContext).Pie(pieData, {});
 }
 
 // General Idea for the algorithm
@@ -107,13 +112,18 @@ function getTableOfCommonKeywords(optionsList, keywordsToExclude) {
         }
       }
     } else {
-      // No restaurant data found for this restaurant. ??
+      // No restaurant data found for this restaurant.
+      alert("Error: no restaurant data found for option \"" + i + "\" in optionsList" +
+        "in getTableofCommonKeywords().");
+      continue;
     }
   }
 
   return table;
 }
 
+// This function looks at the list of restaurants in optionsList,
+// and then removes any which *don't* contain a keyword "keyword".
 function removeAllRestaurantsNotContainingKeyword(optionsList, keyword) {
   var optionsListLength = optionsList.length;
 
@@ -129,6 +139,9 @@ function removeAllRestaurantsNotContainingKeyword(optionsList, keyword) {
   }
 }
 
+// This function takes a keyword occurrences table and chooses
+// the top few items, to then create some pie segments for, 
+// ready to be displayed in a pie chart.
 function makePieData(keywordTable) {
   var pieData = [];
 
@@ -159,18 +172,19 @@ function makePieData(keywordTable) {
 
 $(function () {
   console.log("hello world");
-  // Initially, set up currentOptions to include all restaurants.
+  pizzaChartContext = $("#pizzaChart")[0].getContext("2d");
+  
+  // Now set up currentOptions to include all restaurants.
   for (var key in globalRestaurantData) {
     if (globalRestaurantData.hasOwnProperty(key)) {
       currentOptions.push(key);
     }
   }
 
+  // Initially generate the table of keyword occurrences, and then
+  // generate pie data for the initial set.
   tableOfKeywords = getTableOfCommonKeywords(currentOptions, keywordsChosenSoFar);
   pieData = makePieData(tableOfKeywords);
-
-  ctx = $("#pizzaChart")[0].getContext("2d");
-  console.log(ctx);
 
   var imageObj = new Image();
   imageObj.src = "images/pie.jpg";
