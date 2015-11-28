@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="mainstyles.css" media="screen" charset="utf-8">
   </head>
   <body>
-      <canvas id="pizzaChart" width="400" height="400"></canvas>
+      <!-- I think the best way to generate a new chart is to just remove the entire canvas,
+          then re-add a new one with new data. See this stackoverflow answer:
+           http://stackoverflow.com/questions/24785713/chart-js-load-totally-new-data -->
+
+      <div id="pizzaChartContainer">
+          <canvas id="pizzaChart" width="400" height="400"></canvas>
+      </div>
 
       <script type="text/javascript" src="dependencies/jquery-2.1.4.min.js"></script>
       <script type="text/javascript" src="dependencies/bootstrap.min.js"></script>

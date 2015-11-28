@@ -16,18 +16,11 @@ var data = [
     }
 ];
 
-var restaurantAttributes = [
-  "spicy",
-  "cool",
-  "formal",
-  ""
-];
-
 // This is set to include all restaurants initially.
 var currentOptions = [];
 
 // Note: try and use the same keywords for multiple restaurants!
-var restaurantData = {
+var globalRestaurantData = {
   "Ubiquitous Chip": { "location": "12 Ashton Ln", "description": "Artistic brasserie dishes that display their provenance, served in a leafy space with fairy lights.", "price": 3, "stars": 4, "keywords": ["British", "chips", "Scottish", "family"] },
   "Mother India": { "location": "28 Westminster Terrace", "description": "Cosy ground floor with bar, intimate cellar and Dickensian 1st floor dining rooms for Indian dishes.", "price": 2, "stars": 4, "keywords": ["Indian", "spicy", "family", "curry", "korma"] },
   "Stravaigin": { "location": "28 Gibson St", "description": "Gourmet concoctions from wild ingredients like grey squirrel, hedgerow herbs and sea urchins.", "price": 3, "stars": 4, "keywords": ["gourmet", "contemporary", "British", "Scottish", "herbs"] },
@@ -44,7 +37,7 @@ var restaurantData = {
   "Nanakusa": { "location": "441 Sauchiehall St", "description": "Japanese cuisine using edible wild herbs to promote wellbeing, longevity, nourishment and vitality.", "price": 1, "stars": 4, "keywords": ["Japanese", "herbs", "vitality", "inexpensive"] },
   "Wee Lochan": { "location": "340 Crow Rd", "description": "An evolving Scottish menu served in a modern tiled room with large windows with special lunch deals.", "price": 2, "stars": 5, "keywords": ["Scottish", "modern", "lunch", "seafood"] },
   "The Grill on the Corner": { "location": "21-25 Bothwell St", "description": "Bustling grill kitchen serving elegant room with dark wood floorboards and thick leather seats.", "price": 1, "stars": 4, "keywords": ["seafood", "elegant", "British", "Scottish"] },
-  "Mussel Inn": { "location": "157 Hope St", "description": "", "price": 2, "stars": 4, "keywords": ["seafood", "British", "gourmet", "elegant"] },
+  "Mussel Inn": { "location": "157 Hope St", "description": "Mussels 'n' stuff", "price": 2, "stars": 4, "keywords": ["seafood", "British", "gourmet", "elegant"] },
   "Celino's": { "location": "620- 624 Alexandra Parade", "description": "Delicious Italian restaurant, speciailsing in herby dishes from the north of Italy.", "price": 2, "stars": 3, "keywords": ["Italian", "inexpensive", "family", "herbs"] },
   "The Butchershop Bar & Grill": { "location": "1055 Sauchiehall St", "description": "Manhattan-style space of exposed bricks and round booths of sumptuous leather serving a meaty menu.", "price": 2, "stars": 3, "keywords": ["meat", "spicy", "British", "Scottish", "family", "inexpensive"] },
   "Cail Bruich": { "location": "725 Great Western Rd", "description": "Inventive French-inflected food from Scotland's natural larder in a relaxed, family-run atmosphere.", "price": 2, "stars": 3, "keywords": ["French", "Scottish", "family", "inexpensive"] },
@@ -62,19 +55,22 @@ var restaurantData = {
   // (got halfway down Google "restaurants near glasgow").
 };
 
-var pies = [
-  ["pizza", "indian", "chinese", "pub"],
-  ["spicy", "refreshing", "modern", "traditional"],
-];
-
 var ctx;
 
 var totalImages = 1;
 var loadedImages = 0;
-var myPieChart;
 
-function createChart() {
-  myPieChart = new Chart(ctx).Pie(data, {});
+var thePieChart;
+
+var tableOfKeywords = {};
+var keywordsChosenSoFar = [];
+
+function updateChart(pieData) {
+  if (thePieChart !== undefined) {
+    thePieChart.destroy();
+  }
+
+  thePieChart = new Chart(ctx).Pie(pieData, {});
 }
 
 // General Idea for the algorithm
@@ -86,17 +82,23 @@ function createChart() {
 // 3. If the user chooses a keyword, currentOptions = [option in currentOptions where keywords includes <chosen_keywords>].
 // 4. Goto 1
 
-function getTableOfCommonKeywords(options, data) {
+function getTableOfCommonKeywords(optionsList, keywordsToExclude) {
   var table = {};
-  var optionsLength = options.length;
-  for (var i = 0; i < optionsLength; ++i) {
+  var optionsListLength = optionsList.length;
+  for (var i = 0; i < optionsListLength; ++i) {
     // If there is restaurant data for this restaurant...
-    var restaurantName = options[i];
-    if (data.hasOwnProperty(restaurantName)) {
+    var restaurantName = optionsList[i];
+    if (globalRestaurantData.hasOwnProperty(restaurantName)) {
       // Now loop through the keywords for this restaurant.
-      var keywordsLength = data[restaurantName].keywords.length;
+      var keywordsLength = globalRestaurantData[restaurantName].keywords.length;
       for (var j = 0; j < keywordsLength; ++j) {
-        var keyword = data[restaurantName].keywords[j];
+        var keyword = globalRestaurantData[restaurantName].keywords[j];
+
+        // Skip this keyword if it's one we should exclude.
+        if (keywordsToExclude.indexOf(keyword) > -1) {
+          continue;
+        }
+
         // Count keyword.
         if (table.hasOwnProperty(keyword)) {
           table[keyword] = table[keyword] + 1;
@@ -112,17 +114,61 @@ function getTableOfCommonKeywords(options, data) {
   return table;
 }
 
+function removeAllRestaurantsNotContainingKeyword(optionsList, keyword) {
+  var optionsListLength = optionsList.length;
+
+  // Loop goes backwards through list as we are deleting elements.
+  for (var i = optionsListLength - 1; i > 0; --i) {
+    var restaurantName = optionsList[i];
+    var thisRestaurantData = globalRestaurantData[restaurantName];
+    var restaurantContainsKeyword = (thisRestaurantData.keywords.indexOf(keyword) > -1);
+
+    if (!restaurantContainsKeyword) {
+      optionsList.splice(i, 1);
+    }
+  }
+}
+
+function makePieData(keywordTable) {
+  var pieData = [];
+
+  // First, find out the top 3-5 keywords.
+  // Or do we want just 8 segments of the pie?
+  var maxPieSegments = 5;
+  var minPieSegments = 3;
+  var pieSegments = Math.floor(Math.random() * (maxPieSegments - minPieSegments) + minPieSegments);
+
+  // Choose the top "pieSegments" keywords.
+  // First, create a list from the keyword table.
+  var sortableList = [];
+  for (var keyword in keywordTable) {
+    sortableList.push([keyword, keywordTable[keyword]]);
+  }
+  sortableList.sort(function (a, b) { return b[1] - a[1] });
+
+  // Now we have a sorted list of keywords, choose the first "pieSegments".
+  var topKeywords = sortableList.slice(0, pieSegments);
+
+  for (var i = 0; i < pieSegments; ++i) {
+    var newPieSegment = { "value": topKeywords[i][1], "color": "Green", "label": topKeywords[i][0] };
+    pieData.push(newPieSegment);
+  }
+
+  return pieData;
+}
+
 $(function () {
   console.log("hello world");
   // Initially, set up currentOptions to include all restaurants.
-  for (var key in restaurantData) {
-    if (restaurantData.hasOwnProperty(key)) {
+  for (var key in globalRestaurantData) {
+    if (globalRestaurantData.hasOwnProperty(key)) {
       currentOptions.push(key);
     }
   }
 
-  tableOfKeywords = getTableOfCommonKeywords(currentOptions, restaurantData);
-  
+  tableOfKeywords = getTableOfCommonKeywords(currentOptions, keywordsChosenSoFar);
+  pieData = makePieData(tableOfKeywords);
+
   ctx = $("#pizzaChart")[0].getContext("2d");
   console.log(ctx);
 
@@ -135,15 +181,16 @@ $(function () {
     loadedImages++;
 
     if (loadedImages >= totalImages) {
-      createChart();
+      updateChart(pieData);
     }
   };
 
   console.log("boom");
 
 
-  $("#myChart").click(function (e) {
-    var activePoints = myPieChart.getSegmentsAtEvent(e);
+  $("#pizzaChart").click(function (e) {
+    var activePoints = thePieChart.getSegmentsAtEvent(e);
+
     console.log(activePoints);
 
     // The user has clicked some pies. We are only really interested in
@@ -151,9 +198,21 @@ $(function () {
     // at once.
     pointClick = activePoints[0];
 
-    console.log(pointClick.label + " was clicked");
+    console.log("TTT");
 
-    // Re
+    var choiceKeyword = pointClick.label;
+
+    keywordsChosenSoFar.push(choiceKeyword);
+
+    // As the algorithm, shrink currentOptions by removing all
+    // restaurant names where those restaurants DO NOT contain the keyword we want.
+    removeAllRestaurantsNotContainingKeyword(currentOptions, choiceKeyword);
+    tableOfKeywords = getTableOfCommonKeywords(currentOptions, keywordsChosenSoFar);
+    pieData = makePieData(tableOfKeywords);
+
+    console.log(JSON.stringify(pieData));
+
+    updateChart(pieData);
   });
 
 });
