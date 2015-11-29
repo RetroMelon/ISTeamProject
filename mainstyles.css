@@ -1,0 +1,17 @@
+#logo-image {
+    height: 10vw;
+}
+
+#top-menu-area {
+    height: 30%;
+    background-color: pink;
+}
+
+#results-area {
+    height: 30%;
+    background-color: blue;
+}
+
+#pizza-chart {
+    height: 400px;
+}

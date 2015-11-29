@@ -103,6 +103,10 @@ function updatePizzaChart(pieData) {
   }
 }
 
+// This function takes in a list of restaurant names (optionsList),
+// and uses globalRestaurantData to generate a table of occurrences
+// of keywords for those restaurants. It won't include keywords in the table
+// which are in "keywordsToExclude".
 function getTableOfCommonKeywords(optionsList, keywordsToExclude) {
   var table = {};
   var optionsListLength = optionsList.length;
@@ -196,7 +200,7 @@ function makePizzaPieChartData(keywordTable) {
 // 4. Goto 1
 
 $(function () {
-  pizzaChartContext = $("#pizzaChart")[0].getContext("2d");
+  pizzaChartContext = $("#pizza-chart")[0].getContext("2d");
 
   // Now set up currentOptions to include all restaurants.
   for (var key in globalRestaurantData) {
@@ -211,7 +215,7 @@ $(function () {
   pieData = makePizzaPieChartData(tableOfKeywords);
   updatePizzaChart(pieData);
 
-  $("#pizzaChart").click(function (e) {
+  $("#pizza-chart").click(function (e) {
     var activePoints = thePieChart.getSegmentsAtEvent(e);
 
     console.log(activePoints);
@@ -221,13 +225,10 @@ $(function () {
     // at once.
     pointClick = activePoints[0];
 
-    console.log("TTT");
-
     var choiceKeyword = pointClick.label;
-
     keywordsChosenSoFar.push(choiceKeyword);
 
-    // As the algorithm, shrink currentOptions by removing all
+    // Per the algorithm, shrink currentOptions by removing all
     // restaurant names where those restaurants DO NOT contain the keyword we want.
     removeAllRestaurantsNotContainingKeyword(currentOptions, choiceKeyword);
     tableOfKeywords = getTableOfCommonKeywords(currentOptions, keywordsChosenSoFar);
@@ -235,8 +236,8 @@ $(function () {
     // If there are only less than a few remaining options, or no keywords, hide the pizza chart
     // and maximise the list of results.
     if (currentOptions.length < numberOfRestaurantsToFinishPieChoices || Object.keys(tableOfKeywords).length < 1) {
-      alert("XXX");
-
+      // Use jQuery to slide the pizza picker section so it dissapears.
+      $("#pizza-chart-container").slideUp("slow");
     } else {
       // There are enough restaurants in the current list of options
       // to allow the user to keep using the pizza pie to choose keywords.

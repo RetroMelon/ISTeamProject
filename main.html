@@ -1,23 +1,28 @@
 ﻿<!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Pizza Picker</title>
     <link rel="stylesheet" href="dependencies/bootstrap.min.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="mainstyles.css" media="screen" charset="utf-8">
-  </head>
-  <body>
-      <!-- I think the best way to generate a new chart is to just remove the entire canvas,
-          then re-add a new one with new data. See this stackoverflow answer:
-           http://stackoverflow.com/questions/24785713/chart-js-load-totally-new-data -->
+</head>
+<body>
+    <div id="top-menu-area">
+        <div id="logo-area"><img id="logo-image"src="images/logo.png" /></div>
+    </div>
 
-      <div id="pizzaChartContainer">
-          <canvas id="pizzaChart" width="400" height="400"></canvas>
-      </div>
+    <!-- I used a pizza-chart-container so I can slide the whole thing up
+        when it needs to dissapear. -->
+    <div id="pizza-chart-container">
+        <canvas id="pizza-chart"></canvas>
+    </div>
 
-      <script type="text/javascript" src="dependencies/jquery-2.1.4.min.js"></script>
-      <script type="text/javascript" src="dependencies/bootstrap.min.js"></script>
-      <script type="text/javascript" src="dependencies/Chart.min.js"></script>
-      <script type="text/javascript" src="mainscript.js"></script>
-  </body>
+    <!-- TODO: How are we displaying the list of results? -->
+    <div id="results-area">Results List (3): <br />bla<br/>bla<br/>bla</div>
+    
+    <script type="text/javascript" src="dependencies/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="dependencies/bootstrap.min.js"></script>
+    <script type="text/javascript" src="dependencies/Chart.min.js"></script>
+    <script type="text/javascript" src="mainscript.js"></script>
+</body>
 </html>
