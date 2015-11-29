@@ -183,7 +183,7 @@ function makePizzaPieChartData(keywordTable) {
   var topKeywords = sortableList.slice(0, pieSegments);
 
   for (var i = 0; i < pieSegments; ++i) {
-    var newPieSegment = { "value": topKeywords[i][1], "color": "Green", "label": topKeywords[i][0] };
+    var newPieSegment = { "value": topKeywords[i][1], "label": topKeywords[i][0] };
     pieData.push(newPieSegment);
   }
 
@@ -236,8 +236,11 @@ $(function () {
     // If there are only less than a few remaining options, or no keywords, hide the pizza chart
     // and maximise the list of results.
     if (currentOptions.length < numberOfRestaurantsToFinishPieChoices || Object.keys(tableOfKeywords).length < 1) {
-      // Use jQuery to slide the pizza picker section so it dissapears.
+      // Use jQuery to fade out and slide the pizza picker section so it dissapears.
+
+      $("#pizza-chart").fadeOut(400);
       $("#pizza-chart-container").slideUp("slow");
+
     } else {
       // There are enough restaurants in the current list of options
       // to allow the user to keep using the pizza pie to choose keywords.
