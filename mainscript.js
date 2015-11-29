@@ -257,7 +257,7 @@ $(function () {
 
   resetChoicesAndPizzaPicker();
 
-  $("#logo-area").on("click", "a,img", function (e) {
+  $("#logo-image-link").on("click", "a,img", function (e) {
     resetChoicesAndPizzaPicker();
   });
 
