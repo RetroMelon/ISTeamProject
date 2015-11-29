@@ -3,20 +3,25 @@ pizza
 wings
 steakhouse
 cocktails
-pub food
+pub
 spicy
 sophisticated
 traditional
-fast food
+fastfood
 healthy
 buffet
 seafood
 tapas
-world cuisine
+world
+coffee
+trendy
+cafe
+bar
 
 donuts
 milkshakes
-sweet
+sandwiches
+snacks
 unique
 
 italian
@@ -25,3 +30,4 @@ scottish
 chinese
 indian
 spanish
+american
