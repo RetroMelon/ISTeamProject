@@ -1,21 +1,3 @@
-var data = [
-    {
-      value: 300,
-      color: "#ee4044",
-      label: "Red"
-    },
-    {
-      value: 50,
-      color: "#46BFBD",
-      label: "Green"
-    },
-    {
-      value: 100,
-      color: "#FDB45C",
-      label: "Yellow"
-    }
-];
-
 // This is set to include all restaurants initially.
 var currentOptions = [];
 
@@ -33,7 +15,7 @@ var globalRestaurantData = {
   "Koolba": { "location": "109 Candleriggs", "description": "Richly coloured and textured food in a cosy interior with canopied ceiling and carpets on the walls.", "price": 3, "stars": 4, "keywords": ["Scottish", "African", "bar"] },
   "Sarti": { "location": "121 Bath St", "description": "Italian food exalting Mediterranean seafood dishes with a patio on red hexagonal stone slabs.", "price": 3, "stars": 5, "keywords": ["Italian", "seafood", "bar"] },
   "Bothy Glasgow": { "location": "11 Ruthven Ln", "description": "Comfortable, relaxed Scottish restaurant serving modern classics with a twist and private rooms.", "price": 2, "stars": 3, "keywords": ["Scottish", "modern", "bar", "gourmet"] },
-  "Brian Maule at Chardon d'Or": { "location": "176 W Regent St", "description": "Sophisticated restaurant with secluded dining suites, for French food with a modern Scottish twist.", "price": 3, "stars": 4, "keywords": ["French", "Scottish", "sophisticated", "gourmet", "elegant"] },
+  "Brian Maule at Chardon d'Or": { "location": "176 W Regent St", "description": "Sophisticated restaurant with secluded dining suites, for French food with a modern Scottish twist.", "price": 3, "stars": 4, "keywords": ["French", "Scottish", "modern", "gourmet", "elegant"] },
   "Nanakusa": { "location": "441 Sauchiehall St", "description": "Japanese cuisine using edible wild herbs to promote wellbeing, longevity, nourishment and vitality.", "price": 1, "stars": 4, "keywords": ["Japanese", "herbs", "vitality", "inexpensive"] },
   "Wee Lochan": { "location": "340 Crow Rd", "description": "An evolving Scottish menu served in a modern tiled room with large windows with special lunch deals.", "price": 2, "stars": 5, "keywords": ["Scottish", "modern", "lunch", "seafood"] },
   "The Grill on the Corner": { "location": "21-25 Bothwell St", "description": "Bustling grill kitchen serving elegant room with dark wood floorboards and thick leather seats.", "price": 1, "stars": 4, "keywords": ["seafood", "elegant", "British", "Scottish"] },
@@ -48,17 +30,17 @@ var globalRestaurantData = {
   "Tropeiro Restaurant Glasgow": { "location": "363 Argyle St", "description": "Continuous table service of succulent meats slow cooked over an open fire with a buffet for sides.", "price": 2, "stars": 3, "keywords": ["Brazilian", "meat", "spicy", "gourmet", "family", "Latin-American"] },
   "Battlefield Rest": { "location": "55 Battlefield Rd", "description": "Eye-catching building for a continental bistro with a balance of Italian and Scottish flavours.", "price": 2, "stars": 3, "keywords": ["Italian", "Scottish", "continental", "inexpensive", "family"] },
   "Arisaig": { "location": "1 Merchant Square, Candleriggs", "description": "Smart space with a balcony and cobbled terrace for Scottish food and a choice of 100 malt whiskies.", "price": 2, "stars": 3, "keywords": ["modern", "Scottish", "British", "bar", "whiskey", "meat"] },
-  "Guy's Restaurant & Bar": { "location": "24 Candleriggs", "description": "Simple European menu of grass-fed veal and homemade ice-cream in a decor of chandeliers and mirrors.", "price": 2, "stars": 3, "keywords": ["continental", "European", "ice-cream", "British", "meat", "modern", "family"] },
+  "Guy's Restaurant & Bar": { "location": "24 Candleriggs", "description": "Simple European menu of grass-fed veal and homemade ice-cream in a decor of chandeliers and mirrors.", "price": 2, "stars": 3, "keywords": ["continental", "European", "ice cream", "British", "meat", "modern", "family"] },
   "Number Sixteen West End Ltd": { "location": "16 Byres Rd", "description": "Simple floor and mezzanine of white exposed brick and red walls for an ever changing Scottish menu.", "price": 2, "stars": 3, "keywords": ["west end", "British", "Scottish", "modern", "family"] },
   "The Restaurant Bar & Grill": { "location": "Buchanan St", "description": "A private lift takes you to a sophisticated room and balcony with rotisserie and wood burning oven.", "price": 2, "stars": 3, "keywords": ["meat", "British", "classic", "traditional"] },
 
   // (got halfway down Google "restaurants near glasgow").
 };
 
-
 // Global variable defenitions
-var totalImages = 1;
-var loadedImages = 0;
+var imagesStillToLoad = 0;
+
+var numberOfRestaurantsToFinishPieChoices = 3;
 
 var keywordPatternData = {};
 var pizzaChartContext;
@@ -67,25 +49,59 @@ var thePieChart;
 var tableOfKeywords = {};
 var keywordsChosenSoFar = [];
 
+var pizzaPieChartOptions = {
+  animationSteps: 25,
+  animationEasing: "easeInOutCubic"
+};
+
 // This function creates or updates the
 // pie chart in the global variable "thePieChart"
 // with data in pieData.
-function updateChart(pieData) {
-  if (thePieChart !== undefined) {
-    thePieChart.destroy();
+function updatePizzaChart(pieData) {
+  // For each segment, try and load an image that will
+  // match the label of that segment.
+  var numberOfSegments = pieData.length;
+  imagesStillToLoad = numberOfSegments;
+
+  for (var segmentIndex = 0; segmentIndex < numberOfSegments; ++segmentIndex) {
+    var segmentName = pieData[segmentIndex].label;
+
+    // This creates a function which loads an image, then puts it
+    // into the pie chart, then updates the pie chart if this is the last image
+    // to be drawn (uses global variable imagesStillToLoad).
+    makeImageLoaderFunction = function (imageObject, data, index) {
+      return function () {
+        --imagesStillToLoad;
+
+        // Create a pattern with this image.
+        var pattern = pizzaChartContext.createPattern(imageObject, 'repeat');
+        data[index].color = pattern;
+
+        if (imagesStillToLoad < 1) {
+          // This was the last image to load- now we can draw the chart!
+          if (thePieChart !== undefined) {
+            // We only destroy the chart when we can immediately
+            // re-draw it, no point destroying it, waiting for all the images
+            // to load (while the user stares at a blank canvas), then re-drawing.
+            thePieChart.destroy();
+          }
+
+          thePieChart = new Chart(pizzaChartContext).Pie(data, pizzaPieChartOptions);
+        }
+      }
+    };
+
+    var imageObject = new Image();
+
+    imageObject.onerror = function () {
+      alert("Error: couldn't load image " + this.src + ".");
+      return;
+    }
+
+    imageObject.onload = makeImageLoaderFunction(imageObject, pieData, segmentIndex);
+    imageObject.src = "images/segments/" + segmentName + ".jpg";
   }
-
-  thePieChart = new Chart(pizzaChartContext).Pie(pieData, {});
 }
-
-// General Idea for the algorithm
-//
-// Maintain a list of "current options", restaurants the user may want to go to. Initially all restaurants.
-//
-// 1. Make a giant table of keywords that contains all keywords from current options, with how many times they appear.
-// 2. Every iteration, show the 3-5 most common keywords in the pizza chart.
-// 3. If the user chooses a keyword, currentOptions = [option in currentOptions where keywords includes <chosen_keywords>].
-// 4. Goto 1
 
 function getTableOfCommonKeywords(optionsList, keywordsToExclude) {
   var table = {};
@@ -142,7 +158,7 @@ function removeAllRestaurantsNotContainingKeyword(optionsList, keyword) {
 // This function takes a keyword occurrences table and chooses
 // the top few items, to then create some pie segments for, 
 // ready to be displayed in a pie chart.
-function makePieData(keywordTable) {
+function makePizzaPieChartData(keywordTable) {
   var pieData = [];
 
   // First, find out the top 3-5 keywords.
@@ -170,10 +186,18 @@ function makePieData(keywordTable) {
   return pieData;
 }
 
+// General Idea for the algorithm
+//
+// Maintain a list of "current options", restaurants the user may want to go to. Initially all restaurants.
+//
+// 1. Make a giant table of keywords that contains all keywords from current options, with how many times they appear.
+// 2. Every iteration, show the 3-5 most common keywords in the pizza chart.
+// 3. If the user chooses a keyword, currentOptions = [option in currentOptions where keywords includes <chosen_keywords>].
+// 4. Goto 1
+
 $(function () {
-  console.log("hello world");
   pizzaChartContext = $("#pizzaChart")[0].getContext("2d");
-  
+
   // Now set up currentOptions to include all restaurants.
   for (var key in globalRestaurantData) {
     if (globalRestaurantData.hasOwnProperty(key)) {
@@ -184,23 +208,8 @@ $(function () {
   // Initially generate the table of keyword occurrences, and then
   // generate pie data for the initial set.
   tableOfKeywords = getTableOfCommonKeywords(currentOptions, keywordsChosenSoFar);
-  pieData = makePieData(tableOfKeywords);
-
-  var imageObj = new Image();
-  imageObj.src = "images/pie.jpg";
-  imageObj.onload = function () {
-    var pattern = ctx.createPattern(imageObj, 'repeat');
-    data[loadedImages].color = pattern;
-
-    loadedImages++;
-
-    if (loadedImages >= totalImages) {
-      updateChart(pieData);
-    }
-  };
-
-  console.log("boom");
-
+  pieData = makePizzaPieChartData(tableOfKeywords);
+  updatePizzaChart(pieData);
 
   $("#pizzaChart").click(function (e) {
     var activePoints = thePieChart.getSegmentsAtEvent(e);
@@ -222,11 +231,19 @@ $(function () {
     // restaurant names where those restaurants DO NOT contain the keyword we want.
     removeAllRestaurantsNotContainingKeyword(currentOptions, choiceKeyword);
     tableOfKeywords = getTableOfCommonKeywords(currentOptions, keywordsChosenSoFar);
-    pieData = makePieData(tableOfKeywords);
 
-    console.log(JSON.stringify(pieData));
+    // If there are only less than a few remaining options, or no keywords, hide the pizza chart
+    // and maximise the list of results.
+    if (currentOptions.length < numberOfRestaurantsToFinishPieChoices || Object.keys(tableOfKeywords).length < 1) {
+      alert("XXX");
 
-    updateChart(pieData);
+    } else {
+      // There are enough restaurants in the current list of options
+      // to allow the user to keep using the pizza pie to choose keywords.
+      pieData = makePizzaPieChartData(tableOfKeywords);
+      console.log(JSON.stringify(pieData));
+    }
+
+    updatePizzaChart(pieData);
   });
-
 });
