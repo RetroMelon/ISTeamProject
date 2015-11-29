@@ -25,6 +25,7 @@ oysters
 deli
 world
 coffee
+curry
 tea
 trendy
 cafe
