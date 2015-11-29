@@ -79,6 +79,21 @@ function resetChoicesAndPizzaPicker() {
 // This function updates the results list.
 function updateResultsList() {
   $("#results-area-title").text("Matching Restaurants / Takeaways (" + currentOptions.length + "):");
+
+  //emptying the body of the table
+  $("#simpleTableBody").html("");
+
+  console.log(currentOptions);
+
+  //iterating over the current options that have been chosen and appending them
+  //to the table html.
+  for ( var o in currentOptions) {
+    var currentRestaurant = currentOptions[o];
+
+    var restaurantData = globalRestaurantData[currentRestaurant];
+
+    $("#simpleTableBody").append("<tr><td>" + "T" + "</td><td>" + restaurantData.price + "</td><td>" + restaurantData.stars + "</td><td>" + currentRestaurant + "</td></tr>");
+  }
 }
 
 // This function creates or updates the
@@ -187,7 +202,7 @@ function removeAllRestaurantsNotContainingKeyword(optionsList, keyword) {
 }
 
 // This function takes a keyword occurrences table and chooses
-// the top few items, to then create some pie segments for, 
+// the top few items, to then create some pie segments for,
 // ready to be displayed in a pie chart.
 function makePizzaPieChartData(keywordTable) {
   var pieData = [];
@@ -271,4 +286,6 @@ $(function () {
     updateResultsList();
     updatePizzaChart(pieData);
   });
+
+  $("#simpleTable").stupidtable();
 });
