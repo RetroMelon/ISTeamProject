@@ -190,7 +190,7 @@ function removeAllRestaurantsNotContainingKeyword(optionsList, keyword) {
   var optionsListLength = optionsList.length;
 
   // Loop goes backwards through list as we are deleting elements.
-  for (var i = optionsListLength - 1; i > 0; --i) {
+  for (var i = optionsListLength - 1; i >= 0; --i) {
     var restaurantName = optionsList[i];
     var thisRestaurantData = globalRestaurantData[restaurantName];
     var restaurantContainsKeyword = (thisRestaurantData.keywords.indexOf(keyword) > -1);
