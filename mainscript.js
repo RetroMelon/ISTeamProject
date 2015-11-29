@@ -1,6 +1,3 @@
-// This is set to include all restaurants initially.
-var currentOptions = [];
-
 // Note: try and use the same keywords for multiple restaurants!
 var globalRestaurantData = {
   "Ubiquitous Chip": { "location": "12 Ashton Ln", "description": "Artistic brasserie dishes that display their provenance, served in a leafy space with fairy lights.", "price": 3, "stars": 4, "keywords": ["British", "chips", "Scottish", "family"] },
@@ -42,17 +39,47 @@ var imagesStillToLoad = 0;
 
 var numberOfRestaurantsToFinishPieChoices = 3;
 
-var keywordPatternData = {};
 var pizzaChartContext;
 var thePieChart;
 
 var tableOfKeywords = {};
 var keywordsChosenSoFar = [];
 
+// This is set to include all restaurants initially.
+var currentOptions = [];
+
 var pizzaPieChartOptions = {
   animationSteps: 25,
   animationEasing: "easeInOutCubic"
 };
+
+// This function should reset the entire page.
+function resetChoicesAndPizzaPicker() {
+  imagesStillToLoad = 0;
+
+  $("#pizza-chart").show();
+  $("#pizza-chart-container").show();
+
+  // Now set up currentOptions to include all restaurants.
+  currentOptions = [];
+  for (var key in globalRestaurantData) {
+    if (globalRestaurantData.hasOwnProperty(key)) {
+      currentOptions.push(key);
+    }
+  }
+
+  // Initially generate the table of keyword occurrences, and then
+  // generate pie data for the initial set.
+  tableOfKeywords = getTableOfCommonKeywords(currentOptions, keywordsChosenSoFar);
+  pieData = makePizzaPieChartData(tableOfKeywords);
+  updatePizzaChart(pieData);
+  updateResultsList();
+}
+
+// This function updates the results list.
+function updateResultsList() {
+  $("#results-area-title").text("Matching Restaurants / Takeaways (" + currentOptions.length + "):");
+}
 
 // This function creates or updates the
 // pie chart in the global variable "thePieChart"
@@ -202,18 +229,11 @@ function makePizzaPieChartData(keywordTable) {
 $(function () {
   pizzaChartContext = $("#pizza-chart")[0].getContext("2d");
 
-  // Now set up currentOptions to include all restaurants.
-  for (var key in globalRestaurantData) {
-    if (globalRestaurantData.hasOwnProperty(key)) {
-      currentOptions.push(key);
-    }
-  }
+  resetChoicesAndPizzaPicker();
 
-  // Initially generate the table of keyword occurrences, and then
-  // generate pie data for the initial set.
-  tableOfKeywords = getTableOfCommonKeywords(currentOptions, keywordsChosenSoFar);
-  pieData = makePizzaPieChartData(tableOfKeywords);
-  updatePizzaChart(pieData);
+  $("#logo-area").on("click", "a,img", function (e) {
+    resetChoicesAndPizzaPicker();
+  });
 
   $("#pizza-chart").click(function (e) {
     var activePoints = thePieChart.getSegmentsAtEvent(e);
@@ -248,6 +268,7 @@ $(function () {
       console.log(JSON.stringify(pieData));
     }
 
+    updateResultsList();
     updatePizzaChart(pieData);
   });
 });
