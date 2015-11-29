@@ -1243,28 +1243,28 @@ ExtractDate,FHRSID,BusinessName,BusinessType,BusinessTypeID,AddressLine2,Address
 14/02/2014,40651,Westwood Catering Service,Restaurant/Cafe/Canteen,1,69 Aberdalgie Road,Glasgow,,21/06/2012,-4.11530524,55.86826533
 14/02/2014,125763,Whale Of A Time,Restaurant/Cafe/Canteen,1,1273 Pollokshaws Road,Glasgow,G41 3RR,02/07/2013,-4.284981,55.829158
 14/02/2014,562688,Wheatley House Bean Machine,Restaurant/Cafe/Canteen,1,25 Cochrane Street,Glasgow,G1 1HL,24/06/2013,-4.248266,55.86032
-14/02/2014,315965,Where The Monkey Sleeps,Restaurant/Cafe/Canteen,1,45 Finnieston Street,Glasgow,G3 8JU,16/09/2013,-4.280339,55.86222
-14/02/2014,568580,Where The Monkey Sleeps,Restaurant/Cafe/Canteen,1,182 West Regent Street,Glasgow,G2 4RU,07/01/2014,-4.261774,55.863964
-14/02/2014,99829,Whiteinch Bowling Club,Restaurant/Cafe/Canteen,1,28 Ferryden Street,Glasgow,G14 0SW,07/09/2010,-4.331851,55.870295
-14/02/2014,45653,Willow Cafe,Restaurant/Cafe/Canteen,1,225 Scotland Street,Glasgow,G5 8QB,11/01/2011,-4.275798,55.849622
-14/02/2014,193911,Willow Tea Rooms,Restaurant/Cafe/Canteen,1,97 Buchanan Street,Glasgow,G1 3HF,09/12/2013,-4.254819,55.860066
-14/02/2014,94601,Willowbank Bowling Club,Restaurant/Cafe/Canteen,1,36 Dowanside Road,Glasgow,G12 9DW,06/02/2007,-4.298293,55.875322
-14/02/2014,30396,Windows Restaurant,Restaurant/Cafe/Canteen,1,44 West George Street,Glasgow,,16/05/2013,-4.25322682,55.86195588
-14/02/2014,102691,Winter Gardens,Restaurant/Cafe/Canteen,1,1 Glasgow Green,Glasgow,G40 1AT,11/01/2012,-4.237004,55.851215
-14/02/2014,107369,Wishbones,Restaurant/Cafe/Canteen,1,31 High Street,Glasgow,G1 1LX,18/05/2013,-4.243279,55.857527
-14/02/2014,35815,Wok To Walk,Restaurant/Cafe/Canteen,1,304 Sauchiehall Street,Glasgow,G2 3JA,25/06/2012,-4.263684,55.865763
-14/02/2014,118094,Wolfson Hall Of Residence,Restaurant/Cafe/Canteen,1,2317 Maryhill Road,Glasgow,,17/12/2013,-4.271209,55.876461
-14/02/2014,516671,Wonderworld Soft Play,Restaurant/Cafe/Canteen,1,99 Middlesex Street,Glasgow,G41 1EE,23/10/2013,-4.28354,55.851681
-14/02/2014,118070,Wong Express,Restaurant/Cafe/Canteen,1,920 Maryhill Road,Glasgow,G20 7TA,11/11/2013,-4.280196,55.884044
-14/02/2014,495615,Workspace Cafe,Restaurant/Cafe/Canteen,1,100 Elderpark Street,Glasgow,G51 3TR,12/03/2013,-4.32253,55.857682
-14/02/2014,9656,WRVS Cafe (Gartnavel General Hospital),Restaurant/Cafe/Canteen,1,1053 Great Western Road,Glasgow,,18/02/2010,-4.354562,55.900713
-14/02/2014,31357,Wudon,Restaurant/Cafe/Canteen,1,535 Great Western Road,Glasgow,G12 8HN,19/11/2013,-4.282973,55.875517
-14/02/2014,537386,Wyndford Diner,Restaurant/Cafe/Canteen,1,186 Wyndford Road,Glasgow,G20 8HF,26/09/2013,-4.287613,55.889248
-14/02/2014,50801,Yarrow Recreation Club,Restaurant/Cafe/Canteen,1,223 Anniesland Road,Glasgow,G13 1RP,29/06/2012,-4.332613,55.889928
-14/02/2014,548302,Yarrows Cafe,Restaurant/Cafe/Canteen,1,1915 Dumbarton Road,Glasgow,G14 0YS,26/06/2013,-4.364388,55.882769
-14/02/2014,22410,Yasmin's,Restaurant/Cafe/Canteen,1,538 Dumbarton Road,Glasgow,G11 6SW,01/03/2011,-4.314597,55.870981
-14/02/2014,48683,Yellow Bird Cafe,Restaurant/Cafe/Canteen,1,39 Paisley Road West,Glasgow,G51 1LG,28/05/2012,-4.28068,55.853325
-14/02/2014,612676,Yen,Restaurant/Cafe/Canteen,1,28 Tunnel Street,Glasgow,G3 8HL,28/11/2013,-4.283461,55.859322, Japanese buffet 
+14/02/2014,315965,Where The Monkey Sleeps,Restaurant/Cafe/Canteen,1,45 Finnieston Street,Glasgow,G3 8JU,16/09/2013,-4.280339,55.86222, 
+14/02/2014,568580,Where The Monkey Sleeps,Restaurant/Cafe/Canteen,1,182 West Regent Street,Glasgow,G2 4RU,07/01/2014,-4.261774,55.863964, traditional Mexican trendy world tapas LatinAmerican
+14/02/2014,99829,Whiteinch Bowling Club,Restaurant/Cafe/Canteen,1,28 Ferryden Street,Glasgow,G14 0SW,07/09/2010,-4.331851,55.870295, Brazilian buffet traditional pastries
+14/02/2014,45653,Willow Cafe,Restaurant/Cafe/Canteen,1,225 Scotland Street,Glasgow,G5 8QB,11/01/2011,-4.275798,55.849622, tea cafe coffee buffet healthy light lunch pastries Scottish
+14/02/2014,193911,Willow Tea Rooms,Restaurant/Cafe/Canteen,1,97 Buchanan Street,Glasgow,G1 3HF,09/12/2013,-4.254819,55.860066, tea cafe coffee buffet healthy light pastries
+14/02/2014,94601,Willowbank Bowling Club,Restaurant/Cafe/Canteen,1,36 Dowanside Road,Glasgow,G12 9DW,06/02/2007,-4.298293,55.875322, Scottish cafe coffee bar buffet fastfood
+14/02/2014,30396,Windows Restaurant,Restaurant/Cafe/Canteen,1,44 West George Street,Glasgow,,16/05/2013,-4.25322682,55.86195588, light diner cool gourmet inexpensive modern Scottish
+14/02/2014,102691,Winter Gardens,Restaurant/Cafe/Canteen,1,1 Glasgow Green,Glasgow,G40 1AT,11/01/2012,-4.237004,55.851215, traditional contemporary gourmet unique bar
+14/02/2014,107369,Wishbones,Restaurant/Cafe/Canteen,1,31 High Street,Glasgow,G1 1LX,18/05/2013,-4.243279,55.857527, traditional Scottish coffee seafood meat chicken lunch
+14/02/2014,35815,Wok To Walk,Restaurant/Cafe/Canteen,1,304 Sauchiehall Street,Glasgow,G2 3JA,25/06/2012,-4.263684,55.865763, Japanese traditional modern contemporary cool cocktails
+14/02/2014,118094,Wolfson Hall Of Residence,Restaurant/Cafe/Canteen,1,2317 Maryhill Road,Glasgow,,17/12/2013,-4.271209,55.876461, trendy modern inexpensive milkshakes light unique
+14/02/2014,516671,Wonderworld Soft Play,Restaurant/Cafe/Canteen,1,99 Middlesex Street,Glasgow,G41 1EE,23/10/2013,-4.28354,55.851681, kids family cafe donuts pastries coffee diner
+14/02/2014,118070,Wong Express,Restaurant/Cafe/Canteen,1,920 Maryhill Road,Glasgow,G20 7TA,11/11/2013,-4.280196,55.884044, Chinese fast food cafe cool trendy Asian
+14/02/2014,495615,Workspace Cafe,Restaurant/Cafe/Canteen,1,100 Elderpark Street,Glasgow,G51 3TR,12/03/2013,-4.32253,55.857682, cafe coffee light pastries donuts
+14/02/2014,9656,WRVS Cafe (Gartnavel General Hospital),Restaurant/Cafe/Canteen,1,1053 Great Western Road,Glasgow,,18/02/2010,-4.354562,55.900713, lunch light coffee cafe pastries donuts
+14/02/2014,31357,Wudon,Restaurant/Cafe/Canteen,1,535 Great Western Road,Glasgow,G12 8HN,19/11/2013,-4.282973,55.875517, Japanese trendy world Asian coffee healthy modern cool spicy
+14/02/2014,537386,Wyndford Diner,Restaurant/Cafe/Canteen,1,186 Wyndford Road,Glasgow,G20 8HF,26/09/2013,-4.287613,55.889248, diner traditional light trendy pastries coffee
+14/02/2014,50801,Yarrow Recreation Club,Restaurant/Cafe/Canteen,1,223 Anniesland Road,Glasgow,G13 1RP,29/06/2012,-4.332613,55.889928, coffee cafe trendy buffet
+14/02/2014,548302,Yarrows Cafe,Restaurant/Cafe/Canteen,1,1915 Dumbarton Road,Glasgow,G14 0YS,26/06/2013,-4.364388,55.882769, coffee cafe trendy donuts pastries unique light lunch
+14/02/2014,22410,Yasmin's,Restaurant/Cafe/Canteen,1,538 Dumbarton Road,Glasgow,G11 6SW,01/03/2011,-4.314597,55.870981, Indian cafe spicy cool buffet trendy coffee diner
+14/02/2014,48683,Yellow Bird Cafe,Restaurant/Cafe/Canteen,1,39 Paisley Road West,Glasgow,G51 1LG,28/05/2012,-4.28068,55.853325, cafe Chinese light lunch traditional
+14/02/2014,612676,Yen,Restaurant/Cafe/Canteen,1,28 Tunnel Street,Glasgow,G3 8HL,28/11/2013,-4.283461,55.859322, Japanese buffet world spicy Asian sushi
 14/02/2014,31225,Yo Sushi,Restaurant/Cafe/Canteen,1,21 Buchanan Street,Glasgow,G1 3HL,23/11/2012,-4.254903,55.859309, Japanese buffet world Asian contemporary modern
 14/02/2014,23298,Yo! Sushi,Restaurant/Cafe/Canteen,1,763 Barrhead Road,Glasgow,G53 6AG,18/11/2011,-4.342073,55.822898, Japanese buffet world sushi Asian contemporary modern
 14/02/2014,106784,Yoker Bowling Club,Restaurant/Cafe/Canteen,1,21 Hawick Street,Glasgow,G13 4EL,13/08/2012,-4.382586,55.891137, traditional pub pizza coffee cafe

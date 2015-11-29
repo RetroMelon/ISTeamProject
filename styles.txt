@@ -2,14 +2,19 @@ pizza
 chicken
 meat
 cocktails
+family
+kids
+inexpensive
+gourmet
 pub
 spicy
 cool
 sophisticated
 traditional
+diner
 contemporary
 modern
-fast food
+fastfood
 healthy
 buffet
 seafood
@@ -17,6 +22,7 @@ tapas
 sushi
 world
 coffee
+tea
 trendy
 cafe
 bar
@@ -36,3 +42,4 @@ Spanish
 American
 Japanese
 Asian
+LatinAmerican
