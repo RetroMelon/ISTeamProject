@@ -1,0 +1,27 @@
+burger
+pizza
+wings
+steakhouse
+cocktails
+pub food
+spicy
+sophisticated
+traditional
+fast food
+healthy
+buffet
+seafood
+tapas
+world cuisine
+
+donuts
+milkshakes
+sweet
+unique
+
+italian
+mexican
+scottish
+chinese
+indian
+spanish
