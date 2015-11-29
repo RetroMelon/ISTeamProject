@@ -31,7 +31,7 @@ var globalRestaurantData = {
   "Arisaig": { "location": "1 Merchant Square, Candleriggs", "description": "Smart space with a balcony and cobbled terrace for Scottish food and a choice of 100 malt whiskies.", "price": 2, "stars": 3, "keywords": ["modern", "Scottish", "British", "bar", "whiskey", "meat"] },
   "Guy's Restaurant & Bar": { "location": "24 Candleriggs", "description": "Simple European menu of grass-fed veal and homemade ice-cream in a decor of chandeliers and mirrors.", "price": 2, "stars": 3, "keywords": ["continental", "European", "ice cream", "British", "meat", "modern", "family"] },
   "Number Sixteen West End Ltd": { "location": "16 Byres Rd", "description": "Simple floor and mezzanine of white exposed brick and red walls for an ever changing Scottish menu.", "price": 2, "stars": 3, "keywords": ["west end", "British", "Scottish", "modern", "family"] },
-  "The Restaurant Bar & Grill": { "location": "Buchanan St", "description": "A private lift takes you to a sophisticated room and balcony with rotisserie and wood burning oven.", "price": 2, "stars": 3, "keywords": ["meat", "British", "classic", "traditional"] },
+  "The Restaurant Bar & Grill": { "location": "Buchanan St", "description": "A private lift takes you to a sophisticated room and balcony with rotisserie and wood burning oven.", "price": 2, "stars": 3, "keywords": ["meat", "British", "gourmet", "traditional"] },
 
   "Asia Style": { "location": "185-189 St George's Rd", "description": "Unusual menu of Malaysian pancakes and soft shell crab with courtesy jasmine tea. Cash only.", "price": 2, "stars": 4, "keywords": ["Asian", "seafood", "inexpensive"] },
   "Mono": { "location": "12 King's Court", "description": "Versatile bar with an airy and open feel, music at its heart and a menu of veggie/vegan food.", "price": 2, "stars": 4, "keywords": ["vegetarian", "music", "pub", "inexpensive"] },
@@ -43,12 +43,23 @@ var globalRestaurantData = {
   "Sloans": { "location": "62, 108 Argyle St", "description": "Decadent venue over 3 floors with Grand Ballroom, stunning central staircase and outside courtyard.", "price": 2, "stars": 5, "keywords": ["British", "Scottish", "traditional", "formal", "gourmet", "elegant"] },
   "Roastit Bubbly Jocks": { "location": "450 Dumbarton Rd", "description": "Smart restaurant with contemporary decor and an easygoing vibe, offering Modern Scottish cuisine.", "price": 2, "stars": 4, "keywords": ["modern", "Scottish", "cosy", "gourmet"] },
   "111 by Nico": { "location": "111 Cleveden Rd", "description": "Shetland oysters, Scottish lobster and traditional fish and chips served in an earthy bistro cafe.", "price": 3, "stars": 5, "keywords": ["seafood", "chips", "cafe", "Scottish"] },
+
+  "Assams": { "location": "57 W Regent St", "description": "Comfortable Indian restaurant with simple, sophisticated decor, online deals and weekly live singer.", "price": 3, "stars": 3, "keywords": ["Indian", "bar", "cosy", "British", "curry", "spicy"] },
+  "The Shenaz": { "location": "17 Granville St", "description": "Traditional curries and innovative house specialities in a bright, modern setting with wood floors.", "price": 3, "stars": 4, "keywords": ["curry", "Indian", "modern"] },
+  "India Quay": { "location": "181 Finnieston St", "description": "Stylish, modern dining room spread over 2 floors for an inventive menu of creative Indian cooking.", "price": 3, "stars": 5, "keywords": ["modern", "Indian", "curry", "spicy"] },
+  "Amore Restaurant": { "location": "Ingram street, Merchant City", "description": "Stylish, modern dining room spread over 2 floors for an inventive menu of creative Indian cooking.", "price": 4, "stars": 5, "keywords": ["cosy", "Italian", "gourmet", "elegant"] },
+  "Viva Brazil Glasgow": { "location": "87-91 Bothwell St", "description": "Slow roasted meats expertly carved at table with a selection of buffet-style sides and salads.", "price": 3, "stars": 3, "keywords": ["Brazilian", "Latin American", "meat", "spicy", "inexpensive"] },
+  "Cafe Antipasti": { "location": "305 Sauchiehall St", "description": "Italian dishes in relaxed room with mezzanine, intricate ironwork and individually crafted tables.", "price": 3, "stars": 3, "keywords": ["Italian", "relaxed", "cosy", "elegant"] },
+  "Las Iguanas": { "location": "10-14 W Nile St", "description": "Flame-grilled Latin American dishes and shared plates served in a contemporary chain dining room.", "price": 3, "stars": 3, "keywords": ["Latin American", "Mexican", "meat", "contemporary", "modern"] },
+  "Wudon": { "location": "535 Great Western Rd", "description": "Contemporary dining room with dim lighting for a mix of Chinese,Japanese and Thai cuisines.", "price": 3, "stars": 4, "keywords": ["Japanese", "Asian", "Thai", "Chinese", "contemporary"] },
+  "The Pelican Cafe": { "location": "1377 Argyle St", "description": "Simply prepared fresh oysters and creel caught langoustines from the west coast in serene rooms.", "price": 4, "stars": 5, "keywords": ["cafe", "seafood", "oysters", "fish", "British", "Scottish", "contemporary"] },
+  "The Cabin": { "location": "998 Dumbarton Rd", "description": "Intimate venue with wood floors, serving venison meatballs and chicken with haggis, plus live music.", "price": 3, "stars": 3, "keywords": ["live music", "intimate", "meat", "Scottish"] }
 };
 
 // Global variable defenitions
 var imagesStillToLoad = 0;
 
-var numberOfRestaurantsToFinishPieChoices = 3;
+var numberOfRestaurantsToFinishPieChoices = 5;
 
 var pizzaChartContext;
 var thePieChart;
