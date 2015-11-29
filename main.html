@@ -11,16 +11,20 @@
     <div id="top-menu-area">
         <span id="header" style="display:inline;"><a href="#"><img id="logo-image" src="images/logo.png" /></a></span>     
       	<div class="postcode" >
-      			<input id="search" id="search" placeholder="Postcode...">
-      			<button class="glyphicon glyphicon-search"></button>
-      	<input type="date" style="margin-left:24%; width:10%;" />
-      			<button id="calendar" class="glyphicon glyphicon-calendar"></button>
+      			<input class="search" id="search" id="search" placeholder="Postcode..." >
+      			<button class="glyphicon glyphicon-search" style="color:#99ff99;" ></button>
+      			<input class="distance" type="distance" placeholder="Distance..." />
+      			<button class="glyphicon glyphicon-arrow-right" style="color:#99ff99;"></button>
       	</div>
+		</div>
+
+		<div id="breadcrumbs-area">
+		test
 		</div>
 
     <!-- I used a pizza-chart-container so I can slide the whole thing up
         when it needs to dissapear. -->
-    <div id="pizza-chart-container" align="center">
+    <div id="pizza-chart-container">
         <canvas id="pizza-chart" ></canvas>
     </div>
 
