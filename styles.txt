@@ -20,6 +20,9 @@ buffet
 seafood
 tapas
 sushi
+fish
+oysters
+deli
 world
 coffee
 tea
