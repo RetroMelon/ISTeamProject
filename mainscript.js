@@ -79,6 +79,21 @@ function resetChoicesAndPizzaPicker() {
 // This function updates the results list.
 function updateResultsList() {
   $("#results-area-title").text("Matching Restaurants / Takeaways (" + currentOptions.length + "):");
+
+  //emptying the body of the table
+  $("#simpleTableBody").html("");
+
+  console.log(currentOptions);
+
+  //iterating over the current options that have been chosen and appending them
+  //to the table html.
+  for ( var o in currentOptions) {
+    var currentRestaurant = currentOptions[o];
+
+    var restaurantData = globalRestaurantData[currentRestaurant];
+
+    $("#simpleTableBody").append("<tr><td>" + "T" + "</td><td>" + restaurantData.price + "</td><td>" + restaurantData.stars + "</td><td>" + currentRestaurant + "</td></tr>");
+  }
 }
 
 // This function creates or updates the
