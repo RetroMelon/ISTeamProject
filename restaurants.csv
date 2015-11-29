@@ -1264,15 +1264,15 @@ ExtractDate,FHRSID,BusinessName,BusinessType,BusinessTypeID,AddressLine2,Address
 14/02/2014,548302,Yarrows Cafe,Restaurant/Cafe/Canteen,1,1915 Dumbarton Road,Glasgow,G14 0YS,26/06/2013,-4.364388,55.882769
 14/02/2014,22410,Yasmin's,Restaurant/Cafe/Canteen,1,538 Dumbarton Road,Glasgow,G11 6SW,01/03/2011,-4.314597,55.870981
 14/02/2014,48683,Yellow Bird Cafe,Restaurant/Cafe/Canteen,1,39 Paisley Road West,Glasgow,G51 1LG,28/05/2012,-4.28068,55.853325
-14/02/2014,612676,Yen,Restaurant/Cafe/Canteen,1,28 Tunnel Street,Glasgow,G3 8HL,28/11/2013,-4.283461,55.859322
-14/02/2014,31225,Yo Sushi,Restaurant/Cafe/Canteen,1,21 Buchanan Street,Glasgow,G1 3HL,23/11/2012,-4.254903,55.859309
-14/02/2014,23298,Yo! Sushi,Restaurant/Cafe/Canteen,1,763 Barrhead Road,Glasgow,G53 6AG,18/11/2011,-4.342073,55.822898
-14/02/2014,106784,Yoker Bowling Club,Restaurant/Cafe/Canteen,1,21 Hawick Street,Glasgow,G13 4EL,13/08/2012,-4.382586,55.891137
-14/02/2014,111415,Yorkhill Fire Station,Restaurant/Cafe/Canteen,1,214 Kelvinhaugh Street,Glasgow,G3 8QS,28/07/2006,-4.295541,55.863923
-14/02/2014,589597,Young Calvay Volunteers,Restaurant/Cafe/Canteen,1,678 Duke Street,Glasgow,G31 1JZ,08/10/2013,-4.207811,55.857917
-14/02/2014,556112,Zebra Cafe,Restaurant/Cafe/Canteen,1,34 Queen Street,Glasgow,G1 3DX,15/04/2013,-4.251911,55.858681
-14/02/2014,495626,Zizzi,Restaurant/Cafe/Canteen,1,31 Royal Exchange Square,Glasgow,G1 3AJ,24/06/2013,-4.252971,55.859875
-14/02/2014,36248,Zizzi,Restaurant/Cafe/Canteen,1,8 Cresswell Lane,Glasgow,G12 8AA,10/05/2012,-4.292252,55.875911
-14/02/2014,18687,Zizzi,Restaurant/Cafe/Canteen,1,48 Buchanan Street,Glasgow,,09/08/2011,-4.25452799,55.859396
-14/02/2014,36323,Zoe Makes Cakes,Restaurant/Cafe/Canteen,1,66 White Street,Glasgow,G11 5ED,21/09/2010,-4.305337,55.87306
-14/02/2014,107368,Zorba,Restaurant/Cafe/Canteen,1,25 High Street,Glasgow,G1 1LX,06/11/2012,-4.243279,55.857527
+14/02/2014,612676,Yen,Restaurant/Cafe/Canteen,1,28 Tunnel Street,Glasgow,G3 8HL,28/11/2013,-4.283461,55.859322, Japanese buffet 
+14/02/2014,31225,Yo Sushi,Restaurant/Cafe/Canteen,1,21 Buchanan Street,Glasgow,G1 3HL,23/11/2012,-4.254903,55.859309, Japanese buffet world Asian contemporary modern
+14/02/2014,23298,Yo! Sushi,Restaurant/Cafe/Canteen,1,763 Barrhead Road,Glasgow,G53 6AG,18/11/2011,-4.342073,55.822898, Japanese buffet world sushi Asian contemporary modern
+14/02/2014,106784,Yoker Bowling Club,Restaurant/Cafe/Canteen,1,21 Hawick Street,Glasgow,G13 4EL,13/08/2012,-4.382586,55.891137, traditional pub pizza coffee cafe
+14/02/2014,111415,Yorkhill Fire Station,Restaurant/Cafe/Canteen,1,214 Kelvinhaugh Street,Glasgow,G3 8QS,28/07/2006,-4.295541,55.863923, cafe lunch light milkshakes donuts cool
+14/02/2014,589597,Young Calvay Volunteers,Restaurant/Cafe/Canteen,1,678 Duke Street,Glasgow,G31 1JZ,08/10/2013,-4.207811,55.857917, donuts pastries cafe lunch coffee healthy
+14/02/2014,556112,Zebra Cafe,Restaurant/Cafe/Canteen,1,34 Queen Street,Glasgow,G1 3DX,15/04/2013,-4.251911,55.858681, cafe light lunch trendy coffee healthy buffet
+14/02/2014,495626,Zizzi,Restaurant/Cafe/Canteen,1,31 Royal Exchange Square,Glasgow,G1 3AJ,24/06/2013,-4.252971,55.859875, Italian unique trendy modern contemporary pizza cafe
+14/02/2014,36248,Zizzi,Restaurant/Cafe/Canteen,1,8 Cresswell Lane,Glasgow,G12 8AA,10/05/2012,-4.292252,55.875911, Italian unique trendy modern contemporary pizza Scottish cafe
+14/02/2014,18687,Zizzi,Restaurant/Cafe/Canteen,1,48 Buchanan Street,Glasgow,,09/08/2011,-4.25452799,55.859396, Italian unique trendy modern contemporary pizza
+14/02/2014,36323,Zoe Makes Cakes,Restaurant/Cafe/Canteen,1,66 White Street,Glasgow,G11 5ED,21/09/2010,-4.305337,55.87306, coffee buffet donuts american
+14/02/2014,107368,Zorba,Restaurant/Cafe/Canteen,1,25 High Street,Glasgow,G1 1LX,06/11/2012,-4.243279,55.857527, Spanish unique spicy cocktails

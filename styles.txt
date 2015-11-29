@@ -14,6 +14,7 @@ healthy
 buffet
 seafood
 tapas
+sushi
 world
 coffee
 trendy
@@ -33,3 +34,5 @@ Chinese
 Indian
 Spanish
 American
+Japanese
+Asian
