@@ -52,6 +52,35 @@ button {
   	width:10%;
 }
 
-#breadcrumbs-area {
-		height: 15%
+#breadcrumbs-area ul li a {
+	display: block;
+	float: left;
+	height: 80px;
+	background: #3498db;
+	text-align: center;
+	padding: 30px 40px 0 40px;
+	position: relative;
+	margin: 0 10px 0 0; 
+	text-decoration: none;
+	color: #fff;
 }
+
+ul{ 
+		list-style-type: none; 
+}
+
+#breadcrumbs-area ul li a:after {
+		content: "";  border-top: 40px solid transparent;
+		border-bottom: 40px solid transparent;
+		border-left: 40px solid #3498db;
+		position: absolute; right: -40px; top: 0;
+}
+
+#breadcrumbs-area ul li a:before {
+		content: "";  
+		border-top: 40px solid transparent;
+		border-bottom: 40px solid transparent;
+		border-left: 40px solid white;
+		position: absolute; left: 0; top: 0;
+}
+

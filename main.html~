@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="top-menu-area">
-        <span id="header" style="display:inline;"><a href="#"><img id="logo-image" src="images/logo.png" /></a></span>     
+        <span id="header" style="display:inline;"><a id="logo-image-link"href="#"><img id="logo-image" src="images/logo.png" /></a></span>     
       	<div class="postcode" >
       			<input class="search" id="search" id="search" placeholder="Postcode..." >
       			<button class="glyphicon glyphicon-search" style="color:#99ff99;" ></button>
@@ -19,8 +19,13 @@
 		</div>
 
 		<div id="breadcrumbs-area">
+				<ul>
+						<li><a href="#">Breadcrumb</a></li>
+						<!<li><a href="#">b</a></li>
+				</ul>
+				
 		</div>
-
+		<br><br>
     <!-- I used a pizza-chart-container so I can slide the whole thing up
         when it needs to dissapear. -->
     <div id="pizza-chart-container">
