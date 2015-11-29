@@ -9,7 +9,21 @@
 
 #results-area {
     height: 30%;
+    width: 400px;
+    min-width: 100%;
     background-color: azure;
+}
+#results-row{
+    padding-right : 100px;
+    text-align: left;
+}
+
+#simpleTable thead th {
+    text-align: left;
+}
+
+#simpleTable tbody tr td {
+    text-align: left;
 }
 
 #pizza-chart { <!--trying to make the pizza responsive-->

@@ -6,14 +6,10 @@
     <link rel="stylesheet" href="dependencies/css/bootstrap.min.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="mainstyles.css" media="screen" charset="utf-8">
     <link rel="shortcut icon" href="images/Screenshot.ico"> <!-- need to update to have transparent background--><script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
-</head>	<script>   
-    $(function() {
-         $( "#calendar" ).datepicker();   
-    }); <p>Calendar: <input type="text" id="calendar" /></p>
-</script>
+</head>
 <body>
     <div id="top-menu-area">
-        <span id="header" style="display:inline;"><a href="#"><img id="logo-image" src="images/logo.png" /></a></span>     
+        <span id="header" style="display:inline;"><a id="logo-image-link"href="#"><img id="logo-image" src="images/logo.png" /></a></span>     
       	<div class="postcode" >
       			<input id="search" id="search" placeholder="Postcode...">
       			<button class="glyphicon glyphicon-search"></button>
@@ -24,10 +20,10 @@
 
     <!-- I used a pizza-chart-container so I can slide the whole thing up
         when it needs to dissapear. -->
+    <div id="breadcrumbs-area" align="center">Choices : </div>
     <div id="pizza-chart-container" align="center">
         <canvas id="pizza-chart" ></canvas>
     </div>
-
     <!-- TODO: How are we displaying the list of results? -->
     <div id="results-area">
         <span id="results-area-title"></span>
@@ -36,20 +32,14 @@
           <thead>
               <tr>
               <th data-sort="string">Type</th>
-              <th data-sort="string">Rating</th>
-              <th data-sort="string">Price</th>
-              <th data-sort="string">Name</th>
+              <th data-sort="string" id="results-row">Rating</th>
+              <th data-sort="string" id="results-row">Price</th>
+              <th data-sort="string" id="results-row">Name</th>
               </tr>
           </thead>
-          <tbody id="simpleTableBody">
+          <tbody id="simpleTableBody" >
             <tr>
               <td>T</td><td>***</td><td>££</td><td>Golden Wok</td>
-            </tr>
-            <tr>
-              <td>R</td><td>**</td><td>£</td><td>Bahama Mama's</td>
-            </tr>
-            <tr>
-              <td>T</td><td>****</td><td>£££</td><td>Los Hombres de Cerdo</td>
             </tr>
           </tbody>
         </table>

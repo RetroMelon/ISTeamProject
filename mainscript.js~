@@ -223,7 +223,7 @@ function makePizzaPieChartData(keywordTable) {
   // First, find out the top 3-5 keywords.
   // Or do we want just 8 segments of the pie?
   var maxPieSegments = 8;
-  var minPieSegments = 2;
+  var minPieSegments = 3;
   var pieSegments = Math.floor(Math.random() * (maxPieSegments - minPieSegments) + minPieSegments);
 
   // Choose the top "pieSegments" keywords.

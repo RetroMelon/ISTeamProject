@@ -20,10 +20,10 @@
 
     <!-- I used a pizza-chart-container so I can slide the whole thing up
         when it needs to dissapear. -->
+    <div id="breadcrumbs-area" align="center">Choices : </div>
     <div id="pizza-chart-container" align="center">
         <canvas id="pizza-chart" ></canvas>
     </div>
-
     <!-- TODO: How are we displaying the list of results? -->
     <div id="results-area">
         <span id="results-area-title"></span>
@@ -31,21 +31,15 @@
         <table id="simpleTable">
           <thead>
               <tr>
-              <th data-sort="string">Type</th>
-              <th data-sort="string">Rating</th>
-              <th data-sort="string">Price</th>
-              <th data-sort="string">Name</th>
+              <th data-sort="string" id="results-row">Type</th>
+              <th data-sort="string" id="results-row">Rating</th>
+              <th data-sort="string" id="results-row">Price</th>
+              <th data-sort="string" id="results-row">Name</th>
               </tr>
           </thead>
-          <tbody id="simpleTableBody">
+          <tbody id="simpleTableBody" >
             <tr>
               <td>T</td><td>***</td><td>££</td><td>Golden Wok</td>
-            </tr>
-            <tr>
-              <td>R</td><td>**</td><td>£</td><td>Bahama Mama's</td>
-            </tr>
-            <tr>
-              <td>T</td><td>****</td><td>£££</td><td>Los Hombres de Cerdo</td>
             </tr>
           </tbody>
         </table>
