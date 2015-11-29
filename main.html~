@@ -19,6 +19,7 @@
 		</div>
 
 		<div id="breadcrumbs-area">
+		test
 		</div>
 
     <!-- I used a pizza-chart-container so I can slide the whole thing up
@@ -38,7 +39,7 @@
         <table id="simpleTable">
           <thead>
               <tr>
-              <th data-sort="string">Type</th>
+              <th data-sort="string" id="results-row">Type</th>
               <th data-sort="string" id="results-row">Rating</th>
               <th data-sort="string" id="results-row">Price</th>
               <th data-sort="string" id="results-row">Name</th>
