@@ -187,7 +187,7 @@ function removeAllRestaurantsNotContainingKeyword(optionsList, keyword) {
 }
 
 // This function takes a keyword occurrences table and chooses
-// the top few items, to then create some pie segments for, 
+// the top few items, to then create some pie segments for,
 // ready to be displayed in a pie chart.
 function makePizzaPieChartData(keywordTable) {
   var pieData = [];
@@ -271,4 +271,6 @@ $(function () {
     updateResultsList();
     updatePizzaChart(pieData);
   });
+
+  $("#simpleTable").stupidtable();
 });

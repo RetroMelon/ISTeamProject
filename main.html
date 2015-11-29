@@ -20,12 +20,33 @@
     <!-- TODO: How are we displaying the list of results? -->
     <div id="results-area">
         <span id="results-area-title"></span>
-        <br />bla<br/>bla<br/>bla
+        <table id="simpleTable">
+          <thead>
+              <tr>
+              <th data-sort="string">Type</th>
+              <th data-sort="string">Rating</th>
+              <th data-sort="string">Price</th>
+              <th data-sort="string">Name</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>T</td><td>***</td><td>££</td><td>Golden Wok</td>
+            </tr>
+            <tr>
+              <td>R</td><td>**</td><td>£</td><td>Bahama Mama's</td>
+            </tr>
+            <tr>
+              <td>T</td><td>****</td><td>£££</td><td>Los Hombres de Cerdo</td>
+            </tr>
+          </tbody>
+        </table>
     </div>
-    
+
     <script type="text/javascript" src="dependencies/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="dependencies/bootstrap.min.js"></script>
     <script type="text/javascript" src="dependencies/Chart.min.js"></script>
+    <script type="text/javascript" src="dependencies/stupidtable.min.js"></script>
     <script type="text/javascript" src="mainscript.js"></script>
 </body>
 </html>
