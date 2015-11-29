@@ -3,17 +3,24 @@
 <head>
     <meta charset="utf-8">
     <title>Pizza Picker</title>
-    <link rel="stylesheet" href="dependencies/bootstrap.min.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="dependencies/css/bootstrap.min.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="mainstyles.css" media="screen" charset="utf-8">
-    <link rel="shortcut icon" href="images/Screenshot.ico"> <!-- need to update to have transparent background-->
-</head>
+    <link rel="shortcut icon" href="images/Screenshot.ico"> <!-- need to update to have transparent background--><script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+</head>	<script>   
+    $(function() {
+         $( "#calendar" ).datepicker();   
+    }); <p>Calendar: <input type="text" id="calendar" /></p>
+</script>
 <body>
     <div id="top-menu-area">
-        <span id="header"><a href="#"><img id="logo-image" src="images/logo.png" /></a></span>        
-				<span class="glyphicon glyphicon-home"></span>
-      	<input type="search" id="search" placeholder="Postcode..." />
-  			</span>
-		</div>	
+        <span id="header" style="display:inline;"><a href="#"><img id="logo-image" src="images/logo.png" /></a></span>     
+      	<div class="postcode" >
+      			<input id="search" id="search" placeholder="Postcode...">
+      			<button class="glyphicon glyphicon-search"></button>
+      	<input type="date" style="margin-left:24%; width:10%;" />
+      			<button id="calendar" class="glyphicon glyphicon-calendar"></button>
+      	</div>
+		</div>
 
     <!-- I used a pizza-chart-container so I can slide the whole thing up
         when it needs to dissapear. -->
@@ -24,12 +31,35 @@
     <!-- TODO: How are we displaying the list of results? -->
     <div id="results-area">
         <span id="results-area-title"></span>
-        <br />bla<br/>bla<br/>bla
+        <center>
+        <table id="simpleTable">
+          <thead>
+              <tr>
+              <th data-sort="string">Type</th>
+              <th data-sort="string">Rating</th>
+              <th data-sort="string">Price</th>
+              <th data-sort="string">Name</th>
+              </tr>
+          </thead>
+          <tbody id="simpleTableBody">
+            <tr>
+              <td>T</td><td>***</td><td>££</td><td>Golden Wok</td>
+            </tr>
+            <tr>
+              <td>R</td><td>**</td><td>£</td><td>Bahama Mama's</td>
+            </tr>
+            <tr>
+              <td>T</td><td>****</td><td>£££</td><td>Los Hombres de Cerdo</td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
     </div>
-    
-    <script type="text/javascript" src="dependencies/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="dependencies/bootstrap.min.js"></script>
-    <script type="text/javascript" src="dependencies/Chart.min.js"></script>
+
+    <script type="text/javascript" src="dependencies/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="dependencies/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="dependencies/js/Chart.min.js"></script>
+    <script type="text/javascript" src="dependencies/js/stupidtable.min.js"></script>
     <script type="text/javascript" src="mainscript.js"></script>
 </body>
 </html>

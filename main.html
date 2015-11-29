@@ -5,15 +5,18 @@
     <title>Pizza Picker</title>
     <link rel="stylesheet" href="dependencies/css/bootstrap.min.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="mainstyles.css" media="screen" charset="utf-8">
-    <link rel="shortcut icon" href="images/Screenshot.ico"> <!-- need to update to have transparent background-->
+    <link rel="shortcut icon" href="images/Screenshot.ico"> <!-- need to update to have transparent background--><script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
 </head>
 <body>
     <div id="top-menu-area">
-        <span id="header"><a href="#"><img id="logo-image" src="images/logo.png" /></a></span>        
-				<span class="glyphicon glyphicon-home"></span>
-      	<input type="search" id="search" placeholder="Postcode..." />
-  			</span>
-		</div>	
+        <span id="header" style="display:inline;"><a href="#"><img id="logo-image" src="images/logo.png" /></a></span>     
+      	<div class="postcode" >
+      			<input id="search" id="search" placeholder="Postcode...">
+      			<button class="glyphicon glyphicon-search"></button>
+      	<input type="date" style="margin-left:24%; width:10%;" />
+      			<button id="calendar" class="glyphicon glyphicon-calendar"></button>
+      	</div>
+		</div>
 
     <!-- I used a pizza-chart-container so I can slide the whole thing up
         when it needs to dissapear. -->

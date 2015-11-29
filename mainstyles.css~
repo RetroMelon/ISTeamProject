@@ -4,7 +4,7 @@
 
 #top-menu-area {
     height: 30%;
-    background-color: pink;
+    background-color: #55ACEE;
 }
 
 #results-area {
@@ -24,17 +24,16 @@
 		width:100%;
 }
 
-.postcode-box {
-		background-color: #E84B00;
+.postcode {
+		display:inline;
+		margin-left: 22%;
+		margin-top:100%;
 }
 
-#head-search .button {
-    float: left;
-    text-shadow: none !important;
-    border: medium none;
-    height: 30px;
-    width: 26px;
-    background: #191E23 url("//s.w.org/wp-includes/images/admin-bar-sprite.png?d=20120831") no-repeat scroll 100% 2px;
-    border-radius: 0px;
-    padding: 0px;
+button
+{
+-webkit-appearance: none;
+outline: none;
+border: 0;
+background: transparent;
 }

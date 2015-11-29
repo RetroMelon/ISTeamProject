@@ -4,7 +4,7 @@
 
 #top-menu-area {
     height: 30%;
-    background-color: pink;
+    background-color: #55ACEE;
 }
 
 #results-area {
@@ -24,8 +24,15 @@
 		width:100%;
 }
 
-.postcode-box {
-		background-color: #E84B00;
+.postcode {
+		display:inline;
+		margin-left: 22%;
+		margin-top:100%;
 }
 
-
+button {
+		-webkit-appearance: none;
+		outline: none;
+		border: 0;
+		background: transparent;
+}
