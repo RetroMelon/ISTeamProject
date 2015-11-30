@@ -10,7 +10,21 @@
 
 #results-area {
     height: 30%;
+    width: 400px;
+    min-width: 100%;
     background-color: azure;
+}
+#results-row{
+    padding-right : 100%;
+    text-align: left;
+}
+
+#simpleTable thead th {
+    text-align: left;
+}
+
+#simpleTable tbody tr td {
+    text-align: left;
 }
 
 #pizza-chart { /*trying to make the pizza responsive*/
@@ -35,6 +49,8 @@ button {
 		outline: none;
 		border: 0;
 		background: transparent;
+<<<<<<< HEAD
+=======
 }
 
 .glyphicon {
@@ -52,6 +68,7 @@ button {
   	width:10%;
 }
 
+<<<<<<< HEAD
 #breadcrumbs-area ul li a {
 	display: block;
 	float: left;
@@ -63,6 +80,11 @@ button {
 	margin: 0 10px 0 0; 
 	text-decoration: none;
 	color: #fff;
+=======
+#breadcrumbs-area {
+height: 15%
+>>>>>>> 8ce3a3b50efef37318f7ba3c71b10100a05bc302
+>>>>>>> 3a9462dad4af239c8d80585df73d83e67990e1a2
 }
 
 ul{ 
