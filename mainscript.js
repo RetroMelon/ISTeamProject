@@ -78,6 +78,7 @@ var pizzaPieChartOptions = {
 // This function should reset the entire page.
 function resetChoicesAndPizzaPicker() {
   imagesStillToLoad = 0;
+  keywordsChosenSoFar = [];
 
   $("#pizza-chart").show();
   $("#pizza-chart-container").show();
