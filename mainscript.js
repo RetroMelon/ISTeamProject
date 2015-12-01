@@ -119,7 +119,7 @@ function updateResultsList() {
   }
 }
 function updateBreadcrumbs() {
-  $("#breadcrumbs-area").text("Choices : " + keywordsChosenSoFar);
+  $("#breadcrumbs-area ul").html(('<li><a href="#">' + keywordsChosenSoFar.join('</a></li><li><a href="#">')) + '</a></li>');
 }
 // This function creates or updates the
 // pie chart in the global variable "thePieChart"
