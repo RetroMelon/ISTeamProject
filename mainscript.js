@@ -90,13 +90,8 @@ function resetChoicesAndPizzaPicker() {
       currentOptions.push(key);
     }
   }
-
-  // Initially generate the table of keyword occurrences, and then
-  // generate pie data for the initial set.
-  tableOfKeywords = getTableOfCommonKeywords(currentOptions, keywordsChosenSoFar);
-  pieData = makePizzaPieChartData(tableOfKeywords);
-  updatePizzaChart(pieData);
-  updateResultsList();
+  
+  update();
 }
 
 // This function updates the results list.
@@ -110,7 +105,7 @@ function updateResultsList() {
 
   //iterating over the current options that have been chosen and appending them
   //to the table html.
-  for ( var o in currentOptions) {
+  for (var o in currentOptions) {
     var currentRestaurant = currentOptions[o];
 
     var restaurantData = globalRestaurantData[currentRestaurant];
@@ -118,8 +113,10 @@ function updateResultsList() {
     $("#simpleTableBody").append("<tr><td>" + "T" + "</td><td>" + restaurantData.price + "</td><td>" + restaurantData.stars + "</td><td>" + currentRestaurant + "</td></tr>");
   }
 }
+
 function updateBreadcrumbs() {
-  $("#breadcrumbs-area ul").html(('<li><a href="#">' + keywordsChosenSoFar.join('</a></li><li><a href="#">')) + '</a></li>');
+  var breadcrumbList = ["PizzaPicker"].concat(keywordsChosenSoFar);
+  $("#breadcrumbs-area ul").html(('<li><a href="#"">' + breadcrumbList.join('</a></li><li><a href="#">')) + '</a></li>');
 }
 // This function creates or updates the
 // pie chart in the global variable "thePieChart"
@@ -266,6 +263,36 @@ function makePizzaPieChartData(keywordTable) {
 // 3. If the user chooses a keyword, currentOptions = [option in currentOptions where keywords includes <chosen_keywords>].
 // 4. Goto 1
 
+function update() {
+  tableOfKeywords = getTableOfCommonKeywords(currentOptions, keywordsChosenSoFar);
+
+  updateResultsList();
+
+  // If there are only less than a few remaining options, or no keywords, hide the pizza chart
+  // and maximise the list of results.
+  if (currentOptions.length < numberOfRestaurantsToFinishPieChoices || Object.keys(tableOfKeywords).length < 1) {
+    // Use jQuery to fade out and slide the pizza picker section so it dissapears.
+
+    $("#pizza-chart").fadeOut(400);
+    $("#pizza-chart-container").slideUp("slow");
+
+  } else {
+
+    if (!($("pizza-chart").is(":visible"))) {
+      // If the pizza chart isn't visible, show both the chart and container.
+      $("#pizza-chart").show();
+      $("#pizza-chart-container").show();
+    }
+    // There are enough restaurants in the current list of options
+    // to allow the user to keep using the pizza pie to choose keywords.
+    pieData = makePizzaPieChartData(tableOfKeywords);
+    console.log(JSON.stringify(pieData));
+  }
+
+  updatePizzaChart(pieData);
+  updateBreadcrumbs();
+}
+
 $(function () {
   pizzaChartContext = $("#pizza-chart")[0].getContext("2d");
 
@@ -273,6 +300,32 @@ $(function () {
 
   $("#logo-image-link").on("click", "a,img", function (e) {
     resetChoicesAndPizzaPicker();
+  });
+
+  // When the breadcrumb is clicked, we basically slice the keywordsChosenSoFarList,
+  // reset currentOptions to include all restaurants, then quickly reprocess each keyword,
+  // as if the user was clicking them one by one.
+  $("#breadcrumbs-area").on("click", "a", function () {
+    var gotoBreadcrumb = $(this).text();
+
+    keywordsChosenSoFar = keywordsChosenSoFar.slice(0, keywordsChosenSoFar.indexOf(gotoBreadcrumb) + 1);
+
+    // Make currentOptions include all restaurants...
+    currentOptions = [];
+    for (var key in globalRestaurantData) {
+      if (globalRestaurantData.hasOwnProperty(key)) {
+        currentOptions.push(key);
+      }
+    }
+
+    // Now repeatedly remove all restaurants not containing the already
+    // specified keywords.
+    var numberOfBreadcrumbs = keywordsChosenSoFar.length;
+    for (var breadcrumbIndex = 0; breadcrumbIndex < numberOfBreadcrumbs; ++breadcrumbIndex) {
+      removeAllRestaurantsNotContainingKeyword(currentOptions, keywordsChosenSoFar[breadcrumbIndex]);
+    }
+
+    update();
   });
 
   $("#pizza-chart").click(function (e) {
@@ -291,28 +344,10 @@ $(function () {
     // Per the algorithm, shrink currentOptions by removing all
     // restaurant names where those restaurants DO NOT contain the keyword we want.
     removeAllRestaurantsNotContainingKeyword(currentOptions, choiceKeyword);
-    tableOfKeywords = getTableOfCommonKeywords(currentOptions, keywordsChosenSoFar);
 
-    // If there are only less than a few remaining options, or no keywords, hide the pizza chart
-    // and maximise the list of results.
-    if (currentOptions.length < numberOfRestaurantsToFinishPieChoices || Object.keys(tableOfKeywords).length < 1) {
-      // Use jQuery to fade out and slide the pizza picker section so it dissapears.
-
-      $("#pizza-chart").fadeOut(400);
-      $("#pizza-chart-container").slideUp("slow");
-
-    } else {
-      // There are enough restaurants in the current list of options
-      // to allow the user to keep using the pizza pie to choose keywords.
-      pieData = makePizzaPieChartData(tableOfKeywords);
-      console.log(JSON.stringify(pieData));
-    }
-
-    updateResultsList();
-    updatePizzaChart(pieData);
-    updateBreadcrumbs();
-
+    update();
   });
 
   $("#simpleTable").stupidtable();
 });
+

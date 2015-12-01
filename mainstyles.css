@@ -66,13 +66,17 @@ button {
   	width:10%;
 }
 
+#breadcrumbs-area {
+    margin: 10px;
+}
+
 #breadcrumbs-area ul li a {
 	display: block;
 	float: left;
-	height: 80px;
+	height: 40px;
 	background: #3498db;
 	text-align: center;
-	padding: 30px 40px 0 40px;
+	padding: 10px 40px 0 40px;
 	position: relative;
 	margin: 0 10px 0 0; 
 	text-decoration: none;
@@ -84,17 +88,17 @@ ul{
 }
 
 #breadcrumbs-area ul li a:after {
-		content: "";  border-top: 40px solid transparent;
-		border-bottom: 40px solid transparent;
-		border-left: 40px solid #3498db;
-		position: absolute; right: -40px; top: 0;
+		content: "";  border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+		border-left: 20px solid #3498db;
+		position: absolute; right: -20px; top: 0;
 }
 
 #breadcrumbs-area ul li a:before {
 		content: "";  
-		border-top: 40px solid transparent;
-		border-bottom: 40px solid transparent;
-		border-left: 40px solid white;
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+		border-left: 20px solid white;
 		position: absolute; left: 0; top: 0;
 }
 
