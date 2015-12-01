@@ -1,0 +1,2 @@
+#Any file with a tilde after it should be ignored
+*~
