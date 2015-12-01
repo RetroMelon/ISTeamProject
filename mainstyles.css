@@ -83,6 +83,13 @@ button {
 	color: #fff;
 }
 
+#breadcrumbs-area ul li:first-child a {
+    /* I've made the first breadcrumb always be "PizzaPicker", maybe we
+        could colour it slightly differently?
+    */
+    background: #2d1db9;
+}
+
 ul{ 
 		list-style-type: none; 
 }
