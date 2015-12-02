@@ -130,12 +130,12 @@ function updateResultsList() {
       + "</td><td>"
       + starsString
       + "</td><td>"
-      + "<a href=" + "https://www.google.co.uk/maps/place/" + currentRestaurantName.replace(/\s/g, "+") + ">" + currentRestaurantName
+      + "<a href=" + "https://www.google.com" + ">" +	"</a>" + currentRestaurantName
       + "</td><td>" + distanceString + "</td>"
       + "</tr>");
   }
 }
-
+//"<a href=" + "https://www.google.co.uk/maps/place/" + currentRestaurantName.replace(/\s/g, "+") + ">" + currentRestaurantName
 function updateBreadcrumbs() {
   var breadcrumbList = ["Start"].concat(keywordsChosenSoFar);
   $("#breadcrumbs-area").html(('<li><a href="#"">' + breadcrumbList.join('</a></li><li><a href="#pie-scroll-point">')) + '</a></li>');
