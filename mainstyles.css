@@ -49,6 +49,14 @@ body {
 
 }
 
+#alert {
+    position: absolute;
+    top: 34px;
+    right: 27px;
+    color: red;
+    display: none;
+}
+
 .postcode input {
   width: 100%;
 }

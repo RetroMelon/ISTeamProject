@@ -392,8 +392,8 @@ $(function () {
         return;
       }
       else  $('#alert').hide();
-      
-   
+
+
 
       var userLocation = { "lat": 0, "lon": 0 };
 
@@ -459,6 +459,11 @@ $(function () {
       return value + " miles";
     }
   });
+
+  //setting up the alert tooltip for the postcode
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
 
   //setting up the pie now that it is considered "visible"
   pizzaChartContext = $("#pizza-chart")[0].getContext("2d");
