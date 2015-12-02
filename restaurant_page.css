@@ -1,13 +1,50 @@
-#map {
-	float: left;
-	block: inline;
-	width: 75vw;
-	height: 100vh;
-	background-color: #CCC;
-	margin: -8px;
-	margin-left: 25%
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	background-color: rgb(240, 240, 240);
 }
 
-.body {
-	margin: 0;
+body>div {
+	display: inline-block;
 }
+
+#info {
+	height: 100%;
+	width: 30%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#map-container {
+	height: 100%;
+	width: 30%;
+	position: absolute;
+	top: 0px;
+	left: 30%;
+}
+
+
+#map {
+	position: absolute;
+	left: 30%;
+	width: 70%;
+	height: 100%;
+	background-color: #CCC;
+}
+
+
+.container-fluid {
+	height:100%;
+	display: block;
+}
+
+.description-box {
+	padding-top: 10%;
+	padding-left: 33%;
+	padding-right: 33%;
+	text-align: center;
+	font-size: 25px;
+}
+
