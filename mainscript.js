@@ -101,15 +101,26 @@ function updateResultsList() {
   //emptying the body of the table
   $("#results-table-body").html("");
 
-  console.log(currentOptions);
-
-  //iterating over the current options that have been chosen and appending them
-  //to the table html.
+  // Are we showing distances in our table? Check the table header for a "Distance" element.
+  var showingDistances = ($("#results-table-header").text().toLowerCase().search("distance") > 0);
+  
+  // Iterate over the current options that have been chosen and append them
+  // to the table.
   for (var currentOption in currentOptions) {
     var currentRestaurantName = currentOptions[currentOption];
     var restaurantData = globalRestaurantData[currentRestaurantName];
 
-    $("#results-table-body").append("<tr><td>" + "T" + "</td><td>" + restaurantData.price + "</td><td>" + restaurantData.stars + "</td><td>" + currentRestaurantName + "</td></tr>");
+    var distanceString = (restaurantData.hasOwnProperty("distance") ? restaurantData.distance : "-");
+
+    $("#results-table-body").append("<tr><td>"
+      + "T" + "</td><td>"
+      + restaurantData.price
+      + "</td><td>"
+      + restaurantData.stars
+      + "</td><td>"
+      + currentRestaurantName
+      + (showingDistances ? "</td><td>" + distanceString + "</td><td>" : "")
+      + "</td></tr>");
   }
 }
 
@@ -310,18 +321,31 @@ function distanceBetweenLatLongs(lat1, lon1, lat2, lon2) {
 
 // This function recalculates distance data in "restaurantData" for all restaurants
 // in "forRestaurants", based on "location".
-function recalculateDistances(forRestaurants, restaurantData, location) {
+function recalculateDistancesAndFilter(forRestaurants, restaurantData, location) {
   var numberOfRestaurantsFor = forRestaurants.length;
-  for (var restaurantIndex = 0; restaurantIndex < numberOfRestaurantsFor; ++restaurantIndex) {
-    var restaurantName = forRestaurants[restaurantIndex];
 
+  // Iterate in reverse over "forRestaurants" as we are deleting items from the list.
+  for (var restaurantIndex = numberOfRestaurantsFor - 1; restaurantIndex >= 0 ; --restaurantIndex) {
+    var restaurantName = forRestaurants[restaurantIndex];
     var thisRestaurantData = restaurantData[restaurantName];
+
+    // Just continue if this restaurant has no location data.
+    if (!thisRestaurantData.hasOwnProperty("lat")) {
+      continue;
+    }
 
     // Calculate the distance between the given location and this place.
     var distance = distanceBetweenLatLongs(thisRestaurantData.lat, thisRestaurantData.lon,
       location.lat, location.lon);
 
-    thisRestaurantData.distanceToUser = distance;
+    // If the calculated distance is greater than the filter distance,
+    // remove this restaurant from the "forRestaurants" list.
+    if (distance > filterDistance) {
+      forRestaurants.splice(restaurantIndex, 1);
+      continue;
+    }
+
+    thisRestaurantData.distance = distance;
   }
 }
 
@@ -355,7 +379,15 @@ $(function () {
       userLocation.lat = data.results[0].geometry.location.lat;
       userLocation.lon = data.results[0].geometry.location.lng;
       
-      recalculateDistances(currentOptions, globalRestaurantData, userLocation);
+      recalculateDistancesAndFilter(currentOptions, globalRestaurantData, userLocation);
+
+      // Add a new column into the results table, if it doesn't exist already.
+      if ($("#results-table-header").text().toLowerCase().search("distance") < 0) {
+        // No column in header for "distance".
+        $("#results-table-header").append('<th data-sort="string" id="results-row">Distance</th>')
+      }
+  
+      updateResultsList();
     });
   });
 
