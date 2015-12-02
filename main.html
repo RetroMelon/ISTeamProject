@@ -36,49 +36,53 @@
       </div>
     </div>
 
-      <div class="container" id="pie-and-results-container">
+    <div class="container" id="pie-and-results-container">
 
 
+        <div class="row">
+          <div class="col-xs-12">
             <center>
-              <div class="">
             		<ol id="breadcrumbs-area" class="breadcrumb">
             		</ol>
-              </div>
             </center>
-
-
-      <!-- I used a pizza-chart-container so I can slide the whole thing up
-          when it needs to dissapear. -->
-
-        <div class="row">
-          <div id="pizza-chart-container" class="col-xs-12 col-md-10 col-md-offset-1">
-                <canvas id="pizza-chart"></canvas>
           </div>
         </div>
 
-        <br>
-        <br>
-      <!-- TODO: How are we displaying the list of results? -->
-        <div class="row">
-          <div id="results-area" class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-md-offset-3">
-              <p id="results-area-title" class="text-muted"></p>
-              <table id="results-table" class="table table-hover table-bordered">
-                <thead>
-                    <tr id="results-table-header">
-                    <th data-sort="string" id="results-row">Type</th>
-                    <th data-sort="string" id="results-row">Rating</th>
-                    <th data-sort="string" id="results-row">Price</th>
-                    <th data-sort="string" id="results-row">Name</th>
-		    <th data-sort="string" id="results-row">Distance</th>
-                    </tr>
-                </thead>
-               	<tbody id="results-table-body">
-                </tbody>
-              </table>
-          </div>
-        </div>
 
+        <br>
+
+    <!-- I used a pizza-chart-container so I can slide the whole thing up
+        when it needs to dissapear. -->
+
+      <div class="row">
+        <div id="pizza-chart-container" class="col-xs-12">
+              <canvas id="pizza-chart"></canvas>
+        </div>
       </div>
+
+      <br>
+      <br>
+    <!-- TODO: How are we displaying the list of results? -->
+      <div class="row">
+        <div id="results-area" class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+            <p id="results-area-title" class="text-muted"></p>
+            <table id="results-table" class="table table-hover table-bordered">
+              <thead>
+                  <tr id="results-table-header">
+                  <th data-sort="string" id="results-row">Type</th>
+                  <th data-sort="string" id="results-row">Rating</th>
+                  <th data-sort="string" id="results-row">Price</th>
+                  <th data-sort="string" id="results-row">Name</th>
+	                <th data-sort="string" id="results-row">Distance</th>
+                  </tr>
+              </thead>
+             	<tbody id="results-table-body">
+              </tbody>
+            </table>
+        </div>
+      </div>
+
+    </div>
 
     <script type="text/javascript" src="dependencies/js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="dependencies/js/d3.v3.min.js"></script>
