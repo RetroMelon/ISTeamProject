@@ -136,8 +136,8 @@ function updateResultsList() {
 }
 
 function updateBreadcrumbs() {
-  var breadcrumbList = ["PizzaPicker"].concat(keywordsChosenSoFar);
-  $("#breadcrumbs-area ul").html(('<li><a href="#"">' + breadcrumbList.join('</a></li><li><a href="#">')) + '</a></li>');
+  var breadcrumbList = ["Start"].concat(keywordsChosenSoFar);
+  $("#breadcrumbs-area").html(('<li><a href="#"">' + breadcrumbList.join('</a></li><li><a href="#pie-scroll-point">')) + '</a></li>');
 }
 // This function creates or updates the
 // pie chart in the global variable "thePieChart"
@@ -361,15 +361,14 @@ function recalculateDistancesAndFilter(forRestaurants, restaurantData, location)
 }
 
 $(function () {
-  pizzaChartContext = $("#pizza-chart")[0].getContext("2d");
-
-  resetChoicesAndPizzaPicker();
 
   $("#logo-image-link").on("click", "a,img", function (e) {
     resetChoicesAndPizzaPicker();
   });
 
   $("#postcode-search").on("click", function (e) {
+    console.log("postcode search clicked!");
+
     // What we want to do is filter out all of the restaurants if they are further away than distance.
     // Also, insert a new column into the table that's "distance from the user".
 
@@ -397,6 +396,14 @@ $(function () {
         // No column in header for "distance".
         $("#results-table-header").append('<th data-sort="string" id="results-row">Distance</th>');
       }
+
+      //show the pie and results table. hide the placeholder text
+      $("#results-placeholder").fadeOut(200);
+      $("#pie-and-results").fadeIn(400);
+
+      //setting up the pie now that it is considered "visible"
+      pizzaChartContext = $("#pizza-chart")[0].getContext("2d");
+      resetChoicesAndPizzaPicker();
 
       updateResultsList();
     });
@@ -458,5 +465,6 @@ $(function () {
 
   //setting up the results table to be sortable via the stupid table library
   $("#results-table").stupidtable();
+
 
 });

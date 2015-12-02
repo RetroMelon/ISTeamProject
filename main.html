@@ -32,49 +32,57 @@
       </div>
     </div>
 
-		<div id="breadcrumbs-area">
-				<ul>
-				</ul>
+    <h2 id="results-placeholder" class="text-muted">Enter Your Postcode to View Restaurants...</h2>
+    <!-- This div allows us to programmatically scroll to this point in the webpage.-->
+    <div class="" id="pie-and-results" style="display: none;">
+      <div class="container">
 
-		</div>
-		<br><br>
-    <div class="container">
-    <!-- I used a pizza-chart-container so I can slide the whole thing up
-        when it needs to dissapear. -->
-      <div class="row">
-        <div class="col-xs-12 col-md-10 col-md-offset-1 col-xl-6 col-md-offset-3">
-          <div id="breadcrumbs-area" align="center"></div>
+
+        <div class="row">
+          <center>
+        		<ol id="breadcrumbs-area" class="breadcrumb">
+        		</ol>
+          </center>
         </div>
-      </div>
-
-      <div class="row">
-        <div id="pizza-chart-container" class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-md-offset-3">
-              <canvas id="pizza-chart"></canvas>
+  		  <br><br>
+      <!-- I used a pizza-chart-container so I can slide the whole thing up
+          when it needs to dissapear. -->
+        <div class="row">
+          <div class="col-xs-12 col-md-10 col-md-offset-1 col-xl-6 col-md-offset-3">
+            <div id="breadcrumbs-area" align="center"></div>
+          </div>
         </div>
-      </div>
 
-      <br>
-      <br>
-    <!-- TODO: How are we displaying the list of results? -->
-      <div class="row">
-        <div id="results-area" class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-md-offset-3">
-            <p id="results-area-title" class="text-muted"></p>
-            <table id="results-table" class="table table-hover table-bordered">
-              <thead>
-                  <tr id="results-table-header">
-                  <th data-sort="string" id="results-row">Type</th>
-                  <th data-sort="string" id="results-row">Rating</th>
-                  <th data-sort="string" id="results-row">Price</th>
-                  <th data-sort="string" id="results-row">Name</th>
+        <div class="row">
+          <div id="pizza-chart-container" class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-md-offset-3">
+                <canvas id="pizza-chart"></canvas>
+          </div>
+        </div>
+
+        <br>
+        <br>
+      <!-- TODO: How are we displaying the list of results? -->
+        <div class="row">
+          <div id="results-area" class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-md-offset-3">
+              <p id="results-area-title" class="text-muted"></p>
+              <table id="results-table" class="table table-hover table-bordered">
+                <thead>
+                    <tr id="results-table-header">
+                    <th data-sort="string" id="results-row">Type</th>
+                    <th data-sort="string" id="results-row">Rating</th>
+                    <th data-sort="string" id="results-row">Price</th>
+                    <th data-sort="string" id="results-row">Name</th>
+                    </tr>
+                </thead>
+                <tbody id="results-table-body">
+                  <tr>
+                    <td>T</td><td>***</td><td>££</td><td>Golden Wok</td>
                   </tr>
-              </thead>
-              <tbody id="results-table-body">
-                <tr>
-                  <td>T</td><td>***</td><td>££</td><td>Golden Wok</td>
-                </tr>
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+          </div>
         </div>
+
       </div>
     </div>
 

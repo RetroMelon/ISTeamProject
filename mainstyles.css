@@ -106,6 +106,8 @@ button {
 
 */
 
+
+/*
 #breadcrumbs-area {
     margin: 10px;
 }
@@ -124,9 +126,8 @@ button {
 }
 
 #breadcrumbs-area ul li:first-child a {
-    /* I've made the first breadcrumb always be "PizzaPicker", maybe we
+     I've made the first breadcrumb always be "PizzaPicker", maybe we
         could colour it slightly differently?
-    */
     background: #2d1db9;
 }
 
@@ -147,6 +148,26 @@ ul{
 		border-bottom: 20px solid transparent;
 		border-left: 20px solid white;
 		position: absolute; left: 0; top: 0;
+}
+
+*/
+
+/* custom styling for the breadcrumb */
+
+#breadcrumbs-area {
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+#breadcrumbs-area > li + li:before {
+    color: #bbb;
+    content: "›"; /* alternately \25BA */
+    font-size: 20px;
+    padding: 0 5px;
+}
+
+#results-placeholder {
+  text-align: center;
 }
 
 #results-table {
