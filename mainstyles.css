@@ -209,10 +209,12 @@ ol>li:first-child>a:first-child:before {
   background-color: white;
 }
 
-#background-image {
-  width: 100%;
-  position: absolute;
-  z-index: -1000;
-  top:0px;
-  left:0px;
+th.sorting-asc:after {
+    content: " ▲";
+    font-size: 11px;
+}
+
+th.sorting-desc:after {
+    content: " ▼";
+    font-size: 11px;
 }
