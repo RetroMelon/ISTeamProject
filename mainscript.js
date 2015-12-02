@@ -107,7 +107,7 @@ function resetChoicesAndPizzaPicker() {
 
 // This function updates the results list.
 function updateResultsList() {
-  $("#results-area-title").text("Matching Restaurants / Takeaways (" + currentOptions.length + "):");
+  $("#results-area-title").text("" + currentOptions.length + " restaurants/takeaways match your search");
 
   //emptying the body of the table
   $("#results-table-body").html("");
@@ -129,7 +129,7 @@ function updateResultsList() {
       + "</td><td>"
       + restaurantData.stars
       + "</td><td>"
-      + currentRestaurantName
+      + "<a href=" + "https://www.google.co.uk/maps/place/" + currentRestaurantName.replace(/\s/g, "+") + ">" + currentRestaurantName
       + (showingDistances ? "</td><td>" + distanceString + "</td><td>" : "")
       + "</td></tr>");
   }
