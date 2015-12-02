@@ -123,7 +123,10 @@ function updateResultsList() {
     // TODO
     var priceString = "";
     var starsString = "";
-
+    for (var i = 0; i < restaurantData.stars; i++)
+         priceString = priceString.concat("\u2605");
+    for (var i = 0; i < restaurantData.price; i++)
+          starsString = starsString.concat("\u00A3");
     $("#results-table-body").append("<tr><td>"
       + "T" + "</td><td>"
       + priceString
