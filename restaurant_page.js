@@ -15,7 +15,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 function initialize() {
 	var thisRestaurantData = globalRestaurantData[getURLParameter('restaurant_name')];
-	
+
     var mapCanvas = document.getElementById('map');
 		var currentRestaurant = function getUrlParameter("restaurant_name")
     var mapOptions = {
@@ -24,7 +24,7 @@ function initialize() {
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     var map = new google.maps.Map(mapCanvas, mapOptions);
-} 
+}
 google.maps.event.addDomListener(window, 'load', initialize);
 
 var globalRestaurantData = {
