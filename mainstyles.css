@@ -1,12 +1,21 @@
+/*
+
 #logo-image {
-    /*margin: 5px;*/
+    margin: 5px;
     height: 100%;
+}
+
+*/
+
+/* A slightly darker shade of white */
+body {
+  background-color: #F8F8F8;
 }
 
 #nav-bar {
     position: relative;
     height: 50px;
-    background-color: #55ACEE;
+    background-color: #5A3F26; /*old: #55ACEE*/
     width:100%;
 }
 
@@ -14,6 +23,7 @@
   background-image: url("images/thechip.jpg");
   background-size: cover;
   background-position: center;
+
 }
 
 
@@ -26,9 +36,10 @@
   width: 100%;
 }
 
-.postcode input,button {
+/*making all direct children of the postcode div display block.*/
+.postcode>div,input {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 
@@ -71,7 +82,7 @@
 */
 
 
-#distance-units {
+#distance-hint {
     color: white;
 }
 
@@ -136,4 +147,8 @@ ul{
 		border-bottom: 20px solid transparent;
 		border-left: 20px solid white;
 		position: absolute; left: 0; top: 0;
+}
+
+#results-table {
+  background-color: white;
 }

@@ -448,5 +448,15 @@ $(function () {
     update();
   });
 
+  //setting up the distance slider here.
+  $('#distance').bootstrapSlider({
+    formatter: function(value) {
+
+      return value + " miles";
+    }
+  });
+
+  //setting up the results table to be sortable via the stupid table library
   $("#results-table").stupidtable();
+
 });
