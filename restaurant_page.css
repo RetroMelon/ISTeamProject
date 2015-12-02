@@ -1,6 +1,13 @@
 #map {
-    width: 500px;
-    height: 400px;
-    background-color: #CCC;
+	float: left;
+	block: inline;
+	width: 75vw;
+	height: 100vh;
+	background-color: #CCC;
+	margin: -8px;
+	margin-left: 25%
 }
 
+.body {
+	margin: 0;
+}

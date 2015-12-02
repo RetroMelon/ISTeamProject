@@ -133,7 +133,7 @@ function updateResultsList() {
       + "</td><td>"
       + starsString
       + "</td><td>"
-      + "<a href=" + "https://www.google.com" + ">" +	"</a>" + currentRestaurantName
+      + "<a href=" + "./restaurant_page.html" + ">"+currentRestaurantName
       + "</td><td>" + distanceString + "</td>"
       + "</tr>");
   }
