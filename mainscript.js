@@ -94,8 +94,6 @@ function resetChoicesAndPizzaPicker() {
   $("#pizza-chart").show();
   $("#pizza-chart-container").show();
 
-  $("#retry-button").fadeOut(400);
-
   // Now set up currentOptions to include all restaurants.
   currentOptions = [];
   for (var key in globalRestaurantData) {
@@ -286,9 +284,7 @@ function update() {
     // Use jQuery to fade out and slide the pizza picker section so it dissapears.
 
     $("#pizza-chart").fadeOut(400);
-    //$("#pizza-chart-container").slideUp("slow");
-
-    $("#retry-button").fadeIn(400);
+    $("#pizza-chart-container").slideUp("slow");
 
   } else {
 
@@ -296,8 +292,6 @@ function update() {
       // If the pizza chart isn't visible, show both the chart and container.
       $("#pizza-chart").show();
       $("#pizza-chart-container").show();
-
-      $("#retry-button").fadeOut(400);
     }
     // There are enough restaurants in the current list of options
     // to allow the user to keep using the pizza pie to choose keywords.
