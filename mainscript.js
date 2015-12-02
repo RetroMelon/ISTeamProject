@@ -120,11 +120,15 @@ function updateResultsList() {
 
     var distanceString = (restaurantData.hasOwnProperty("distance") ? restaurantData.distance : "-");
 
+    // TODO
+    var priceString = "";
+    var starsString = "";
+
     $("#results-table-body").append("<tr><td>"
       + "T" + "</td><td>"
-      + restaurantData.price
+      + priceString
       + "</td><td>"
-      + restaurantData.stars
+      + starsString
       + "</td><td>"
       + "<a href=" + "https://www.google.co.uk/maps/place/" + currentRestaurantName.replace(/\s/g, "+") + ">" + currentRestaurantName
       + "</td><td>" + distanceString + "</td>"
