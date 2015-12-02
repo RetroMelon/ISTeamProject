@@ -12,10 +12,9 @@
         <span id="header" style="display:inline;"><a id="logo-image-link"href="#"><img id="logo-image" src="images/logo.png" /></a></span>     
       	<div class="postcode" >
       			<input class="search" id="search" placeholder="Specific postcode..." >
-      			<button class="glyphicon glyphicon-search" style="color:#99ff99;" ></button>
-
-      			<input class="distance" id="distance" placeholder="Distance..." />
-      			<button class="glyphicon glyphicon-arrow-right" style="color:#99ff99;"></button>
+      			<input class="distance" id="distance" value="10" placeholder="Distance..."/>
+                <span id="distance-units">miles</span>
+      			<button id="postcode-search" class="glyphicon glyphicon-arrow-right" style="color:#99ff99;"></button>
       	</div>
 		</div>
 
@@ -35,16 +34,16 @@
     <div id="results-area">
         <span id="results-area-title"></span>
         <center>
-        <table id="simpleTable">
+        <table id="results-table">
           <thead>
-              <tr>
+              <tr id="results-table-header">
               <th data-sort="string" id="results-row">Type</th>
               <th data-sort="string" id="results-row">Rating</th>
               <th data-sort="string" id="results-row">Price</th>
               <th data-sort="string" id="results-row">Name</th>
               </tr>
           </thead>
-          <tbody id="simpleTableBody" >
+          <tbody id="results-table-body" >
             <tr>
               <td>T</td><td>***</td><td>££</td><td>Golden Wok</td>
             </tr>

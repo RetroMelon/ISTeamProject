@@ -90,7 +90,7 @@ function resetChoicesAndPizzaPicker() {
       currentOptions.push(key);
     }
   }
-  
+
   update();
 }
 
@@ -99,18 +99,17 @@ function updateResultsList() {
   $("#results-area-title").text("Matching Restaurants / Takeaways (" + currentOptions.length + "):");
 
   //emptying the body of the table
-  $("#simpleTableBody").html("");
+  $("#results-table-body").html("");
 
   console.log(currentOptions);
 
   //iterating over the current options that have been chosen and appending them
   //to the table html.
-  for (var o in currentOptions) {
-    var currentRestaurant = currentOptions[o];
+  for (var currentOption in currentOptions) {
+    var currentRestaurantName = currentOptions[currentOption];
+    var restaurantData = globalRestaurantData[currentRestaurantName];
 
-    var restaurantData = globalRestaurantData[currentRestaurant];
-
-    $("#simpleTableBody").append("<tr><td>" + "T" + "</td><td>" + restaurantData.price + "</td><td>" + restaurantData.stars + "</td><td>" + currentRestaurant + "</td></tr>");
+    $("#results-table-body").append("<tr><td>" + "T" + "</td><td>" + restaurantData.price + "</td><td>" + restaurantData.stars + "</td><td>" + currentRestaurantName + "</td></tr>");
   }
 }
 
@@ -293,6 +292,39 @@ function update() {
   updateBreadcrumbs();
 }
 
+function distanceBetweenLatLongs(lat1, lon1, lat2, lon2) {
+  var radlat1 = Math.PI * lat1 / 180
+  var radlat2 = Math.PI * lat2 / 180
+  var radlon1 = Math.PI * lon1 / 180
+  var radlon2 = Math.PI * lon2 / 180
+  var theta = lon1 - lon2
+  var radtheta = Math.PI * theta / 180
+  var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+
+  dist = Math.acos(dist)
+  dist = dist * 180 / Math.PI
+  dist = dist * 60 * 1.1515
+
+  return dist
+}
+
+// This function recalculates distance data in "restaurantData" for all restaurants
+// in "forRestaurants", based on "location".
+function recalculateDistances(forRestaurants, restaurantData, location) {
+  var numberOfRestaurantsFor = forRestaurants.length;
+  for (var restaurantIndex = 0; restaurantIndex < numberOfRestaurantsFor; ++restaurantIndex) {
+    var restaurantName = forRestaurants[restaurantIndex];
+
+    var thisRestaurantData = restaurantData[restaurantName];
+
+    // Calculate the distance between the given location and this place.
+    var distance = distanceBetweenLatLongs(thisRestaurantData.lat, thisRestaurantData.lon,
+      location.lat, location.lon);
+
+    thisRestaurantData.distanceToUser = distance;
+  }
+}
+
 $(function () {
   pizzaChartContext = $("#pizza-chart")[0].getContext("2d");
 
@@ -300,6 +332,31 @@ $(function () {
 
   $("#logo-image-link").on("click", "a,img", function (e) {
     resetChoicesAndPizzaPicker();
+  });
+
+  $("#postcode-search").on("click", function (e) {
+    // What we want to do is filter out all of the restaurants if they are further away than distance.
+    // Also, insert a new column into the table that's "distance from the user".
+
+    // TODO: read the postcode from the input form.
+    var postcode = "G644DE";
+
+    // Use Google maps to convert our postcode into a lat/lon.
+    var googleMapsApiCallUrl = "http://maps.googleapis.com/maps/api/geocode/json?address=" + postcode + "&sensor=false"
+
+    $.getJSON(googleMapsApiCallUrl, function (data) {
+      if (data.status != "OK") {
+        alert("Invalid postcode. Please re-enter");
+        return;
+      }
+
+      var userLocation = { "lat": 0, "lon": 0 };
+
+      userLocation.lat = data.results[0].geometry.location.lat;
+      userLocation.lon = data.results[0].geometry.location.lng;
+      
+      recalculateDistances(currentOptions, globalRestaurantData, userLocation);
+    });
   });
 
   // When the breadcrumb is clicked, we basically slice the keywordsChosenSoFarList,
@@ -348,6 +405,6 @@ $(function () {
     update();
   });
 
-  $("#simpleTable").stupidtable();
+  $("#results-table").stupidtable();
 });
 
