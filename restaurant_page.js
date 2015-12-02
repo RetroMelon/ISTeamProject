@@ -1,4 +1,4 @@
-var getUrlParameter = function getUrlParameter(sParam) {
+var getURLParameter = function getURLParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
         sURLVariables = sPageURL.split('&'),
         sParameterName,
@@ -11,15 +11,13 @@ var getUrlParameter = function getUrlParameter(sParam) {
             return sParameterName[1] === undefined ? true : sParameterName[1];
         }
     }
-};
+}
 
 function initialize() {
-	var thisRestaurantData = globalRestaurantData[getURLParameter('restaurant_name')];
-	
+	var thisRestaurantData = globalRestaurantData[getURLParameter('restaurant_name').replace(/\+/g, " ")]; 
     var mapCanvas = document.getElementById('map');
-		var currentRestaurant = function getUrlParameter("restaurant_name")
     var mapOptions = {
-        center: new google.maps.LatLng(55.865774, -4.284479),
+        center: new google.maps.LatLng(thisRestaurantData["lat"],thisRestaurantData["lon"]),
         zoom: 19,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
@@ -28,7 +26,7 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 var globalRestaurantData = {
-  "Ubiquitous Chip": { "location": "12 Ashton Ln", "description": "Artistic brasserie dishes that display their provenance, served in a leafy space with fairy lights.", "price": 3, "stars": 4, "keywords": ["British", "chips", "Scottish", "family"] },
+  "Ubiquitous Chip": {"lat" : 55.8748262,"lon":-4.2951635, "location": "12 Ashton Ln", "description": "Artistic brasserie dishes that display their provenance, served in a leafy space with fairy lights.", "price": 3, "stars": 4, "keywords": ["British", "chips", "Scottish", "family"] },
   "Mother India": { "location": "28 Westminster Terrace", "description": "Cosy ground floor with bar, intimate cellar and Dickensian 1st floor dining rooms for Indian dishes.", "price": 2, "stars": 4, "keywords": ["Indian", "spicy", "family", "curry", "korma"] },
   "Stravaigin": { "location": "28 Gibson St", "description": "Gourmet concoctions from wild ingredients like grey squirrel, hedgerow herbs and sea urchins.", "price": 3, "stars": 4, "keywords": ["gourmet", "contemporary", "British", "Scottish", "herbs"] },
   "Rogano": { "location": "11 Exchange Pl", "description": "Classical fish recipes dishes in unusual Queen Mary ocean-liner-inspired room and basement cafe.", "price": 3, "stars": 4, "keywords": ["fish", "ocean", "cafe", "seafood", "elegant"] },
@@ -50,7 +48,6 @@ var globalRestaurantData = {
   "The Butchershop Bar & Grill": { "location": "1055 Sauchiehall St", "description": "Manhattan-style space of exposed bricks and round booths of sumptuous leather serving a meaty menu.", "price": 2, "stars": 3, "keywords": ["meat", "spicy", "British", "Scottish", "family", "inexpensive"] },
   "Cail Bruich": { "location": "725 Great Western Rd", "description": "Inventive French-inflected food from Scotland's natural larder in a relaxed, family-run atmosphere.", "price": 2, "stars": 3, "keywords": ["French", "Scottish", "family", "inexpensive"] },
 
-
   "Charcoals": { "location": "26A Renfield St", "description": "Gold framed Indian paintings adorn the walls of this Indian dining room filled with small tables.", "price": 2, "stars": 3, "keywords": ["Indian", "small", "cosy", "inexpensive", "family"] },
   "The Red Onion": { "location": "257 W Campbell St", "description": "Astute modern interpretations of classic Scottish cookery in a comfortable, contemporary setting.", "price": 2, "stars": 3, "keywords": ["onion", "modern", "Scottish", "modern"] },
   "Opium": { "location": "191 Hope St", "description": "Sleek, low-lit spot with old-school chef infusing flavors from China, Malaysia and Thailand.", "price": 2, "stars": 3, "keywords": ["Chinese", "Malaysian", "Thai", "modern", "gourmet"] },
@@ -70,7 +67,6 @@ var globalRestaurantData = {
   "China Blue": { "location": "96 Renfield St", "description": "Tasty Chinese restaurant with a vibrant atmosphere and a wide range of Cantonese dishes.", "price": 2, "stars": 3, "keywords": ["Chinese", "inexpensive", "spicy", "Asian"] },
   "Khublai Khan Mongolian Barbecue": { "location": "26 Candleriggs", "description": "Customer picked ingredients or tried and tested dish combos in atmospheric deep red and gold room.", "price": 2, "stars": 4, "keywords": ["Asian", "Mongolian", "cosy", "atmospheric", "vitality"] },
   "Sloans": { "location": "62, 108 Argyle St", "description": "Decadent venue over 3 floors with Grand Ballroom, stunning central staircase and outside courtyard.", "price": 2, "stars": 5, "keywords": ["British", "Scottish", "traditional", "formal", "gourmet", "elegant"] },
-
   "Roastit Bubbly Jocks": { "location": "450 Dumbarton Rd", "description": "Smart restaurant with contemporary decor and an easygoing vibe, offering Modern Scottish cuisine.", "price": 2, "stars": 4, "keywords": ["modern", "Scottish", "cosy", "gourmet"] },
   "111 by Nico": { "location": "111 Cleveden Rd", "description": "Shetland oysters, Scottish lobster and traditional fish and chips served in an earthy bistro cafe.", "price": 3, "stars": 5, "keywords": ["seafood", "chips", "cafe", "Scottish"] },
 
@@ -80,7 +76,6 @@ var globalRestaurantData = {
   "Amore Restaurant": { "location": "Ingram street, Merchant City", "description": "Stylish, modern dining room spread over 2 floors for an inventive menu of creative Indian cooking.", "price": 4, "stars": 5, "keywords": ["cosy", "Italian", "gourmet", "elegant"] },
   "Viva Brazil Glasgow": { "location": "87-91 Bothwell St", "description": "Slow roasted meats expertly carved at table with a selection of buffet-style sides and salads.", "price": 3, "stars": 3, "keywords": ["Brazilian", "Latin American", "meat", "spicy", "inexpensive"] },
   "Cafe Antipasti": { "location": "305 Sauchiehall St", "description": "Italian dishes in relaxed room with mezzanine, intricate ironwork and individually crafted tables.", "price": 3, "stars": 3, "keywords": ["Italian", "relaxed", "cosy", "elegant"] },
-
   "Las Iguanas": { "location": "10-14 W Nile St", "description": "Flame-grilled Latin American dishes and shared plates served in a contemporary chain dining room.", "price": 3, "stars": 3, "keywords": ["Latin American", "Mexican", "meat", "contemporary", "modern"] },
   "Wudon": { "location": "535 Great Western Rd", "description": "Contemporary dining room with dim lighting for a mix of Chinese,Japanese and Thai cuisines.", "price": 3, "stars": 4, "keywords": ["Japanese", "Asian", "Thai", "Chinese", "contemporary"] },
   "The Pelican Cafe": { "location": "1377 Argyle St", "description": "Simply prepared fresh oysters and creel caught langoustines from the west coast in serene rooms.", "price": 4, "stars": 5, "keywords": ["cafe", "seafood", "oysters", "fish", "British", "Scottish", "contemporary"] },
