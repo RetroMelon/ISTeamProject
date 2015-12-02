@@ -122,8 +122,7 @@ function updateResultsList() {
     var restaurantData = globalRestaurantData[currentRestaurantName];
 
     var distanceString = (restaurantData.hasOwnProperty("distance") ? restaurantData.distance : "-");
-
-    // TODO
+    if(distanceString != "-")distanceString =Math.round(distanceString * 100) / 100 ;
     var priceString = "";
     var starsString = "";
     for (var i = 0; i < restaurantData.stars; i++)
