@@ -2,54 +2,71 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pizza Picker</title>
     <link rel="stylesheet" href="dependencies/css/bootstrap.min.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="mainstyles.css" media="screen" charset="utf-8">
     <link rel="shortcut icon" href="images/Screenshot.ico"> <!-- need to update to have transparent background--><script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
 </head>
 <body>
-    <div id="top-menu-area">
-        <span id="header" style="display:inline;"><a id="logo-image-link"href="#"><img id="logo-image" src="images/logo.png" /></a></span>     
+    <div id="nav-bar">
+        <img id="logo-image" src="images/logo.png"/>
       	<div class="postcode" >
-      			<input class="search" id="search" placeholder="Specific postcode..." >
-      			<input class="distance" id="distance" value="10" placeholder="Distance..."/>
+      			<input class="form-control" id="search" placeholder="Specific postcode..." >
+      			<input class="form-control" id="distance" value="10" placeholder="Distance..."/>
                 <span id="distance-units">miles</span>
       			<button id="postcode-search" class="glyphicon glyphicon-arrow-right" style="color:#99ff99;"></button>
       	</div>
 		</div>
 
+    <div class="jumbotron">
+
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <p></p>
+      </div>
+    </div>
+
 		<div id="breadcrumbs-area">
 				<ul>
 				</ul>
-				
+
 		</div>
 		<br><br>
+    <div class="container">
     <!-- I used a pizza-chart-container so I can slide the whole thing up
         when it needs to dissapear. -->
-    <div id="breadcrumbs-area" align="center"></div>
-    <div id="pizza-chart-container" align="center">
-        <canvas id="pizza-chart" ></canvas>
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 col-xl-6 col-md-offset-3">
+        <div id="breadcrumbs-area" align="center"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div id="pizza-chart-container" class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-md-offset-3">
+            <canvas id="pizza-chart"></canvas>
+      </div>
     </div>
     <!-- TODO: How are we displaying the list of results? -->
-    <div id="results-area">
-        <span id="results-area-title"></span>
-        <center>
-        <table id="results-table">
-          <thead>
-              <tr id="results-table-header">
-              <th data-sort="string" id="results-row">Type</th>
-              <th data-sort="string" id="results-row">Rating</th>
-              <th data-sort="string" id="results-row">Price</th>
-              <th data-sort="string" id="results-row">Name</th>
-              </tr>
-          </thead>
-          <tbody id="results-table-body" >
-            <tr>
-              <td>T</td><td>***</td><td>££</td><td>Golden Wok</td>
-            </tr>
-          </tbody>
-        </table>
-      </center>
+      <div class="row">
+        <div id="results-area" class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-md-offset-3">
+            <span id="results-area-title"></span>
+            <table id="results-table" class="table table-hover table-bordered">
+              <thead>
+                  <tr id="results-table-header">
+                  <th data-sort="string" id="results-row">Type</th>
+                  <th data-sort="string" id="results-row">Rating</th>
+                  <th data-sort="string" id="results-row">Price</th>
+                  <th data-sort="string" id="results-row">Name</th>
+                  </tr>
+              </thead>
+              <tbody id="results-table-body">
+                <tr>
+                  <td>T</td><td>***</td><td>££</td><td>Golden Wok</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
     </div>
 
     <script type="text/javascript" src="dependencies/js/jquery-2.1.4.min.js"></script>

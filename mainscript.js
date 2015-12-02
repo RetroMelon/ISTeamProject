@@ -1,3 +1,6 @@
+//sets up charts to be responsive
+Chart.defaults.global.responsive = true;
+
 // Note: try and use the same keywords for multiple restaurants!
 var globalRestaurantData = {
   "Ubiquitous Chip": { "location": "12 Ashton Ln", "description": "Artistic brasserie dishes that display their provenance, served in a leafy space with fairy lights.", "price": 3, "stars": 4, "keywords": ["British", "chips", "Scottish", "family"] },
@@ -72,7 +75,15 @@ var currentOptions = [];
 
 var pizzaPieChartOptions = {
   animationSteps: 25,
-  animationEasing: "easeInOutCubic"
+  animationEasing: "easeInOutCubic",
+
+  //this causes the tooltip to be shown permanently which is what we want.
+  onAnimationComplete: function () {
+        this.showTooltip(this.segments, true);
+  },
+
+  tooltipEvents: [],
+  showTooltips: true
 };
 
 // This function should reset the entire page.
@@ -82,6 +93,8 @@ function resetChoicesAndPizzaPicker() {
 
   $("#pizza-chart").show();
   $("#pizza-chart-container").show();
+
+  $("#retry-button").fadeOut(400);
 
   // Now set up currentOptions to include all restaurants.
   currentOptions = [];
@@ -151,7 +164,7 @@ function updatePizzaChart(pieData) {
 
           thePieChart = new Chart(pizzaChartContext).Pie(data, pizzaPieChartOptions);
         }
-      }
+      };
     };
 
     var imageObject = new Image();
@@ -159,7 +172,7 @@ function updatePizzaChart(pieData) {
     imageObject.onerror = function () {
       alert("Error: couldn't load image " + this.src + ".");
       return;
-    }
+    };
 
     imageObject.onload = makeImageLoaderFunction(imageObject, pieData, segmentIndex);
     imageObject.src = "images/segments/" + segmentName + ".jpg";
@@ -273,7 +286,9 @@ function update() {
     // Use jQuery to fade out and slide the pizza picker section so it dissapears.
 
     $("#pizza-chart").fadeOut(400);
-    $("#pizza-chart-container").slideUp("slow");
+    //$("#pizza-chart-container").slideUp("slow");
+
+    $("#retry-button").fadeIn(400);
 
   } else {
 
@@ -281,6 +296,8 @@ function update() {
       // If the pizza chart isn't visible, show both the chart and container.
       $("#pizza-chart").show();
       $("#pizza-chart-container").show();
+
+      $("#retry-button").fadeOut(400);
     }
     // There are enough restaurants in the current list of options
     // to allow the user to keep using the pizza pie to choose keywords.
@@ -293,19 +310,19 @@ function update() {
 }
 
 function distanceBetweenLatLongs(lat1, lon1, lat2, lon2) {
-  var radlat1 = Math.PI * lat1 / 180
-  var radlat2 = Math.PI * lat2 / 180
-  var radlon1 = Math.PI * lon1 / 180
-  var radlon2 = Math.PI * lon2 / 180
-  var theta = lon1 - lon2
-  var radtheta = Math.PI * theta / 180
+  var radlat1 = Math.PI * lat1 / 180;
+  var radlat2 = Math.PI * lat2 / 180;
+  var radlon1 = Math.PI * lon1 / 180;
+  var radlon2 = Math.PI * lon2 / 180;
+  var theta = lon1 - lon2;
+  var radtheta = Math.PI * theta / 180;
   var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
 
-  dist = Math.acos(dist)
-  dist = dist * 180 / Math.PI
-  dist = dist * 60 * 1.1515
+  dist = Math.acos(dist);
+  dist = dist * 180 / Math.PI;
+  dist = dist * 60 * 1.1515;
 
-  return dist
+  return dist;
 }
 
 // This function recalculates distance data in "restaurantData" for all restaurants
@@ -342,7 +359,7 @@ $(function () {
     var postcode = "G644DE";
 
     // Use Google maps to convert our postcode into a lat/lon.
-    var googleMapsApiCallUrl = "http://maps.googleapis.com/maps/api/geocode/json?address=" + postcode + "&sensor=false"
+    var googleMapsApiCallUrl = "http://maps.googleapis.com/maps/api/geocode/json?address=" + postcode + "&sensor=false";
 
     $.getJSON(googleMapsApiCallUrl, function (data) {
       if (data.status != "OK") {
@@ -354,7 +371,7 @@ $(function () {
 
       userLocation.lat = data.results[0].geometry.location.lat;
       userLocation.lon = data.results[0].geometry.location.lng;
-      
+
       recalculateDistances(currentOptions, globalRestaurantData, userLocation);
     });
   });
@@ -407,4 +424,3 @@ $(function () {
 
   $("#results-table").stupidtable();
 });
-
