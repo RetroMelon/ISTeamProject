@@ -3,7 +3,7 @@ Chart.defaults.global.responsive = true;
 
 // Note: try and use the same keywords for multiple restaurants!
 var globalRestaurantData = {
-  "Ubiquitous Chip": { "location": "12 Ashton Ln", "description": "Artistic brasserie dishes that display their provenance, served in a leafy space with fairy lights.", "price": 3, "stars": 4, "keywords": ["British", "chips", "Scottish", "family"] },
+  "Ubiquitous Chip": {"lat" : 55.8748262,"lon":-4.2951635, "location": "12 Ashton Ln", "description": "Artistic brasserie dishes that display their provenance, served in a leafy space with fairy lights.", "price": 3, "stars": 4, "keywords": ["British", "chips", "Scottish", "family"] },
   "Mother India": { "location": "28 Westminster Terrace", "description": "Cosy ground floor with bar, intimate cellar and Dickensian 1st floor dining rooms for Indian dishes.", "price": 2, "stars": 4, "keywords": ["Indian", "spicy", "family", "curry", "korma"] },
   "Stravaigin": { "location": "28 Gibson St", "description": "Gourmet concoctions from wild ingredients like grey squirrel, hedgerow herbs and sea urchins.", "price": 3, "stars": 4, "keywords": ["gourmet", "contemporary", "British", "Scottish", "herbs"] },
   "Rogano": { "location": "11 Exchange Pl", "description": "Classical fish recipes dishes in unusual Queen Mary ocean-liner-inspired room and basement cafe.", "price": 3, "stars": 4, "keywords": ["fish", "ocean", "cafe", "seafood", "elegant"] },
@@ -66,7 +66,7 @@ var numberOfRestaurantsToFinishPieChoices = 5;
 
 var pizzaChartContext;
 var thePieChart;
-
+var filterDistance;
 var tableOfKeywords = {};
 var keywordsChosenSoFar = [];
 
@@ -166,7 +166,7 @@ function updatePizzaChart(pieData) {
         --imagesStillToLoad;
 
         // Create a pattern with this image.
-        var pattern = pizzaChartContext.createPattern(imageObject, 'repeat');
+        var pattern = pizzaChartContext.createPattern(imageObject, "repeat");
         data[index].color = pattern;
 
         if (imagesStillToLoad < 1) {
@@ -358,7 +358,7 @@ function recalculateDistancesAndFilter(forRestaurants, restaurantData, location)
 
     // If the calculated distance is greater than the filter distance,
     // remove this restaurant from the "forRestaurants" list.
-    if (distance > filterDistance) {
+    if (distance >  filterDistance) {
       forRestaurants.splice(restaurantIndex, 1);
       continue;
     }
@@ -381,16 +381,19 @@ $(function () {
     // Also, insert a new column into the table that's "distance from the user".
 
     // TODO: read the postcode from the input form.
-    var postcode = "G644DE";
+    var postcode = $( "#search" ).val();
 
     // Use Google maps to convert our postcode into a lat/lon.
     var googleMapsApiCallUrl = "http://maps.googleapis.com/maps/api/geocode/json?address=" + postcode + "&sensor=false";
-
     $.getJSON(googleMapsApiCallUrl, function (data) {
       if (data.status != "OK") {
-        alert("Invalid postcode. Please re-enter");
+        $('#alert').show();
+        //alert("Invalid postcode. Please re-enter" + postcode);
         return;
       }
+      else  $('#alert').hide();
+
+
 
       var userLocation = { "lat": 0, "lon": 0 };
 
@@ -452,10 +455,15 @@ $(function () {
   //setting up the distance slider here.
   $('#distance').bootstrapSlider({
     formatter: function(value) {
-
+      filterDistance = value;
       return value + " miles";
     }
   });
+
+  //setting up the alert tooltip for the postcode
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
 
   //setting up the pie now that it is considered "visible"
   pizzaChartContext = $("#pizza-chart")[0].getContext("2d");

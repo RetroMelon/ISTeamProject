@@ -49,6 +49,14 @@ body {
 
 }
 
+#alert {
+    position: absolute;
+    top: 34px;
+    right: 27px;
+    color: red;
+    display: none;
+}
+
 .postcode input {
   width: 100%;
 }
@@ -207,6 +215,11 @@ ol>li:first-child>a:first-child:before {
 
 #results-table {
   background-color: white;
+}
+
+th:hover {
+  background-color: #eee;
+  cursor: pointer;
 }
 
 th.sorting-asc:after {

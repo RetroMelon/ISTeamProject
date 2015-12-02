@@ -14,7 +14,6 @@
     <!--img id="background-image" src="images/thechip_fade2.png" alt="" /-->
 
     <div id="postcode-container" class="jumbotron">
-
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-2">
@@ -25,6 +24,7 @@
           <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4">
           	<div class="postcode">
           			<input class="form-control" id="search" placeholder="Postcode" >
+          			<span class="glyphicon glyphicon-flag" id="alert" data-toggle="tooltip" title="Woops, we can't find your postcode."></span>
                 <div class="">
                   <span class="badge" id="distance-hint">Distance:</span> &nbsp;
                   <input id="distance" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="20" data-slider-step="1" data-slider-value="3" >
@@ -55,8 +55,10 @@
         when it needs to dissapear. -->
 
       <div class="row">
-        <div id="pizza-chart-container">
-              <canvas id="pizza-chart"></canvas>
+        <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+          <div id="pizza-chart-container">
+                <canvas id="pizza-chart"></canvas>
+          </div>
         </div>
       </div>
 
