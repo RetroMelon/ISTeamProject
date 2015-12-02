@@ -9,13 +9,20 @@
     <link rel="stylesheet" href="mainstyles.css" media="screen" charset="utf-8">
     <link rel="shortcut icon" href="images/Screenshot.ico">
 </head>
-<body style="background-color : #EBEBEB;">
+<body>
 
-    <div class="jumbotron">
+    <!--img id="background-image" src="images/thechip_fade2.png" alt="" /-->
+
+    <div id="postcode-container" class="jumbotron">
+
       <div class="container">
         <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+          <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+            <center>
             <img id="logo-image" class="img-responsive" src="images/logoinv.png"/>
+          </center>
+          </div>
+          <div class="col-xs-10 col-xs-offset-1 col-sm-4">
           	<div class="postcode">
           			<input class="form-control" id="search" placeholder="Postcode" >
                 <div class="">
@@ -29,22 +36,22 @@
       </div>
     </div>
 
-    <div id="pie-and-results">
-      <div class="container">
+      <div class="container" id="pie-and-results-container">
 
 
-        <div class="row">
-          <center>
-        		<ol id="breadcrumbs-area" class="breadcrumb" style="background-color : #EBEBEB;">
-        		</ol>
-          </center>
-        </div>
-  		  
+            <center>
+              <div class="">
+            		<ol id="breadcrumbs-area" class="breadcrumb">
+            		</ol>
+              </div>
+            </center>
+
+
       <!-- I used a pizza-chart-container so I can slide the whole thing up
-          when it needs to dissapear. -->	
+          when it needs to dissapear. -->
 
         <div class="row">
-          <div id="pizza-chart-container">
+          <div id="pizza-chart-container" class="col-xs-12 col-md-10 col-md-offset-1">
                 <canvas id="pizza-chart"></canvas>
           </div>
         </div>
@@ -72,7 +79,6 @@
         </div>
 
       </div>
-    </div>
 
     <script type="text/javascript" src="dependencies/js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="dependencies/js/d3.v3.min.js"></script>
