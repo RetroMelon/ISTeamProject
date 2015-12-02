@@ -80,6 +80,10 @@ function stopExperiment(){
   //change running to false
   running = false;
 
+  //re-showing the pizza picker
+  $("#pizza-chart").show();
+  $("#pizza-chart-container").show();
+
   //parse the data
   parseData();
 
