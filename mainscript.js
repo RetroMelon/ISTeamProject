@@ -358,7 +358,7 @@ function recalculateDistancesAndFilter(forRestaurants, restaurantData, location)
 
     // If the calculated distance is greater than the filter distance,
     // remove this restaurant from the "forRestaurants" list.
-    if (distance >  100000/*filterDistance*/) {
+    if (distance >  filterDistance) {
       forRestaurants.splice(restaurantIndex, 1);
       continue;
     }
