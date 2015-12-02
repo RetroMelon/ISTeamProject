@@ -83,7 +83,10 @@ var pizzaPieChartOptions = {
   },
 
   tooltipEvents: [],
-  showTooltips: true
+  showTooltips: true,
+
+  labelColor : 'white',
+  labelFontSize : '16',
 };
 
 // This function should reset the entire page.
@@ -137,7 +140,7 @@ function updateResultsList() {
 }
 
 function updateBreadcrumbs() {
-  var breadcrumbList = ["Start"].concat(keywordsChosenSoFar);
+  var breadcrumbList = [""].concat(keywordsChosenSoFar); //we put an empty string here because in the css we add a glyphicon
   $("#breadcrumbs-area").html(('<li><a href="#"">' + breadcrumbList.join('</a></li><li><a href="#pie-scroll-point">')) + '</a></li>');
 }
 // This function creates or updates the
@@ -450,7 +453,7 @@ $(function () {
       return value + " miles";
     }
   });
-      
+
   //setting up the pie now that it is considered "visible"
   pizzaChartContext = $("#pizza-chart")[0].getContext("2d");
   resetChoicesAndPizzaPicker();

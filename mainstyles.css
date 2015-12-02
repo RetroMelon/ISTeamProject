@@ -9,7 +9,7 @@
 
 /* A slightly darker shade of white */
 body {
-  background-color: #F8F8F8;
+  background-color: rgb(240, 240, 240);
 }
 
 #nav-bar {
@@ -19,17 +19,35 @@ body {
     width:100%;
 }
 
+
 .jumbotron {
+  background-color: transparent;
   background-image: url("images/thechip.jpg");
   background-size: cover;
   background-position: center;
-
+  margin-bottom: 10px;
+  /*-webkit-box-shadow: inset 0px -57px 75px -12px rgb(240, 240, 240);*/
 }
 
+#postcode-container {
+  padding-top: 11px;
+  padding-bottom: 26px;
+}
+
+/*
+
+#postcode-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+*/
 
 .postcode {
+    margin-top: 25px;
 		width: 100%;
     text-align: center;
+
 }
 
 .postcode input {
@@ -157,6 +175,9 @@ ul{
 #breadcrumbs-area {
   border-radius: 6px;
   font-size: 16px;
+  background-color: #E2E2E2;
+
+  display: inline-block;
 }
 
 #breadcrumbs-area > li + li:before {
@@ -166,10 +187,25 @@ ul{
     padding: 0 5px;
 }
 
+/* adding a glyphicon  */
+ol>li:first-child>a:first-child:before {
+  content: "\e021";
+  font-family: 'Glyphicons Halflings';
+  font-size: 13px;
+}
+
 #results-placeholder {
   text-align: center;
 }
 
 #results-table {
   background-color: white;
+}
+
+#background-image {
+  width: 100%;
+  position: absolute;
+  z-index: -1000;
+  top:0px;
+  left:0px;
 }
