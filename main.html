@@ -32,9 +32,7 @@
       </div>
     </div>
 
-    <h2 id="results-placeholder" class="text-muted">Enter Your Postcode to View Restaurants...</h2>
-    <!-- This div allows us to programmatically scroll to this point in the webpage.-->
-    <div class="" id="pie-and-results" style="display: none;">
+    <div id="pie-and-results">
       <div class="container">
 
 
@@ -46,9 +44,7 @@
         </div>
   		  
       <!-- I used a pizza-chart-container so I can slide the whole thing up
-          when it needs to dissapear. -->
-
-	
+          when it needs to dissapear. -->	
 
         <div class="row">
           <div id="pizza-chart-container">
@@ -69,6 +65,7 @@
                     <th data-sort="string" id="results-row">Rating</th>
                     <th data-sort="string" id="results-row">Price</th>
                     <th data-sort="string" id="results-row">Name</th>
+		    <th data-sort="string" id="results-row">Distance</th>
                     </tr>
                 </thead>
                 <tbody id="results-table-body">

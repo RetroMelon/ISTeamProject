@@ -112,9 +112,6 @@ function updateResultsList() {
   //emptying the body of the table
   $("#results-table-body").html("");
 
-  // Are we showing distances in our table? Check the table header for a "Distance" element.
-  var showingDistances = ($("#results-table-header").text().toLowerCase().search("distance") > 0);
-
   // Iterate over the current options that have been chosen and append them
   // to the table.
   for (var currentOption in currentOptions) {
@@ -130,8 +127,8 @@ function updateResultsList() {
       + restaurantData.stars
       + "</td><td>"
       + "<a href=" + "https://www.google.co.uk/maps/place/" + currentRestaurantName.replace(/\s/g, "+") + ">" + currentRestaurantName
-      + (showingDistances ? "</td><td>" + distanceString + "</td><td>" : "")
-      + "</td></tr>");
+      + "</td><td>" + distanceString + "</td>"
+      + "</tr>");
   }
 }
 
@@ -361,6 +358,7 @@ function recalculateDistancesAndFilter(forRestaurants, restaurantData, location)
 }
 
 $(function () {
+   resetChoicesAndPizzaPicker();
 
   $("#logo-image-link").on("click", "a,img", function (e) {
     resetChoicesAndPizzaPicker();
@@ -391,21 +389,7 @@ $(function () {
 
       recalculateDistancesAndFilter(currentOptions, globalRestaurantData, userLocation);
 
-      // Add a new column into the results table, if it doesn't exist already.
-      if ($("#results-table-header").text().toLowerCase().search("distance") < 0) {
-        // No column in header for "distance".
-        $("#results-table-header").append('<th data-sort="string" id="results-row">Distance</th>');
-      }
-
-      //show the pie and results table. hide the placeholder text
-      $("#results-placeholder").fadeOut(200);
-      $("#pie-and-results").fadeIn(400);
-
-      //setting up the pie now that it is considered "visible"
-      pizzaChartContext = $("#pizza-chart")[0].getContext("2d");
-      resetChoicesAndPizzaPicker();
-
-      updateResultsList();
+      update();
     });
   });
 
@@ -462,9 +446,11 @@ $(function () {
       return value + " miles";
     }
   });
+      
+  //setting up the pie now that it is considered "visible"
+  pizzaChartContext = $("#pizza-chart")[0].getContext("2d");
+  resetChoicesAndPizzaPicker();
 
   //setting up the results table to be sortable via the stupid table library
   $("#results-table").stupidtable();
-
-
 });
