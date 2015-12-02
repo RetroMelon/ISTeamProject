@@ -62,13 +62,6 @@ button {
 		background: transparent;
 }
 
-.glyphicon {
-    /* Visual Studio doesn't like "text-size", is it a real attribute? */
-    text-size:10vw;
-    width:1%;
-
-}
-
 #search {
 		width:30%;
 }

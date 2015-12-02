@@ -107,7 +107,7 @@ function resetChoicesAndPizzaPicker() {
 
 // This function updates the results list.
 function updateResultsList() {
-  $("#results-area-title").text("" + currentOptions.length + " restaurants/takeaways match your search");
+  $("#results-area-title").html("<span class=\"badge\">" + currentOptions.length + "</span> restaurants/takeaways match your search");
 
   //emptying the body of the table
   $("#results-table-body").html("");
