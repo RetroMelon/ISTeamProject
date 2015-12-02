@@ -217,6 +217,11 @@ ol>li:first-child>a:first-child:before {
   background-color: white;
 }
 
+th:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
 th.sorting-asc:after {
     content: " ▲";
     font-size: 11px;
