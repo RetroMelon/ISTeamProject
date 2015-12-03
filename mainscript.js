@@ -78,7 +78,7 @@ function updateResultsList() {
     var typeString = "";
     if (restaurantData.Takeaway == "T") typeString = "\uD83D\uDE97";
     if (restaurantData.Takeaway == "R") typeString = "\uD83C\uDF74";
-    if (restaurantData.Takeaway == "RT")  typeString = "\uD83C\uDF74\uD83D\uDE97";
+    if (restaurantData.Takeaway == "RT")  typeString = "\uD83C\uDF74  \uD83D\uDE97";
     $("#results-table-body").append("<tr><td>"
       + typeString + "</td><td>"
       + priceString
