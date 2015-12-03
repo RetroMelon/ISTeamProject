@@ -70,15 +70,23 @@ function updateResultsList() {
     var restaurantData = globalRestaurantData[restaurantIndex];
 
     var distanceString = (restaurantData.hasOwnProperty("distance") ? restaurantData.distance : "-");
+    var priceString = "";//Array(restaurantData.price).join("\u2605"); /* \u2605 */
+    var starsString = ""; //Array(restaurantData.stars).join("\u00A3"); /* \u00A3 */
+    var typeString = "";
+
     if(distanceString != "-") {
 			distanceString =Math.round(distanceString * 100) / 100 ;
 		}
-    var priceString = Array(restaurantData.price).join("\u2605"); /* \u2605 */
-    var starsString = Array(restaurantData.stars).join("\u00A3"); /* \u00A3 */
-    var typeString = "";
-    if (restaurantData.Takeaway == "T") typeString = "\uD83D\uDE97";
-    if (restaurantData.Takeaway == "R") typeString = "\uD83C\uDF74";
-    if (restaurantData.Takeaway == "RT")  typeString = "\uD83C\uDF74  \uD83D\uDE97";
+    for (var i =0; i < restaurantData.rating ;i++){
+	 priceString = priceString.concat("\u2605"); //Array(restaurantData.price).join("\u2605"); /* \u2605 */
+    }
+    for (var i =0; i < restaurantData.price;i++){
+	 starsString = starsString.concat("\u00A3");
+    }
+    if (restaurantData.Takeaway == "T") typeString = "Takeaway";
+    if (restaurantData.Takeaway == "R") typeString = "Restaurant";
+    if (restaurantData.Takeaway == "RT")  typeString = "Restaurant/Takeaway ";
+
     $("#results-table-body").append("<tr><td>"
       + typeString + "</td><td>"
       + priceString
