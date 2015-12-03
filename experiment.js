@@ -90,13 +90,16 @@ function stopExperiment(){
 }
 
 //A LIST OF ALL OF THE TARGETS WHICH ARE ACCEPTABLE FOR THE USER TO HAVE CLICKED ON.
-var validTargets = ["logo-image",
-                    "search",
-                    "distance",
-                    "breadcrumbs-area",
-                    "simpleTable",
-                    "pizza-chart",];
+//NOTE THAT THESE IDENTIFIERS CAN'T HAVE SPACES IN THEM OTHERWISE THEY MESS UP PARSING THE EXPERIMENT OUTPUT.
+var validTargets = ["#search",
+                    ".slider-handle",
+                    ".breadcrumbs-link",
+                    "ol>li:first-child>a:first-child:before",
+                    "#results-table-header>th",
+                    "#results-table-body>th>a",
+                    "#pizza-chart",];
 
+/*
 //for some elements like nes inside canvases we need to
 //give them custom sizes. for this we look them up in the custom
 //areas dictionary before calculating manually.
@@ -177,6 +180,7 @@ function averageFitts(targets) {
   return averageFittsValue;
 
 }
+*/
 
 /* ---------------FUNCTIONS RELATED TO PARSING THE DATA AND DISPLAYING IT IN D3---------------- */
 function parseData(data){
@@ -191,6 +195,8 @@ function parseData(data){
   for(var i in dataLines) {
     dataLinesSplit.push(dataLines[i].split(" "));
   }
+
+  /*
 
   //we do some general analytics on the data as a whole, such as average fitts law
   //difficulty between all of the buttons pressed.
@@ -241,6 +247,8 @@ function parseData(data){
   //drawing the fitts plot
   drawFittsScatter(fittsData);
 
+  */
+
 
   //an array of dictionaries {x: 123, y:123, valid: true/false}
   var clickDots = [];
@@ -268,7 +276,7 @@ function parseData(data){
     //if it was a click event on a valid target.
     if(dataLinesSplit[m][1] === "click") {
       totalClicks+=1;
-      if (dataLinesSplit[m][4] === "clear-button" || validTargets.indexOf(dataLinesSplit[m][4]) == -1) {
+      if (validTargets.indexOf(dataLinesSplit[m][4]) == -1) {
         totalErrors+=1;
       }
     }
@@ -290,11 +298,13 @@ function parseData(data){
 
 
   //logging all of the information we have gathered to the display.
+  $('body').append("<center><div id=\"results-log\"></div></center>");
+  $("#results-log").append(eventLog.replaceAll("\n", "<br>"));
   $('#results-log').append( String("-----EXPERIMENT COMPLETE-----") + "<br>");
   $('#results-log').append("Total Time (ms): " + String(totalTime) + "<br>");
   $('#results-log').append("Total Clicks: " + String(totalClicks) + "<br>");
   $('#results-log').append("Clicks in Error: " + String(totalErrors) + "<br>");
-  $('#results-log').append("Average Fitts: " + String(averageFitts) + "<br>");
+  //$('#results-log').append("Average Fitts: " + String(averageFitts) + "<br>");
 
 
 }
@@ -317,7 +327,19 @@ $(function(){
     if(e.target.id === "play-button") {
       return;
     }
-    logEvent("click" + " " + getRelativeCoords(e) + " " + e.target.id);
+
+    var identifier = " ";
+    var $target = $(e.target);
+    console.log($target);
+    for (var n in validTargets) {
+      if ($target.is(validTargets[n])) {
+        console.log("is " + validTargets[n]);
+        identifier += validTargets[n];
+        break;
+      }
+    }
+
+    logEvent("click" + " " + getRelativeCoords(e) + identifier);
   });
 
   $(document).keydown(function (e){

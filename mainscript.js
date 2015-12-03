@@ -70,14 +70,25 @@ function updateResultsList() {
     var restaurantData = globalRestaurantData[restaurantIndex];
 
     var distanceString = (restaurantData.hasOwnProperty("distance") ? restaurantData.distance : "-");
+    var priceString = "";//Array(restaurantData.price).join("\u2605"); /* \u2605 */
+    var starsString = ""; //Array(restaurantData.stars).join("\u00A3"); /* \u00A3 */
+    var typeString = "";
+
     if(distanceString != "-") {
 			distanceString =Math.round(distanceString * 100) / 100 ;
 		}
-    var priceString = Array(restaurantData.price).join("\u2605");
-    var starsString = Array(restaurantData.stars).join("\u00A3");
-   
+    for (var i =0; i < restaurantData.rating ;i++){
+	 priceString = priceString.concat("\u2605"); //Array(restaurantData.price).join("\u2605"); /* \u2605 */
+    }
+    for (var i =0; i < restaurantData.price;i++){
+	 starsString = starsString.concat("\u00A3");
+    }
+    if (restaurantData.Takeaway == "T") typeString = "Takeaway";
+    if (restaurantData.Takeaway == "R") typeString = "Restaurant";
+    if (restaurantData.Takeaway == "RT")  typeString = "Restaurant/Takeaway ";
+
     $("#results-table-body").append("<tr><td>"
-      + "T" + "</td><td>"
+      + typeString + "</td><td>"
       + priceString
       + "</td><td>"
       + starsString
@@ -90,7 +101,7 @@ function updateResultsList() {
 
 function updateBreadcrumbs() {
   var breadcrumbList = [""].concat(keywordsChosenSoFar); //we put an empty string here because in the css we add a glyphicon
-  $("#breadcrumbs-area").html(('<li><a href="#"">' + breadcrumbList.join('</a></li><li><a href="#pie-scroll-point">')) + '</a></li>');
+  $("#breadcrumbs-area").html(('<li><a  class="breadcrumbs-link" href="#">' + breadcrumbList.join('</a></li><li><a class="breadcrumbs-link" href="#pie-scroll-point">')) + '</a></li>');
 }
 // This function creates or updates the
 // pie chart in the global variable "thePieChart"
@@ -175,7 +186,7 @@ function getTableOfCommonKeywords(optionsList, keywordsToExclude) {
 		       table[keyword] = 1;
 		     }
 		  }
-  } 
+  }
   return table;
 }
 
@@ -265,7 +276,7 @@ function update() {
     // There are enough restaurants in the current list of options
     // to allow the user to keep using the pizza pie to choose keywords.
     pieData = makePizzaPieChartData(tableOfKeywords);
-        
+
     updateBreadcrumbs();
 		updatePizzaChart(pieData);
   }
@@ -332,8 +343,8 @@ function getGlobalRestaurantDataFromFileThenUpdate() {
 					var thisRestaurantData = globalRestaurantData[restaurantIndex];
 
 					// If there is no keyword data then there is nothing we can do.
-					if (thisRestaurantData.keywordData !== undefined) {	
-						var keywordArray = thisRestaurantData.keywordData.split(" ")
+					if (thisRestaurantData.keywordData !== undefined) {
+						var keywordArray = thisRestaurantData.keywordData.split(" ");
 
 						// Remove any empty keywords.
 						var numberOfKeywords = keywordArray.length;
@@ -356,12 +367,17 @@ function getGlobalRestaurantDataFromFileThenUpdate() {
 }
 
 $(function () {
-  // Setting up the distance slider here.
+  //setting up the distance slider here.
   $('#distance').bootstrapSlider({
     formatter: function(value) {
-
+      filterDistance = value;
       return value + " miles";
     }
+  });
+
+  //initialising the tooltip for the postcode
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
   });
 
   // Setting up the pie now that it is considered "visible"
@@ -454,11 +470,4 @@ $(function () {
     update();
   });
 
-  //setting up the distance slider here.
-  $('#distance').bootstrapSlider({
-    formatter: function(value) {
-      filterDistance = value;
-      return value + " miles";
-    }
-  });
 });
