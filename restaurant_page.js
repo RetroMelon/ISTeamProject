@@ -15,9 +15,12 @@ var getURLParameter = function getURLParameter(sParam) {
 
 function initialize() {
 	var thisRestaurantData = globalRestaurantData[getURLParameter('restaurant_name').replace(/\+/g, " ")]; 
-    var mapCanvas = document.getElementById('map');
-    var mapOptions = {
-        center: new google.maps.LatLng(thisRestaurantData["lat"],thisRestaurantData["lon"]),
+
+	var mapCanvas = document.getElementById('map');
+   	var mapOptions = {
+		center: new google.maps.LatLng(55.87483,-4.29305),
+        center: new google.maps.LatLng(thisRestaurantData.lat,thisRestaurantData.lon),
+
         zoom: 22,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
@@ -26,7 +29,6 @@ function initialize() {
 	document.getElementById('restaurant-name').innerHTML = getURLParameter('restaurant_name').replace(/\+/g, " ");
 
 	document.getElementById('description-box').innerHTML = thisRestaurantData["description"];
-	
 	var priceString = "";
     for (var i = 0; i < thisRestaurantData.price; i++)
          priceString = priceString.concat("\u00A3");
@@ -42,6 +44,7 @@ function initialize() {
      //    tagsString = tagsString.concat(string);
 	//document.getElementById('tags').innerHTML = tagsString;
 } 
+
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
