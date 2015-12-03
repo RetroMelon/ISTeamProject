@@ -88,6 +88,7 @@ function updateResultsList() {
     if (restaurantData.Takeaway == "RT") typeString = "Restaurant/Takeaway ";
     var imageName = "family.jpg";
     if (keywordsChosenSoFar.length > 0) imageName = keywordsChosenSoFar[keywordsChosenSoFar.length - 1].concat(".jpg");
+    if (distanceString==="-"){
     $("#results-table-body").append("<tr><td>"
       + typeString + "</td><td>"
       + priceString
@@ -98,6 +99,19 @@ function updateResultsList() {
       + currentRestaurantName.replace(/\s/g, "+") + "&image_name=" + imageName + ">" + currentRestaurantName
       + "</td><td>" + distanceString + "</td>"
       + "</tr>");
+    }
+    if (distanceString!="-"){
+    $("#results-table-body").append("<tr><td>"
+      + typeString + "</td><td>"
+      + priceString
+      + "</td><td>"
+      + starsString
+      + "</td><td>"
+      + "<a href=" + "./restaurant_page.html?restaurant_name="
+      + currentRestaurantName.replace(/\s/g, "+") + "&image_name=" + imageName + ">" + currentRestaurantName
+      + "</td><td>" + distanceString + " miles </td>"
+      + "</tr>");
+    }
   }
 }
 
