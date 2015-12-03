@@ -1,4 +1,4 @@
-ExtractDate,FHRSID,BusinessName,BusinessType,BusinessTypeID,AddressLine2,AddressLine3,PostCode,RatingDate,Longitude,Latitude, Style
+ExtractDate,FHRSID,name,type,typeId,addressLine2,addressLine3,postcode,ratingDate,lon,lat,keywordData
 14/02/2014,19429,(Starbucks),Restaurant/Cafe/Canteen,1,390 Provan Walk,Glasgow,G34 9DL,01/11/2011,-4.136909,55.872982,coffee snacks
 14/02/2014,36362,2 Go,Restaurant/Cafe/Canteen,1,397 Dumbarton Road,Glasgow,G11 6BE,03/09/2013,-4.308613,55.870617,snacks coffee fastfood
 14/02/2014,507934,200 St Vincent Street,Restaurant/Cafe/Canteen,1,200 St Vincent Street,Glasgow,G2 5SG,06/02/2013,-4.260957,55.86229,traditional pub
@@ -136,7 +136,7 @@ ExtractDate,FHRSID,BusinessName,BusinessType,BusinessTypeID,AddressLine2,Address
 14/02/2014,18545,Bridgeton Community Learning Centre,Restaurant/Cafe/Canteen,1,68 Dale Street,Glasgow,G40 4TL,21/02/2012,-4.222541,55.844979
 14/02/2014,29379,British Bakeries Canteen,Restaurant/Cafe/Canteen,1,783 Duke Street,Glasgow,G31 1LL,20/04/2012,-4.210019,55.858803
 14/02/2014,534333,Broad Street Cafe,Restaurant/Cafe/Canteen,1,60 Broad Street,Glasgow,G40 2QN,18/11/2013,-4.223796,55.850457
-14/02/2014,534357,Brooklands Café,Restaurant/Cafe/Canteen,1,1632 Great Western Road,Glasgow,G13 1HH,08/04/2013,-4.324127,55.890026
+14/02/2014,534357,Brooklands Caf\E9,Restaurant/Cafe/Canteen,1,1632 Great Western Road,Glasgow,G13 1HH,08/04/2013,-4.324127,55.890026
 14/02/2014,77482,Broomton Community Shop,Restaurant/Cafe/Canteen,1,42 Broomton Road,Glasgow,G21 3RU,19/03/2012,-4.203822,55.89693
 14/02/2014,200645,Brown's Bar and Brasserie,Restaurant/Cafe/Canteen,1,1 George Square,Glasgow,G2 1DY,20/01/2014,-4.250847,55.860453
 14/02/2014,606997,Brutti Compadres,Restaurant/Cafe/Canteen,1,35 Virginia Street,Glasgow,G1 1TN,13/08/2013,-4.250545,55.858544
@@ -1056,7 +1056,7 @@ ExtractDate,FHRSID,BusinessName,BusinessType,BusinessTypeID,AddressLine2,Address
 14/02/2014,433012,Thairiffic,Restaurant/Cafe/Canteen,1,303 Sauchiehall Street,Glasgow,G2 3HQ,15/08/2013,-4.263947,55.865326
 14/02/2014,27018,The Albany Cafe,Restaurant/Cafe/Canteen,1,44 Ashley Street,Glasgow,G3 6DS,01/08/2012,-4.272108,55.869876
 14/02/2014,594161,The Amarillo Cafe,Restaurant/Cafe/Canteen,1,18 Craigbank Drive,Glasgow,G53 6RA,21/10/2013,-4.362041,55.816233
-14/02/2014,315991,The Annexe Café,Restaurant/Cafe/Canteen,1,9 Stewartville Street,Glasgow,G11 5PE,05/04/2012,-4.304804,55.871093
+14/02/2014,315991,The Annexe Caf\E9,Restaurant/Cafe/Canteen,1,9 Stewartville Street,Glasgow,G11 5PE,05/04/2012,-4.304804,55.871093
 14/02/2014,624672,The Arc Cafe,Restaurant/Cafe/Canteen,1,340 Ashgill Road,Glasgow,G22 7HW,14/01/2014,-4.240541,55.893769
 14/02/2014,53576,The Arches,Restaurant/Cafe/Canteen,1,253 Argyle Street,Glasgow,G2 8DL,07/06/2010,-4.258365,55.858383
 14/02/2014,585885,The Ark Cafe,Restaurant/Cafe/Canteen,1,40 George Street,Glasgow,G1 1QE,05/09/2013,-4.241682,55.860863
