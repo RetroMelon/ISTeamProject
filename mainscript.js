@@ -159,14 +159,20 @@ function updatePizzaChart(pieData) {
 function getTableOfCommonKeywords(optionsList, keywordsToExclude) {
   var table = {};
   var optionsListLength = optionsList.length;
+
   for (var i = 0; i < optionsListLength; ++i) {
 
 		  // If there is restaurant data for this restaurant...
-		  var restaurantIndex = currentOptions[i];
+		  var restaurantIndex = optionsList[i];
 		  if (restaurantIndex > globalRestaurantData.length || restaurantIndex < 0) {
 		    alert("currentOptions contains element " + restaurantIndex + " but that is not a valid index.");
 		  }
-
+      
+		  if (restaurantIndex === undefined) {
+		    alert("Somehow restaurant index is undefined...");
+		    continue;
+		  }
+    
 		  var restaurantName = globalRestaurantData[restaurantIndex].name;
 
 		  // Now loop through the keywords for this restaurant.
@@ -331,7 +337,7 @@ function recalculateDistancesAndFilter(forRestaurantsByIndex, restaurantData, lo
 
 // Sets up "globalRestaurantData" by reading in restaurants.csv
 function getGlobalRestaurantDataFromFileThenUpdate() {
-  $.get('restaurants-mini.csv', function(data) {
+  $.get('restaurants_new.csv', function (data) {
     // Set globalRestaurantData to be the objects read in from the CSV file.
     globalRestaurantData = $.csv.toObjects(data);
 
@@ -474,5 +480,4 @@ $(function () {
 
     update();
   });
-
 });
