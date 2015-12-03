@@ -98,7 +98,7 @@ function updateResultsList() {
       + "</tr>");
   }
 }
-//"<a href=" + "https://www.google.co.uk/maps/place/" + currentRestaurantName.replace(/\s/g, "+") + ">" + currentRestaurantName
+
 function updateBreadcrumbs() {
   var breadcrumbList = [""].concat(keywordsChosenSoFar); //we put an empty string here because in the css we add a glyphicon
   $("#breadcrumbs-area").html(('<li><a  class="breadcrumbs-link" href="#">' + breadcrumbList.join('</a></li><li><a class="breadcrumbs-link" href="#pie-scroll-point">')) + '</a></li>');
