@@ -16,7 +16,21 @@ body>div {
 	top: 0px;
 	left: 0px;
 }
-
+#logo-image {
+  cursor: pointer;
+  position : absolute;
+  z-index: 1000;
+  height : 100px;
+}
+.chipImage {
+  background-color: transparent;
+  background-image: url("images/thechip.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+  height: 100px; 
+  /*-webkit-box-shadow: inset 0px -57px 75px -12px rgb(240, 240, 240);*/
+}
 #image{
 	background-image: url('images/segments/pizza.jpg'); 
 	height: 350px; 
