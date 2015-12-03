@@ -75,9 +75,12 @@ function updateResultsList() {
 		}
     var priceString = Array(restaurantData.price).join("\u2605");
     var starsString = Array(restaurantData.stars).join("\u00A3");
-   
+    var typeString = "";
+    if (restaurantData.Takeaway == "T") typeString = "\uD83D\uDE97";
+    if (restaurantData.Takeaway == "R") typeString = "\uD83C\uDF74";
+    if (restaurantData.Takeaway == "RT")  typeString = "\uD83C\uDF74\uD83D\uDE97";
     $("#results-table-body").append("<tr><td>"
-      + "T" + "</td><td>"
+      + typeString + "</td><td>"
       + priceString
       + "</td><td>"
       + starsString
