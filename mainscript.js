@@ -95,7 +95,7 @@ function updateResultsList() {
       + "</td><td>"
       + starsString
       + "</td><td>"
-      + "<a href=" + "./restaurant_page.html?restaurant_name="
+      + "<a target=\"_blank\" href=" + "./restaurant_page.html?restaurant_name="
       + currentRestaurantName.replace(/\s/g, "+") + "&image_name=" + imageName + ">" + currentRestaurantName
       + "</td><td>" + distanceString + "</td>"
       + "</tr>");
