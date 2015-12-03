@@ -367,6 +367,11 @@ function getGlobalRestaurantDataFromFileThenUpdate() {
 }
 
 $(function () {
+
+  $('#logo-image').click(function() {
+    location.reload();
+  });
+
   //setting up the distance slider here.
   $('#distance').bootstrapSlider({
     formatter: function(value) {
