@@ -336,7 +336,7 @@ function getGlobalRestaurantDataFromFileThenUpdate() {
 
 					// If there is no keyword data then there is nothing we can do.
 					if (thisRestaurantData.keywordData !== undefined) {
-						var keywordArray = thisRestaurantData.keywordData.split(" ")
+						var keywordArray = thisRestaurantData.keywordData.split(" ");
 
 						// Remove any empty keywords.
 						var numberOfKeywords = keywordArray.length;
