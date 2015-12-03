@@ -94,7 +94,7 @@ function updateResultsList() {
       + "</td><td>"
       + starsString
       + "</td><td>"
-      + "<a href=" + "./restaurant_page.html?restaurant_name="
+      + "<a target=\"_blank\" href=" + "./restaurant_page.html?restaurant_name="
       + currentRestaurantName.replace(/\s/g, "+") + "&image_name=" + imageName + ">" + currentRestaurantName
       + "</td><td>" + distanceString + "</td>"
       + "</tr>");
@@ -344,9 +344,9 @@ function recalculateDistancesAndFilter(forRestaurantsByIndex, restaurantData, lo
 
 // Sets up "globalRestaurantData" by reading in restaurants.csv
 function getGlobalRestaurantDataFromFileThenUpdate() {
-  $.get('restaurants_new.csv', function (data) {
     // Set globalRestaurantData to be the objects read in from the CSV file.
-    globalRestaurantData = $.csv.toObjects(data);
+
+    globalRestaurantData = $.csv.toObjects(restaurantStringData);
 
     // Now go through each restaurant and split the keywords from a
     // string of words seperated by spaces into an array of word strings.
@@ -375,8 +375,6 @@ function getGlobalRestaurantDataFromFileThenUpdate() {
 
     // Now load the pizza picker.
     resetChoicesAndPizzaPicker();
-
-  }, 'text');
 }
 
 $(function () {
