@@ -45,8 +45,16 @@ function processGlobalData() {
     zoom: 17,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   }
-  var map = new google.maps.Map(mapCanvas, mapOptions);
   
+	var myLatLng = {lat: thisRestaurantData.lat,lon: thisRestaurantData.lon};
+	
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+
 	var imageName = getURLParameter('image_name');
 	if (imageName === undefined) {
 		imageName = "family.jpg";	
