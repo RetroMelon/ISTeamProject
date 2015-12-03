@@ -1,88 +1,202 @@
-ExtractDate,FHRSID,name,type,typeId,addressLine2,addressLine3,postcode,ratingDate,lon,lat,keywordData
-14/02/2014,19429,(Starbucks),Restaurant/Cafe/Canteen,1,390 Provan Walk,Glasgow,G34 9DL,01/11/2011,-4.136909,55.872982,coffee snacks
-14/02/2014,36362,2 Go,Restaurant/Cafe/Canteen,1,397 Dumbarton Road,Glasgow,G11 6BE,03/09/2013,-4.308613,55.870617,snacks coffee fastfood
-14/02/2014,507934,200 St Vincent Street,Restaurant/Cafe/Canteen,1,200 St Vincent Street,Glasgow,G2 5SG,06/02/2013,-4.260957,55.86229,traditional pub
-14/02/2014,95689,279 Cafe Bistro,Restaurant/Cafe/Canteen,1,279 Dumbarton Road,Glasgow,G11 6AB,22/05/2012,-4.303939,55.870516,coffee sandwiches cafe
-14/02/2014,110587,32nd Signal Regiment (v),Restaurant/Cafe/Canteen,1,21 Jardine Street,Glasgow,G20 6JU,24/05/2011,-4.277246,55.877088,coffee sandwiches cafe
-14/02/2014,10859,7 Day Catering Ltd  -Staff Canteen,Restaurant/Cafe/Canteen,1,53 Coltness Street,Glasgow,G33 4JD,13/09/2011,-4.152553,55.863938,healthy milkshakes
-14/02/2014,406755,7th Heaven,Restaurant/Cafe/Canteen,1,15 Elmbank Gardens,Glasgow,G2 4NQ,06/06/2012,-4.270439,55.865108,cafe pub sandwiches
-14/02/2014,556088,916 - Diner,Restaurant/Cafe/Canteen,1,916 Sauchiehall Street,Glasgow,G3 7TF,06/06/2013,-4.284479,55.865774,seafood sophisticated cocktails
-14/02/2014,31114,Abercromby Cafe,Restaurant/Cafe/Canteen,1,168 Abercromby Street,Glasgow,G40 2RZ,22/10/2013,-4.229148,55.852688,burger pub cafe
-14/02/2014,36313,Abercromby Catering And Vending,Restaurant/Cafe/Canteen,1,8 Arrol Road,Glasgow,G40 3DQ,12/02/2013,-4.213875,55.84625,cafe milkshakes snacks
-14/02/2014,35898,A-Cakes,Restaurant/Cafe/Canteen,1,39 Milnbank Street,Glasgow,G31 3AQ,28/06/2010,-4.221675,55.864803,milkshakes snacks donuts sweet
-14/02/2014,537382,Ad Lib,Restaurant/Cafe/Canteen,1,33 Ingram Street,Glasgow,G1 1HA,23/07/2013,-4.242358,55.859008,tapas world trendy spanish
-14/02/2014,91632,Agra Restaurant,Restaurant/Cafe/Canteen,1,995 Crow Road,Glasgow,G13 1JP,05/07/2013,-4.32204,55.893903,italian pizza cocktails trendy
-14/02/2014,315982,AJ's Sandwich Shop,Restaurant/Cafe/Canteen,1,14 Tollcross Road,Glasgow,G31 4XD,20/06/2012,-4.19669,55.850836,cafe sandwiches snacks milkshakes
-14/02/2014,360826,Akbars Balti Restaurant,Restaurant/Cafe/Canteen,1,573 Sauchiehall Street,Glasgow,G3 7PQ,09/10/2012,-4.273083,55.866048,indian spicy traditional
-14/02/2014,36482,Alba Cafe,Restaurant/Cafe/Canteen,1,481 Great Western Road,Glasgow,G12 8HL,17/05/2011,-4.282144,55.875281,scottish cafe milkshakes snacks fastfood
-14/02/2014,188093,Albacore,Restaurant/Cafe/Canteen,1,200 Carlisle Street,Glasgow,,16/12/2013,-4.242509842,55.85779953,pub burger snacks
-14/02/2014,19526,Albacore (Scottish Qualifications Authority),Restaurant/Cafe/Canteen,1,58 Robertson Street,Glasgow,G2 8DU,22/10/2009,-4.260464,55.857095,cafe
-14/02/2014,49104,Alberto's,Restaurant/Cafe/Canteen,1,506 Alexandra Parade,Glasgow,G31 3BQ,15/05/2013,-4.218008,55.863548,italian healthy trendy
-14/02/2014,360864,Albion Sports And Social Club,Restaurant/Cafe/Canteen,1,320 Halley Street,Glasgow,G13 4DJ,14/11/2013,-4.378986,55.891898,pub bar burger pizza snacks
-14/02/2014,66160,Alishan Tandoori,Restaurant/Cafe/Canteen,1,250 Battlefield Road,Glasgow,G42 9HU,24/01/2013,-4.262139,55.824889,indian spicy tradtitional
-14/02/2014,49065,All In One,Restaurant/Cafe/Canteen,1,12 Marne Street,Glasgow,G31 2TD,05/06/2013,-4.212686,55.8627,wings steakhouse spicy
-14/02/2014,15468,Alla Turca Restuarant,Restaurant/Cafe/Canteen,1,192 Pitt Street,Glasgow,G2 4DY,15/10/2013,-4.26452,55.865289,world buffet unique
-14/02/2014,116807,Allied Distillers Canteen,Restaurant/Cafe/Canteen,1,1780 London Road,Glasgow,G32 8XA,19/10/2005,-4.192206,55.838729,cafe snacks sandwiches
-14/02/2014,548299,Almi's Cafeteria,Restaurant/Cafe/Canteen,1,600 Eglinton Street,Glasgow,G5 9RR,07/11/2013,-4.262232,55.844633,cafe snacks sandwiches
-14/02/2014,511143,Al's Diner,Restaurant/Cafe/Canteen,1,70 Cathedral Street,Glasgow,G4 0RN,08/10/2013,,,american burger pizza wings steakhouse donuts milkshakes
-14/02/2014,112421,AM PM,Restaurant/Cafe/Canteen,1,16 Killermont Street,Glasgow,G2 3NW,05/11/2013,-4.25203,55.865428,trendy cocktails tapas bar
-14/02/2014,133348,Amalfi Pizzeria,Restaurant/Cafe/Canteen,1,148 West Nile Street,Glasgow,G1 2RQ,14/02/2011,-4.253893,55.863929,italian pizza sopisticated cocktails
-14/02/2014,19637,Amarone,Restaurant/Cafe/Canteen,1,4 Nelson Mandela Place,Glasgow,,09/07/2012,-4.2535556,55.86203936,italian pizza spicy
-14/02/2014,568571,Amateur Football Association,Restaurant/Cafe/Canteen,1,34 Bridge Street,Glasgow,G5 9HU,04/07/2013,-4.259031,55.853338,cafe sandwiches snacks
-14/02/2014,133364,Amber Regent,Restaurant/Cafe/Canteen,1,50 West Regent Street,Glasgow,G2 2RA,22/02/2012,-4.256413,55.86329,seafood world sophisticated
-14/02/2014,30936,Amber Restaurant,Restaurant/Cafe/Canteen,1,132 Byres Road,Glasgow,G12 8TD,05/10/2011,-4.295156,55.873646,world italian mexican spanish pizza spicy
-14/02/2014,480311,Amber's Cafe,Restaurant/Cafe/Canteen,1,18 Balmore Road,Glasgow,G22 6RN,26/11/2013,-4.255088,55.884273,cafe sandwiches snacks
-14/02/2014,31320,Amore Ristorante,Restaurant/Cafe/Canteen,1,30 Ingram Street,Glasgow,G1 1EZ,01/07/2013,-4.242543,55.859445,italian pizza
-14/02/2014,45671,Amros Tandoori,Restaurant/Cafe/Canteen,1,1228 Royston Road,Glasgow,G33 1EX,19/06/2013,-4.193152,55.878212,indian spicy buffet
-14/02/2014,31211,AMT Coffee,Restaurant/Cafe/Canteen,1,79 Gordon Street,Glasgow,G1 3SQ,16/09/2009,-4.258211,55.859302,coffee cafe snacks
-14/02/2014,102350,Amt Expresso (Queen St Station),Restaurant/Cafe/Canteen,1,38 George Square,Glasgow,G1 2AF,15/09/2010,-4.251204,55.862487,coffee snacks cafe
-14/02/2014,133322,Wagamama,Restaurant/Cafe/Canteen,1,97 West George Street,Glasgow,G2 1PB,23/10/2013,-4.255654,55.862055, Japanese gourmet spicy seafood lunch unique modern
-14/02/2014,26406,Wagamama,Restaurant/Cafe/Canteen,1,763 Barrhead Road,Glasgow,G53 6AG,29/10/2012,-4.342073,55.822898, Japanese gourmet spicy seafood lunch unique
-14/02/2014,134485,Walker Precision Engineering,Restaurant/Cafe/Canteen,1,4 Fullarton Drive,Glasgow,G32 8YL,20/04/2012,-4.174502,55.83517, cafe coffee pizza Scottish
-14/02/2014,581115,Weaver's Coffee House,Restaurant/Cafe/Canteen,1,503 London Road,Glasgow,G40 1NQ,22/08/2013,-4.229643,55.85018, coffee tea pastries donuts trendy cafe
-14/02/2014,31045,Wee Annie's,Restaurant/Cafe/Canteen,1,31 Levern Bridge Road,Glasgow,G53 7AB,07/05/2009,-4.36412,55.819186, inexpensive family coffee tea cafe
-14/02/2014,77966,Wee Curry Shop,Restaurant/Cafe/Canteen,1,7 Buccleuch Street,Glasgow,G3 6SJ,07/06/2010,-4.260136,55.86714, Indian curry world Asian inexpensive family
-14/02/2014,448778,Wee Lochan,Restaurant/Cafe/Canteen,1,340 Crow Road,Glasgow,G11 7HT,18/09/2012,-4.32221,55.878009, cool pub bar pizza
-14/02/2014,460443,Wee Rangers Club,Restaurant/Cafe/Canteen,1,250 Edmiston Drive,Glasgow,G51 2YU,29/10/2012,-4.315055,55.853707, traditional trendy buffet Scottish
-14/02/2014,371805,Wee Tait Deli and Cakes,Restaurant/Cafe/Canteen,1,379 Paisley Road West,Glasgow,G51 1LX,22/05/2012,-4.293037,55.85181, deli world pastries donuts tea coffee inexpensive
-14/02/2014,126307,Wellcroft Bowling Club,Restaurant/Cafe/Canteen,1,163 Queens Drive,Glasgow,G42 8QR,27/03/2009,-4.269374,55.833698, coffee tea pastries light lunch
-14/02/2014,129417,Wellington Church (The Crypt Cafe),Restaurant/Cafe/Canteen,1,77 Southpark Avenue,Glasgow,G12 8LE,22/09/2010,-4.287007,55.87262, tea coffee pastries light lunch unique
-14/02/2014,19481,West Bar,Restaurant/Cafe/Canteen,1,15 Binnie Place,Glasgow,G40 1AW,02/07/2013,-4.234176,55.8515, Scottish bar cocktails pizza pub
-14/02/2014,109173,Western Lawn Tennis And Squash Club,Restaurant/Cafe/Canteen,1,44 Hyndland Road,Glasgow,G12 9UR,07/07/2010,-4.301699,55.881588, cafe fastfood lunch light
-14/02/2014,26137,Westmarc,Restaurant/Cafe/Canteen,1,1345 Govan Road,Glasgow,G51 4TF,26/07/2010,-4.337594,55.863985, Scottish traditional cool healthy fastfood
-14/02/2014,40651,Westwood Catering Service,Restaurant/Cafe/Canteen,1,69 Aberdalgie Road,Glasgow,,21/06/2012,-4.11530524,55.86826533, cafe donuts family kids
-14/02/2014,125763,Whale Of A Time,Restaurant/Cafe/Canteen,1,1273 Pollokshaws Road,Glasgow,G41 3RR,02/07/2013,-4.284981,55.829158, seafood trendy lunch light Scottish fish oysters traditional
-14/02/2014,562688,Wheatley House Bean Machine,Restaurant/Cafe/Canteen,1,25 Cochrane Street,Glasgow,G1 1HL,24/06/2013,-4.248266,55.86032, coffee tea trendy healthy inexpensive cafe trendy
-14/02/2014,315965,Where The Monkey Sleeps,Restaurant/Cafe/Canteen,1,45 Finnieston Street,Glasgow,G3 8JU,16/09/2013,-4.280339,55.86222, traditional Mexican LatinAmerican trendy world tapas cool inexpensive meat
-14/02/2014,568580,Where The Monkey Sleeps,Restaurant/Cafe/Canteen,1,182 West Regent Street,Glasgow,G2 4RU,07/01/2014,-4.261774,55.863964, traditional Mexican trendy world tapas LatinAmerican meat
-14/02/2014,99829,Whiteinch Bowling Club,Restaurant/Cafe/Canteen,1,28 Ferryden Street,Glasgow,G14 0SW,07/09/2010,-4.331851,55.870295, Brazilian buffet traditional pastries
-14/02/2014,45653,Willow Cafe,Restaurant/Cafe/Canteen,1,225 Scotland Street,Glasgow,G5 8QB,11/01/2011,-4.275798,55.849622, tea cafe coffee buffet healthy light lunch pastries Scottish
-14/02/2014,193911,Willow Tea Rooms,Restaurant/Cafe/Canteen,1,97 Buchanan Street,Glasgow,G1 3HF,09/12/2013,-4.254819,55.860066, tea cafe coffee buffet healthy light pastries
-14/02/2014,94601,Willowbank Bowling Club,Restaurant/Cafe/Canteen,1,36 Dowanside Road,Glasgow,G12 9DW,06/02/2007,-4.298293,55.875322, Scottish cafe coffee bar buffet fastfood
-14/02/2014,30396,Windows Restaurant,Restaurant/Cafe/Canteen,1,44 West George Street,Glasgow,,16/05/2013,-4.25322682,55.86195588, light diner cool gourmet inexpensive modern Scottish
-14/02/2014,102691,Winter Gardens,Restaurant/Cafe/Canteen,1,1 Glasgow Green,Glasgow,G40 1AT,11/01/2012,-4.237004,55.851215, traditional contemporary gourmet unique bar
-14/02/2014,107369,Wishbones,Restaurant/Cafe/Canteen,1,31 High Street,Glasgow,G1 1LX,18/05/2013,-4.243279,55.857527, traditional Scottish coffee seafood meat chicken lunch
-14/02/2014,35815,Wok To Walk,Restaurant/Cafe/Canteen,1,304 Sauchiehall Street,Glasgow,G2 3JA,25/06/2012,-4.263684,55.865763, Japanese traditional modern contemporary cool cocktails
-14/02/2014,118094,Wolfson Hall Of Residence,Restaurant/Cafe/Canteen,1,2317 Maryhill Road,Glasgow,,17/12/2013,-4.271209,55.876461, trendy modern inexpensive milkshakes light unique
-14/02/2014,516671,Wonderworld Soft Play,Restaurant/Cafe/Canteen,1,99 Middlesex Street,Glasgow,G41 1EE,23/10/2013,-4.28354,55.851681, kids family cafe donuts pastries coffee diner
-14/02/2014,118070,Wong Express,Restaurant/Cafe/Canteen,1,920 Maryhill Road,Glasgow,G20 7TA,11/11/2013,-4.280196,55.884044, Chinese fast food cafe cool trendy Asian
-14/02/2014,495615,Workspace Cafe,Restaurant/Cafe/Canteen,1,100 Elderpark Street,Glasgow,G51 3TR,12/03/2013,-4.32253,55.857682, cafe coffee light pastries donuts
-14/02/2014,9656,WRVS Cafe (Gartnavel General Hospital),Restaurant/Cafe/Canteen,1,1053 Great Western Road,Glasgow,,18/02/2010,-4.354562,55.900713, lunch light coffee cafe pastries donuts
-14/02/2014,31357,Wudon,Restaurant/Cafe/Canteen,1,535 Great Western Road,Glasgow,G12 8HN,19/11/2013,-4.282973,55.875517, Japanese trendy world Asian coffee healthy modern cool spicy
-14/02/2014,537386,Wyndford Diner,Restaurant/Cafe/Canteen,1,186 Wyndford Road,Glasgow,G20 8HF,26/09/2013,-4.287613,55.889248, diner traditional light trendy pastries coffee
-14/02/2014,50801,Yarrow Recreation Club,Restaurant/Cafe/Canteen,1,223 Anniesland Road,Glasgow,G13 1RP,29/06/2012,-4.332613,55.889928, coffee cafe trendy buffet
-14/02/2014,548302,Yarrows Cafe,Restaurant/Cafe/Canteen,1,1915 Dumbarton Road,Glasgow,G14 0YS,26/06/2013,-4.364388,55.882769, coffee cafe trendy donuts pastries unique light lunch
-14/02/2014,22410,Yasmin's,Restaurant/Cafe/Canteen,1,538 Dumbarton Road,Glasgow,G11 6SW,01/03/2011,-4.314597,55.870981, Indian cafe spicy cool buffet trendy coffee diner
-14/02/2014,48683,Yellow Bird Cafe,Restaurant/Cafe/Canteen,1,39 Paisley Road West,Glasgow,G51 1LG,28/05/2012,-4.28068,55.853325, cafe Chinese light lunch traditional
-14/02/2014,612676,Yen,Restaurant/Cafe/Canteen,1,28 Tunnel Street,Glasgow,G3 8HL,28/11/2013,-4.283461,55.859322, Japanese buffet world spicy Asian sushi
-14/02/2014,31225,Yo Sushi,Restaurant/Cafe/Canteen,1,21 Buchanan Street,Glasgow,G1 3HL,23/11/2012,-4.254903,55.859309, Japanese buffet world Asian contemporary modern
-14/02/2014,23298,Yo! Sushi,Restaurant/Cafe/Canteen,1,763 Barrhead Road,Glasgow,G53 6AG,18/11/2011,-4.342073,55.822898, Japanese buffet world sushi Asian contemporary modern
-14/02/2014,106784,Yoker Bowling Club,Restaurant/Cafe/Canteen,1,21 Hawick Street,Glasgow,G13 4EL,13/08/2012,-4.382586,55.891137, traditional pub pizza coffee cafe
-14/02/2014,111415,Yorkhill Fire Station,Restaurant/Cafe/Canteen,1,214 Kelvinhaugh Street,Glasgow,G3 8QS,28/07/2006,-4.295541,55.863923, cafe lunch light milkshakes donuts cool
-14/02/2014,589597,Young Calvay Volunteers,Restaurant/Cafe/Canteen,1,678 Duke Street,Glasgow,G31 1JZ,08/10/2013,-4.207811,55.857917, donuts pastries cafe lunch coffee healthy
-14/02/2014,556112,Zebra Cafe,Restaurant/Cafe/Canteen,1,34 Queen Street,Glasgow,G1 3DX,15/04/2013,-4.251911,55.858681, cafe light lunch trendy coffee healthy buffet
-14/02/2014,495626,Zizzi,Restaurant/Cafe/Canteen,1,31 Royal Exchange Square,Glasgow,G1 3AJ,24/06/2013,-4.252971,55.859875, Italian unique trendy modern contemporary pizza cafe
-14/02/2014,36248,Zizzi,Restaurant/Cafe/Canteen,1,8 Cresswell Lane,Glasgow,G12 8AA,10/05/2012,-4.292252,55.875911, Italian unique trendy modern contemporary pizza Scottish cafe
-14/02/2014,18687,Zizzi,Restaurant/Cafe/Canteen,1,48 Buchanan Street,Glasgow,,09/08/2011,-4.25452799,55.859396, Italian unique trendy modern contemporary pizza
-14/02/2014,36323,Zoe Makes Cakes,Restaurant/Cafe/Canteen,1,66 White Street,Glasgow,G11 5ED,21/09/2010,-4.305337,55.87306, coffee buffet donuts american
-14/02/2014,107368,Zorba,Restaurant/Cafe/Canteen,1,25 High Street,Glasgow,G1 1LX,06/11/2012,-4.243279,55.857527, Spanish unique spicy cocktails
+ExtractDate,FHRSID,name,type,BusinessTypeID,addressLine2,addressLine3,postcode,ratingDate,lon,lat,keywordData,Takeaway
+14/02/2014,19429,(Starbucks),Restaurant/Cafe/Canteen,1,390 Provan Walk,Glasgow,G34 9DL,01/11/2011,-4.136909,55.872982,coffee snacks,R
+14/02/2014,36362,2 Go,Restaurant/Cafe/Canteen,1,397 Dumbarton Road,Glasgow,G11 6BE,03/09/2013,-4.308613,55.870617,snacks coffee fastfood,T
+14/02/2014,507934,200 St Vincent Street,Restaurant/Cafe/Canteen,1,200 St Vincent Street,Glasgow,G2 5SG,06/02/2013,-4.260957,55.86229,traditional pub,T
+14/02/2014,95689,279 Cafe Bistro,Restaurant/Cafe/Canteen,1,279 Dumbarton Road,Glasgow,G11 6AB,22/05/2012,-4.303939,55.870516,coffee sandwiches cafe,R
+14/02/2014,110587,32nd Signal Regiment (v),Restaurant/Cafe/Canteen,1,21 Jardine Street,Glasgow,G20 6JU,24/05/2011,-4.277246,55.877088,coffee sandwiches cafe,RT
+14/02/2014,10859,7 Day Catering Ltd  -Staff Canteen,Restaurant/Cafe/Canteen,1,53 Coltness Street,Glasgow,G33 4JD,13/09/2011,-4.152553,55.863938,healthy milkshakes,T
+14/02/2014,406755,7th Heaven,Restaurant/Cafe/Canteen,1,15 Elmbank Gardens,Glasgow,G2 4NQ,06/06/2012,-4.270439,55.865108,cafe pub sandwiches,T
+14/02/2014,556088,916 - Diner,Restaurant/Cafe/Canteen,1,916 Sauchiehall Street,Glasgow,G3 7TF,06/06/2013,-4.284479,55.865774,seafood sophisticated cocktails,T
+14/02/2014,31114,Abercromby Cafe,Restaurant/Cafe/Canteen,1,168 Abercromby Street,Glasgow,G40 2RZ,22/10/2013,-4.229148,55.852688,burger pub cafe,R
+14/02/2014,36313,Abercromby Catering And Vending,Restaurant/Cafe/Canteen,1,8 Arrol Road,Glasgow,G40 3DQ,12/02/2013,-4.213875,55.84625,cafe milkshakes snacks,T
+14/02/2014,35898,A-Cakes,Restaurant/Cafe/Canteen,1,39 Milnbank Street,Glasgow,G31 3AQ,28/06/2010,-4.221675,55.864803,milkshakes snacks donuts sweet,T
+14/02/2014,537382,Ad Lib,Restaurant/Cafe/Canteen,1,33 Ingram Street,Glasgow,G1 1HA,23/07/2013,-4.242358,55.859008,tapas world trendy spanish,RT
+14/02/2014,91632,Agra Restaurant,Restaurant/Cafe/Canteen,1,995 Crow Road,Glasgow,G13 1JP,05/07/2013,-4.32204,55.893903,italian pizza cocktails trendy,T
+14/02/2014,315982,AJ's Sandwich Shop,Restaurant/Cafe/Canteen,1,14 Tollcross Road,Glasgow,G31 4XD,20/06/2012,-4.19669,55.850836,cafe sandwiches snacks milkshakes,R
+14/02/2014,360826,Akbars Balti Restaurant,Restaurant/Cafe/Canteen,1,573 Sauchiehall Street,Glasgow,G3 7PQ,09/10/2012,-4.273083,55.866048,indian spicy traditional,R
+14/02/2014,36482,Alba Cafe,Restaurant/Cafe/Canteen,1,481 Great Western Road,Glasgow,G12 8HL,17/05/2011,-4.282144,55.875281,scottish cafe milkshakes snacks fastfood,T
+14/02/2014,188093,Albacore,Restaurant/Cafe/Canteen,1,200 Carlisle Street,Glasgow,,16/12/2013,-4.242509842,55.85779953,pub burger snacks,R
+14/02/2014,19526,Albacore (Scottish Qualifications Authority),Restaurant/Cafe/Canteen,1,58 Robertson Street,Glasgow,G2 8DU,22/10/2009,-4.260464,55.857095,cafe,R
+14/02/2014,49104,Alberto's,Restaurant/Cafe/Canteen,1,506 Alexandra Parade,Glasgow,G31 3BQ,15/05/2013,-4.218008,55.863548,italian healthy trendy,RT
+14/02/2014,360864,Albion Sports And Social Club,Restaurant/Cafe/Canteen,1,320 Halley Street,Glasgow,G13 4DJ,14/11/2013,-4.378986,55.891898,pub bar burger pizza snacks,R
+14/02/2014,66160,Alishan Tandoori,Restaurant/Cafe/Canteen,1,250 Battlefield Road,Glasgow,G42 9HU,24/01/2013,-4.262139,55.824889,indian spicy tradtitional,RT
+14/02/2014,49065,All In One,Restaurant/Cafe/Canteen,1,12 Marne Street,Glasgow,G31 2TD,05/06/2013,-4.212686,55.8627,wings steakhouse spicy,T
+14/02/2014,15468,Alla Turca Restuarant,Restaurant/Cafe/Canteen,1,192 Pitt Street,Glasgow,G2 4DY,15/10/2013,-4.26452,55.865289,world buffet unique,T
+14/02/2014,116807,Allied Distillers Canteen,Restaurant/Cafe/Canteen,1,1780 London Road,Glasgow,G32 8XA,19/10/2005,-4.192206,55.838729,cafe snacks sandwiches,T
+14/02/2014,548299,Almi's Cafeteria,Restaurant/Cafe/Canteen,1,600 Eglinton Street,Glasgow,G5 9RR,07/11/2013,-4.262232,55.844633,cafe snacks sandwiches,RT
+14/02/2014,511143,Al's Diner,Restaurant/Cafe/Canteen,1,70 Cathedral Street,Glasgow,G4 0RN,08/10/2013,,,american burger pizza wings steakhouse donuts milkshakes,R
+14/02/2014,112421,AM PM,Restaurant/Cafe/Canteen,1,16 Killermont Street,Glasgow,G2 3NW,05/11/2013,-4.25203,55.865428,trendy cocktails tapas bar,RT
+14/02/2014,133348,Amalfi Pizzeria,Restaurant/Cafe/Canteen,1,148 West Nile Street,Glasgow,G1 2RQ,14/02/2011,-4.253893,55.863929,italian pizza sopisticated cocktails,R
+14/02/2014,19637,Amarone,Restaurant/Cafe/Canteen,1,4 Nelson Mandela Place,Glasgow,,09/07/2012,-4.2535556,55.86203936,italian pizza spicy,T
+14/02/2014,568571,Amateur Football Association,Restaurant/Cafe/Canteen,1,34 Bridge Street,Glasgow,G5 9HU,04/07/2013,-4.259031,55.853338,cafe sandwiches snacks,RT
+14/02/2014,133364,Amber Regent,Restaurant/Cafe/Canteen,1,50 West Regent Street,Glasgow,G2 2RA,22/02/2012,-4.256413,55.86329,seafood world sophisticated,R
+14/02/2014,30936,Amber Restaurant,Restaurant/Cafe/Canteen,1,132 Byres Road,Glasgow,G12 8TD,05/10/2011,-4.295156,55.873646,world italian mexican spanish pizza spicy,T
+14/02/2014,480311,Amber's Cafe,Restaurant/Cafe/Canteen,1,18 Balmore Road,Glasgow,G22 6RN,26/11/2013,-4.255088,55.884273,cafe sandwiches snacks,R
+14/02/2014,31320,Amore Ristorante,Restaurant/Cafe/Canteen,1,30 Ingram Street,Glasgow,G1 1EZ,01/07/2013,-4.242543,55.859445,italian pizza,R
+14/02/2014,45671,Amros Tandoori,Restaurant/Cafe/Canteen,1,1228 Royston Road,Glasgow,G33 1EX,19/06/2013,-4.193152,55.878212,indian spicy buffet,T
+14/02/2014,31211,AMT Coffee,Restaurant/Cafe/Canteen,1,79 Gordon Street,Glasgow,G1 3SQ,16/09/2009,-4.258211,55.859302,coffee cafe snacks,R
+14/02/2014,102350,Amt Expresso (Queen St Station),Restaurant/Cafe/Canteen,1,38 George Square,Glasgow,G1 2AF,15/09/2010,-4.251204,55.862487,coffee snacks cafe,T
+14/02/2014,30935,An Clachan Cafe Ltd,Restaurant/Cafe/Canteen,1,5 La Belle Place,Glasgow,G3 7LH,12/03/2013,-4.27954,55.866593,,T
+14/02/2014,132673,Anarkali Restaurant,Restaurant/Cafe/Canteen,1,531 Victoria Road,Glasgow,G42 8BH,04/12/2013,-4.265291,55.83407,,RT
+14/02/2014,48041,Anatolia,Restaurant/Cafe/Canteen,1,140 St Vincent Street,Glasgow,G2 5LA,25/07/2013,-4.25852,55.861876,,R
+14/02/2014,507922,Andell's Restauarnt And Tearoom,Restaurant/Cafe/Canteen,1,140 Sauchiehall Street,Glasgow,G2 3DH,04/02/2013,-4.258023,55.865157,,T
+14/02/2014,315985,Anne's Snack Bar,Restaurant/Cafe/Canteen,1,183 Fordneuk Street,Glasgow,G40 3SA,10/04/2012,-4.218836,55.849486,,T
+14/02/2014,49131,Another Piece,Restaurant/Cafe/Canteen,1,387 Great Western Road,Glasgow,G4 9HY,05/04/2013,-4.277598,55.873819,,T
+14/02/2014,128362,Anti Pasti,Restaurant/Cafe/Canteen,1,305 Sauchiehall Street,Glasgow,G2 3HQ,01/02/2012,-4.263947,55.865326,,T
+14/02/2014,26768,Aramark,Restaurant/Cafe/Canteen,1,200 Glentanar Road,Glasgow,G22 7XS,11/06/2010,-4.259779,55.895646,,T
+14/02/2014,360791,Ardery Street Masonic Halls,Restaurant/Cafe/Canteen,1,9 Ardery Street,Glasgow,G11 7SX,30/04/2012,-4.31445,55.871478,,RT
+14/02/2014,31127,Arisaig,Restaurant/Cafe/Canteen,1,71 Albion Street,Glasgow,G1 1NY,16/04/2013,-4.243579,55.858573,,R
+14/02/2014,31015,Arnold Clark Canteen,Restaurant/Cafe/Canteen,1,459 Crow Road,Glasgow,G11 7DN,15/05/2012,-4.327257,55.882201,,R
+14/02/2014,49071,Aroma,Restaurant/Cafe/Canteen,1,5 Cadogan Street,Glasgow,G2 6QE,19/04/2013,-4.260169,55.859446,,RT
+14/02/2014,132908,Arta,Restaurant/Cafe/Canteen,1,13 Walls Street,Glasgow,G1 1PA,03/01/2013,-4.24317,55.857852,,RT
+14/02/2014,36128,Artisan Roast,Restaurant/Cafe/Canteen,1,15 Gibson Street,Glasgow,G12 8NU,11/03/2013,-4.282448,55.8723,,RT
+14/02/2014,49165,Arty Tarts,Restaurant/Cafe/Canteen,1,3 McLaren Crescent,Glasgow,G20 0LD,10/11/2011,-4.285638,55.895285,,T
+14/02/2014,10067,Asda (Restaurant  and Staff Canteen),Restaurant/Cafe/Canteen,1,1300 Duke Street,Glasgow,G31 4EB,07/10/2009,-4.199841,55.853449,,R
+14/02/2014,21857,Asda Cafe/Canteen,Restaurant/Cafe/Canteen,1,555 Prospecthill Road,Glasgow,G42 0AE,13/12/2011,-4.246845,55.830176,,RT
+14/02/2014,31299,Asda Customer Restaurant And Canteen,Restaurant/Cafe/Canteen,1,1 Monument Drive,Glasgow,G33 1AD,14/04/2011,-4.186996,55.890984,,RT
+14/02/2014,56095,Ashoka Ashton Lane,Restaurant/Cafe/Canteen,1,19 Ashton Lane,Glasgow,G12 8SJ,10/06/2013,-4.292992,55.87463,,R
+14/02/2014,581091,Ashoka At The Quay,Restaurant/Cafe/Canteen,1,3 Springfield Quay,Glasgow,G5 8NP,04/12/2013,-4.274804,55.855303,,R
+14/02/2014,86684,Ashoka South Side,Restaurant/Cafe/Canteen,1,268 Clarkston Road,Glasgow,G44 3EA,23/01/2012,-4.269606,55.812187,,R
+14/02/2014,315952,Ashoka West End,Restaurant/Cafe/Canteen,1,1284 Argyle Street,Glasgow,G3 8AB,20/03/2013,-4.290045,55.866929,,RT
+14/02/2014,129774,Asia Style,Restaurant/Cafe/Canteen,1,185 St Georges Road,Glasgow,G3 6JD,22/04/2013,-4.269402,55.869792,,T
+14/02/2014,406775,Asian Gourmet,Restaurant/Cafe/Canteen,1,17 West Princes Street,Glasgow,G4 9BS,28/01/2014,-4.270026,55.870077,,RT
+14/02/2014,371804,Ask Italian,Restaurant/Cafe/Canteen,1,3 Port Dundas Place,Glasgow,G2 3LD,18/06/2013,-4.253253,55.865298,,T
+14/02/2014,427404,Assams,Restaurant/Cafe/Canteen,1,57 West Regent Street,Glasgow,G2 2AE,18/12/2013,-4.256581,55.862882,,RT
+14/02/2014,17626,Assissi House,Restaurant/Cafe/Canteen,1,41 Easterhill Street,Glasgow,,16/04/2012,-4.17422278,55.84143226,,T
+14/02/2014,34308,Athena Greek Taverna,Restaurant/Cafe/Canteen,1,1116 Argyle Street,Glasgow,G3 8TD,23/08/2012,-4.284857,55.865138,,RT
+14/02/2014,495620,Athena Greek Taverna,Restaurant/Cafe/Canteen,1,99 Hope Street,Glasgow,G2 6LL,07/01/2014,-4.259448,55.86079,,T
+14/02/2014,22941,Atrium,Restaurant/Cafe/Canteen,1,121 University Avenue,Glasgow,G12 8SP,05/12/2012,-4.293732,55.874158,,T
+14/02/2014,18898,Atrium Coffee House,Restaurant/Cafe/Canteen,1,58 Cresswell Street,Glasgow,G12 8AP,06/08/2013,-4.291748,55.876576,,RT
+14/02/2014,30440,Aubergine,Restaurant/Cafe/Canteen,1,356 Victoria Road,Glasgow,G42 8YW,22/11/2011,-4.264837,55.837512,,RT
+14/02/2014,129741,Aulds,Restaurant/Cafe/Canteen,1,55 St Enoch Square,Glasgow,,06/09/2010,-4.25558113,55.85737272,,T
+14/02/2014,495618,Auntie Anne's,Restaurant/Cafe/Canteen,1,763 Barrhead Road,Glasgow,,03/01/2013,,,,R
+14/02/2014,35884,Auntie M's,Restaurant/Cafe/Canteen,1,2 Clouston Street,Glasgow,G20 8QS,23/06/2010,-4.2847,55.880698,,T
+14/02/2014,36252,Avenue G Cafe,Restaurant/Cafe/Canteen,1,291 Byres Road,Glasgow,G12 8TL,08/10/2013,-4.293342,55.875953,,R
+14/02/2014,97344,Azure (Hospitality),Restaurant/Cafe/Canteen,1,150 Edmiston Drive,Glasgow,G51 2XD,31/05/2013,-4.308669,55.852452,,RT
+14/02/2014,34729,Azzurro,Restaurant/Cafe/Canteen,1,91 Cambridge Street,Glasgow,G3 6RU,08/03/2013,-4.259871,55.866965,,T
+14/02/2014,145168,B and Q Cafe,Restaurant/Cafe/Canteen,1,21 Leggatston Road,Glasgow,G53 7RJ,10/05/2012,-4.339161,55.802839,,R
+14/02/2014,45097,B and Q Cafe,Restaurant/Cafe/Canteen,1,40 Allerdyce Road,Glasgow,G15 6RX,11/05/2012,-4.377474,55.905094,,RT
+14/02/2014,129737,B.H.S. Plc,Restaurant/Cafe/Canteen,1,55 St Enoch Square,Glasgow,G1 4BW,21/09/2010,-4.254458,55.857412,,R
+14/02/2014,556103,Babu Bombay Street Kitchen,Restaurant/Cafe/Canteen,1,186 West Regent Street,Glasgow,G2 4RU,06/06/2013,-4.261774,55.863964,,RT
+14/02/2014,466588,Babylon Cafe,Restaurant/Cafe/Canteen,1,9 Clyde Place,Glasgow,G5 8AA,09/01/2014,,,,T
+14/02/2014,35943,Back 2 Angie's,Restaurant/Cafe/Canteen,1,330 Duke Street,Glasgow,G31 1QZ,08/09/2010,-4.222143,55.858171,,T
+14/02/2014,26356,Baguette Express,Restaurant/Cafe/Canteen,1,297 Provan Walk,Glasgow,G34 9DY,21/02/2012,-4.138074,55.871218,,T
+14/02/2014,48960,Ballito Bay,Restaurant/Cafe/Canteen,1,16 St Andrews Street,Glasgow,G1 5PD,11/08/2011,-4.24419,55.855308,,T
+14/02/2014,594153,Bank Street Bar And Kitchen,Restaurant/Cafe/Canteen,1,54 Bank Street,Glasgow,G12 8LZ,15/01/2014,-4.284265,55.8733,,T
+14/02/2014,120348,Bar Soba,Restaurant/Cafe/Canteen,1,11 Mitchell Lane,Glasgow,G1 3LX,18/02/2013,-4.255473,55.859487,,T
+14/02/2014,315983,Bar Soba Byres Road,Restaurant/Cafe/Canteen,1,122 Byres Road,Glasgow,G12 8TB,24/10/2013,-4.295826,55.873085,,R
+14/02/2014,23202,Bar Ten,Restaurant/Cafe/Canteen,1,10 Mitchell Lane,Glasgow,G1 3NU,20/05/2013,-4.255247,55.859995,,R
+14/02/2014,14658,Barbarossa Restaurant,Restaurant/Cafe/Canteen,1,3 Clarkston Road,Glasgow,G44 4EF,26/03/2013,-4.261659,55.817726,,T
+14/02/2014,19559,Barca Tapas And Cava Bar,Restaurant/Cafe/Canteen,1,48 Buchanan Street,Glasgow,G1 3JN,23/07/2013,-4.253456,55.859156,,RT
+14/02/2014,460413,Barclays Wealth   (3rd Floor),Restaurant/Cafe/Canteen,1,300 Bath Street,Glasgow,G2 4JR,08/11/2013,-4.268847,55.865497,,T
+14/02/2014,48941,Barolo Grill,Restaurant/Cafe/Canteen,1,94 Mitchell Street,Glasgow,G1 3NQ,18/02/2013,-4.255247,55.859995,,T
+14/02/2014,66154,Battlefield Rest,Restaurant/Cafe/Canteen,1,55 Battlefield Road,Glasgow,G42 9JL,11/10/2013,-4.266264,55.827186,,RT
+14/02/2014,49111,Baxter Storey,Restaurant/Cafe/Canteen,1,40 Moffat Street,Glasgow,G5 0ND,19/04/2012,-4.242554,55.847159,,T
+14/02/2014,594128,BaxterStorey,Restaurant/Cafe/Canteen,1,141 Bothwell Street,Glasgow,G2 7EQ,07/10/2013,-4.264012,55.861227,,RT
+14/02/2014,49055,Baxterstorey Ltd (Network Rail Canteen),Restaurant/Cafe/Canteen,1,58 Port Dundas Road,Glasgow,G4 0LQ,09/08/2013,-4.253444,55.867227,,R
+14/02/2014,594122,Baxterstorey Scotland Ltd.,Restaurant/Cafe/Canteen,1,1 Carlton Place,Glasgow,G5 9DA,04/12/2013,-4.263942,55.8408,,R
+14/02/2014,594121,Baxterstorey Scotland Ltd.,Restaurant/Cafe/Canteen,1,212 Saltmarket,Glasgow,G1 5JZ,04/12/2013,-4.246675,55.854076,,T
+14/02/2014,23176,BBC Scotland HQ,Restaurant/Cafe/Canteen,1,40 Pacific Quay,Glasgow,G51 1DA,29/01/2014,-4.290943,55.858032,,T
+14/02/2014,26838,BDP Ltd,Restaurant/Cafe/Canteen,1,15 Exchange Place,Glasgow,G1 3AN,23/08/2013,-4.253746,55.860022,,R
+14/02/2014,612675,Bean Machine,Restaurant/Cafe/Canteen,1,32 Albion Street,Glasgow,G1 1LH,28/11/2013,-4.244412,55.857775,,T
+14/02/2014,30419,Beanscene,Restaurant/Cafe/Canteen,1,1365 Argyle Street,Glasgow,G3 8AF,29/01/2013,-4.29177,55.867723,,R
+14/02/2014,129167,Beanscene,Restaurant/Cafe/Canteen,1,19 Skirving Street,Glasgow,G41 3AB,15/08/2011,-4.280532,55.829798,,RT
+14/02/2014,10216,Beanscene,Restaurant/Cafe/Canteen,1,110 Battlefield Road,Glasgow,G42 9JT,22/02/2011,-4.265146,55.826083,,RT
+14/02/2014,10642,Beanscene Ltd,Restaurant/Cafe/Canteen,1,40 Woodlands Road,Glasgow,G3 6UR,05/10/2012,-4.272108,55.868241,,T
+14/02/2014,52640,Beechwood Tavern,Restaurant/Cafe/Canteen,1,164 Ardmay Crescent,Glasgow,G44 4PP,15/10/2013,-4.247809,55.823354,,R
+14/02/2014,124689,Bella Fresca,Restaurant/Cafe/Canteen,1,2093 Paisley Road West,Glasgow,G52 3JH,20/05/2010,-4.353494,55.845706,,T
+14/02/2014,108511,Bella Italia,Restaurant/Cafe/Canteen,1,96 Hope Street,Glasgow,G2 6PH,08/08/2013,-4.258318,55.860873,,RT
+14/02/2014,112543,Bella Napoli,Restaurant/Cafe/Canteen,1,85 Kilmarnock Road,Glasgow,G41 3YR,09/09/2011,-4.282917,55.828531,,R
+14/02/2014,594146,Bella Vita,Restaurant/Cafe/Canteen,1,597 Mosspark Boulevard,Glasgow,G52 1SB,10/10/2013,-4.333458,55.845127,,T
+14/02/2014,15639,Bellahouston Sports Centre (Cafe),Restaurant/Cafe/Canteen,1,31 Bellahouston Drive,Glasgow,G52 1HH,22/06/2010,-4.324015,55.846159,,T
+14/02/2014,101490,Bellgrove Hotel,Restaurant/Cafe/Canteen,1,607 Gallowgate,Glasgow,G40 2PG,27/08/2013,-4.222186,55.854997,,R
+14/02/2014,360873,Belvidere Bowling Club,Restaurant/Cafe/Canteen,1,23 Silverdale Street,Glasgow,G31 4LE,07/06/2012,-4.200938,55.847138,,T
+14/02/2014,35987,Bensons Cafe,Restaurant/Cafe/Canteen,1,1300 Duke Street,Glasgow,G31 4EB,26/06/2012,-4.199841,55.853449,,RT
+14/02/2014,26315,"Benson's Pantry (Inshops Unit 6, 7, 8)",Restaurant/Cafe/Canteen,1,1300 Duke Street,Glasgow,G31 4EB,24/04/2009,-4.199841,55.853449,,R
+14/02/2014,480304,Best Chippy,Restaurant/Cafe/Canteen,1,55 Mount Annan Drive,Glasgow,G44 4RX,22/11/2012,-4.25474,55.823937,,RT
+14/02/2014,23319,Bibi's Cantina,Restaurant/Cafe/Canteen,1,599 Dumbarton Road,Glasgow,G11 6HY,19/02/2013,-4.317637,55.870501,,T
+14/02/2014,19699,Biggar's Cafe,Restaurant/Cafe/Canteen,1,273 Sauchiehall Street,Glasgow,G2 3HQ,17/05/2012,-4.263947,55.865326,,T
+14/02/2014,581125,Bikram Yoga Southside (and Juice Bar),Restaurant/Cafe/Canteen,1,32 Eastwood Avenue,Glasgow,G41 3NS,28/08/2013,-4.286243,55.827805,,T
+14/02/2014,26801,Biscuit,Restaurant/Cafe/Canteen,1,17 Skirving Street,Glasgow,G41 3AB,11/04/2011,-4.280532,55.829798,,T
+14/02/2014,548297,Bites 'N' Pieces,Restaurant/Cafe/Canteen,1,99 Rockfield Road,Glasgow,G21 3DY,13/05/2013,-4.203947,55.889549,,RT
+14/02/2014,36251,Black Sheep Bistro,Restaurant/Cafe/Canteen,1,10 Clarendon Street,Glasgow,G20 7QD,23/05/2012,-4.268495,55.872603,,T
+14/02/2014,131310,Blackhill Bowling Club,Restaurant/Cafe/Canteen,1,20 Tay Crescent,Glasgow,G33 2BQ,29/04/2009,-4.189009,55.871356,,R
+14/02/2014,84941,Bluebird Cafe,Restaurant/Cafe/Canteen,1,510 Cathcart Road,Glasgow,G42 7BX,20/10/2011,-4.25734,55.837119,,R
+14/02/2014,108510,Bombay Blues,Restaurant/Cafe/Canteen,1,41 Hope Street,Glasgow,G2 6AE,09/02/2011,-4.259536,55.859557,,RT
+14/02/2014,36487,Bonbons And Buttercream,Restaurant/Cafe/Canteen,1,7 Dryburgh Gardens,Glasgow,G20 6BT,13/12/2011,-4.277453,55.87899,,T
+14/02/2014,448741,Boots The Chemists Ltd,Restaurant/Cafe/Canteen,1,200 Sauchiehall Street,Glasgow,G2 3EF,29/03/2006,-4.259931,55.865248,,T
+14/02/2014,36149,Boyd Catering (Brookfield Construction Site),Restaurant/Cafe/Canteen,1,1345 Govan Road,Glasgow,G51 4TF,14/05/2012,-4.337594,55.863985,,T
+14/02/2014,594144,Boyd's,Restaurant/Cafe/Canteen,1,2121 Paisley Road West,Glasgow,G52 3JL,10/10/2013,-4.35467,55.845612,,T
+14/02/2014,128360,Bradfords,Restaurant/Cafe/Canteen,1,245 Sauchiehall Street,Glasgow,G2 3EZ,03/10/2012,-4.262562,55.865145,,R
+14/02/2014,480298,Brambles Catering,Restaurant/Cafe/Canteen,1,188 Riverford Road,Glasgow,G43 2DE,21/11/2013,-4.288925,55.821005,,RT
+14/02/2014,49060,Bread + Butter,Restaurant/Cafe/Canteen,1,74 Buchanan Street,Glasgow,G1 3HA,11/03/2011,-4.25397,55.860018,,R
+14/02/2014,607032,Bread Meats Bread,Restaurant/Cafe/Canteen,1,104 St Vincent Street,Glasgow,G2 5UB,09/01/2014,-4.255533,55.861625,,R
+14/02/2014,56101,Brel,Restaurant/Cafe/Canteen,1,37 Ashton Lane,Glasgow,G12 8SJ,20/10/2013,-4.292992,55.87463,,R
+14/02/2014,133366,Brian Maule At Chardon D'Or,Restaurant/Cafe/Canteen,1,172 West Regent Street,Glasgow,,18/08/2010,-4.26149352,55.86369468,,T
+14/02/2014,18545,Bridgeton Community Learning Centre,Restaurant/Cafe/Canteen,1,68 Dale Street,Glasgow,G40 4TL,21/02/2012,-4.222541,55.844979,,T
+14/02/2014,29379,British Bakeries Canteen,Restaurant/Cafe/Canteen,1,783 Duke Street,Glasgow,G31 1LL,20/04/2012,-4.210019,55.858803,,T
+14/02/2014,534333,Broad Street Cafe,Restaurant/Cafe/Canteen,1,60 Broad Street,Glasgow,G40 2QN,18/11/2013,-4.223796,55.850457,,R
+14/02/2014,534357,Brooklands Caf�,Restaurant/Cafe/Canteen,1,1632 Great Western Road,Glasgow,G13 1HH,08/04/2013,-4.324127,55.890026,,R
+14/02/2014,77482,Broomton Community Shop,Restaurant/Cafe/Canteen,1,42 Broomton Road,Glasgow,G21 3RU,19/03/2012,-4.203822,55.89693,,RT
+14/02/2014,200645,Brown's Bar and Brasserie,Restaurant/Cafe/Canteen,1,1 George Square,Glasgow,G2 1DY,20/01/2014,-4.250847,55.860453,,T
+14/02/2014,606997,Brutti Compadres,Restaurant/Cafe/Canteen,1,35 Virginia Street,Glasgow,G1 1TN,13/08/2013,-4.250545,55.858544,,RT
+14/02/2014,460399,Buchanan Lodge,Restaurant/Cafe/Canteen,1,163 Wardie Road,Glasgow,G34 9EG,25/10/2012,-4.120015,55.867172,,T
+14/02/2014,607019,Bull Leader,Restaurant/Cafe/Canteen,1,55 Union Street,Glasgow,G1 3RB,06/11/2013,-4.257325,55.859184,,T
+14/02/2014,125754,Buon Giorno,Restaurant/Cafe/Canteen,1,1012 Pollokshaws Road,Glasgow,G41 2HG,28/10/2013,-4.278617,55.832008,,RT
+14/02/2014,444490,Burger King,Restaurant/Cafe/Canteen,1,102 Union Street,Glasgow,G1 3QW,25/08/2012,-4.256555,55.859962,,RT
+14/02/2014,511133,Burger King,Restaurant/Cafe/Canteen,1,6 Allerdyce Court,Glasgow,G15 6SA,26/02/2013,-4.376618,55.902864,,R
+14/02/2014,511132,Burger King,Restaurant/Cafe/Canteen,1,1 Springfield Quay,Glasgow,G5 8NP,02/08/2013,-4.274804,55.855303,,RT
+14/02/2014,516675,Burger King,Restaurant/Cafe/Canteen,1,55 St Enoch Square,Glasgow,G1 4BW,04/09/2013,-4.254458,55.857412,,R
+14/02/2014,562673,Burger Meats Bun,Restaurant/Cafe/Canteen,1,48 West Regent Street,Glasgow,G2 2RA,19/06/2013,-4.256413,55.86329,,T
+14/02/2014,134212,Burnbank Bowling Club,Restaurant/Cafe/Canteen,1,235 Woodlands Road,Glasgow,G3 6NN,19/10/2004,-4.277658,55.871302,,T
+14/02/2014,125768,Burrell Collection (The Burrell Cafe/Restaurant),Restaurant/Cafe/Canteen,1,2060 Pollokshaws Road,Glasgow,G43 1AT,28/03/2012,-4.303363,55.823261,,RT
+14/02/2014,48944,Buzzy Wares,Restaurant/Cafe/Canteen,1,48 Buchanan Street,Glasgow,G1 3JN,11/01/2012,-4.253456,55.859156,,R
+14/02/2014,460409,Byblos Cafe,Restaurant/Cafe/Canteen,1,6 Park Road,Glasgow,G4 9JG,22/07/2013,-4.278703,55.873853,,R
+14/02/2014,48674,C/o Scottish Water,Restaurant/Cafe/Canteen,1,419 Balmore Road,Glasgow,G22 6NU,24/04/2013,-4.260865,55.890943,,R
+14/02/2014,562692,Cafe,Restaurant/Cafe/Canteen,1,220 High Street,Glasgow,G4 0QW,11/07/2013,-4.239688,55.860657,,T
+14/02/2014,612651,Cafe 13,Restaurant/Cafe/Canteen,1,794 Govan Road,Glasgow,G51 2YL,11/11/2013,-4.310615,55.862895,,RT
+14/02/2014,48871,Cafe Absolute,Restaurant/Cafe/Canteen,1,161 Byres Road,Glasgow,G12 8TS,24/01/2012,-4.295756,55.873787,,T
+14/02/2014,568576,Cafe Amalfi,Restaurant/Cafe/Canteen,1,19 Carmunnock Road,Glasgow,G44 4TZ,19/11/2013,-4.256752,55.825042,,T
+14/02/2014,24725,Cafe Andaluz,Restaurant/Cafe/Canteen,1,15 St Vincent Place,Glasgow,G1 2DW,09/10/2013,-4.252437,55.860864,,R
+14/02/2014,90588,Cafe Andaluz,Restaurant/Cafe/Canteen,1,2 Cresswell Lane,Glasgow,G12 8AA,04/03/2011,-4.292252,55.875911,,T
+14/02/2014,406756,Cafe Asia,Restaurant/Cafe/Canteen,1,1359 Barrhead Road,Glasgow,G53 7DA,07/06/2012,-4.362746,55.821792,,T
+14/02/2014,119069,Cafe Avanti,Restaurant/Cafe/Canteen,1,26 Merkland Street,Glasgow,G11 6DB,17/12/2012,-4.30912,55.870275,,T
+14/02/2014,73331,Cafe B Encore At Blair Court,Restaurant/Cafe/Canteen,1,100 Borron Street,Glasgow,G4 9XG,19/11/2012,-4.24913,55.87526,,RT
+14/02/2014,48928,Cafe Bella Turca,Restaurant/Cafe/Canteen,1,563 Sauchiehall Street,Glasgow,G3 7PQ,09/04/2013,-4.273083,55.866048,,T
+14/02/2014,95711,Cafe Bungalow,Restaurant/Cafe/Canteen,1,1363 Dumbarton Road,Glasgow,G14 9UZ,28/03/2013,-4.343177,55.875742,,T
+14/02/2014,31168,Cafe Castello Coffee House,Restaurant/Cafe/Canteen,1,61 Old Castle Road,Glasgow,G44 5TG,03/05/2011,-4.257964,55.816491,,R
+14/02/2014,23158,Cafe Cherubini,Restaurant/Cafe/Canteen,1,360 Great Western Road,Glasgow,G4 9HT,27/09/2011,-4.276352,55.873833,,RT
+14/02/2014,91623,Cafe Circa,Restaurant/Cafe/Canteen,1,322 Crow Road,Glasgow,G11 7HS,27/11/2013,-4.321842,55.877747,,R
+14/02/2014,127496,Cafe Cosmo,Restaurant/Cafe/Canteen,1,12 Rose Street,Glasgow,G3 6QZ,18/08/2011,-4.260859,55.865545,,T
+14/02/2014,17904,Cafe Di Sorrento,Restaurant/Cafe/Canteen,1,470 Crow Road,Glasgow,G11 7DR,19/02/2013,-4.325861,55.88132,,T
+14/02/2014,22899,Cafe Euro,Restaurant/Cafe/Canteen,1,549 Duke Street,Glasgow,G31 1DL,21/06/2011,-4.217936,55.858642,,RT
+14/02/2014,128349,Cafe Express,Restaurant/Cafe/Canteen,1,140 Sauchiehall Street,Glasgow,G2 3DH,13/03/2013,-4.258023,55.865157,,T
+14/02/2014,556086,Cafe Fornette,Restaurant/Cafe/Canteen,1,140 Sauchiehall Street,Glasgow,G2 3DH,22/07/2013,-4.258023,55.865157,,T
+14/02/2014,44283,Cafe Gandolfi,Restaurant/Cafe/Canteen,1,64 Albion Street,Glasgow,G1 1NY,03/10/2013,-4.243579,55.858573,,T
+14/02/2014,516677,Cafe Go Go,Restaurant/Cafe/Canteen,1,5 Cresswell Lane,Glasgow,,06/08/2013,,,,RT
+14/02/2014,108523,Cafe Hula,Restaurant/Cafe/Canteen,1,321 Hope Street,Glasgow,G2 3PT,16/12/2011,-4.256986,55.866281,,R
+14/02/2014,19091,Cafe In Victorian Market,Restaurant/Cafe/Canteen,1,233 London Road,Glasgow,G40 1PE,04/02/2012,-4.237417,55.853948,,RT
+14/02/2014,607008,Cafe India,Restaurant/Cafe/Canteen,1,29 Albion Street,Glasgow,G1 1LH,26/10/2013,-4.244412,55.857775,,T
+14/02/2014,95682,Cafe JJ,Restaurant/Cafe/Canteen,1,180 Dumbarton Road,Glasgow,G11 6XE,17/05/2012,-4.29999,55.870769,,R
+14/02/2014,73330,Cafe Katia,Restaurant/Cafe/Canteen,1,100 Borron Street,Glasgow,,30/04/2013,-4.24894571,55.87401512,,RT
+14/02/2014,134208,Cafe La Padella,Restaurant/Cafe/Canteen,1,124 Woodlands Road,Glasgow,G3 6HB,22/04/2013,-4.273911,55.869277,,T
+14/02/2014,33024,Cafe Lavita,Restaurant/Cafe/Canteen,1,202 Gallowgate,Glasgow,G1 5DS,29/08/2013,-4.238092,55.855419,,T
+14/02/2014,618974,Cafe Lovestruck,Restaurant/Cafe/Canteen,1,751 Pollokshaws Road,Glasgow,G41 2AX,09/12/2013,-4.271722,55.835345,,R
+14/02/2014,49187,Cafe Ludovic,Restaurant/Cafe/Canteen,1,11 Lochleven Road,Glasgow,G42 9JU,05/08/2013,-4.265209,55.825507,,R
+14/02/2014,571746,Cafe Massimo,Restaurant/Cafe/Canteen,1,1009 Cathcart Road,Glasgow,G42 9XJ,29/07/2013,-4.259091,55.827659,,R
+14/02/2014,607039,Cafe Melegrano,Restaurant/Cafe/Canteen,1,105 Albert Drive,Glasgow,G41 2SU,11/11/2013,-4.270098,55.841459,,R
+14/02/2014,466607,Cafe Momentum (Scottish Enterprise),Restaurant/Cafe/Canteen,1,50 Waterloo Street,Glasgow,G2 6HQ,14/08/2013,-4.261071,55.86067,,T
+14/02/2014,23301,Cafe Noor,Restaurant/Cafe/Canteen,1,49 Kilmarnock Road,Glasgow,G41 3YN,24/01/2013,-4.281972,55.829295,,R
+14/02/2014,109495,Cafe Nye,Restaurant/Cafe/Canteen,1,20 India Street,Glasgow,,08/09/2010,,,,T
+14/02/2014,534342,Cafe Octavia,Restaurant/Cafe/Canteen,1,40 Edington Street,Glasgow,G4 9RD,31/07/2013,-4.259395,55.872537,,RT
+14/02/2014,585895,Cafe Olive,Restaurant/Cafe/Canteen,1,513 Amulree Street,Glasgow,G32 7TW,16/09/2013,-4.165765,55.842891,,RT
+14/02/2014,26685,Cafe Oliver,Restaurant/Cafe/Canteen,1,430 Dumbarton Road,Glasgow,G11 6SB,21/06/2013,-4.310294,55.870936,,RT
+14/02/2014,48551,Cafe Osa,Restaurant/Cafe/Canteen,1,217 Hope Street,Glasgow,G2 2UW,06/10/2011,-4.257905,55.863667,,T
+14/02/2014,10395,Cafe Pearce,Restaurant/Cafe/Canteen,1,860 Govan Road,Glasgow,G51 3UU,13/07/2010,-4.312603,55.863523,,T
+14/02/2014,466604,Cafe Phoenix Ltd,Restaurant/Cafe/Canteen,1,262 Woodlands Road,Glasgow,G3 6NE,04/11/2013,-4.277611,55.871869,,T
+14/02/2014,48772,Cafe Ritazza,Restaurant/Cafe/Canteen,1,79 Gordon Street,Glasgow,G1 3SQ,19/05/2011,-4.258211,55.859302,,RT
+14/02/2014,128567,Cafe Ritazza,Restaurant/Cafe/Canteen,1,1 Scottish Exhibition Centre,Glasgow,G3 8YW,01/09/2010,-4.288154,55.86087,,T
+14/02/2014,17637,Cafe Roots,Restaurant/Cafe/Canteen,1,63 North Frederick Street,Glasgow,G1 2BS,23/09/2013,-4.248413,55.862025,,RT
+14/02/2014,585892,Cafe Roots (City Of Glasgow College),Restaurant/Cafe/Canteen,1,230 Cathedral Street,Glasgow,G1 2TG,13/09/2013,-4.246071,55.863255,,RT
+14/02/2014,48647,Cafe Rouge,Restaurant/Cafe/Canteen,1,20 Royal Exchange Square,Glasgow,G1 3AB,28/11/2013,-4.252561,55.86052,,RT
+14/02/2014,607016,Cafe Salma,Restaurant/Cafe/Canteen,1,523 Sauchiehall Street,Glasgow,G3 7PQ,06/11/2013,-4.273083,55.866048,,R
