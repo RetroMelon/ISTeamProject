@@ -18,15 +18,35 @@ function initialize() {
     var mapCanvas = document.getElementById('map');
     var mapOptions = {
         center: new google.maps.LatLng(thisRestaurantData["lat"],thisRestaurantData["lon"]),
-        zoom: 19,
+        zoom: 22,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     var map = new google.maps.Map(mapCanvas, mapOptions);
+
+	document.getElementById('restaurant-name').innerHTML = getURLParameter('restaurant_name').replace(/\+/g, " ");
+
+	document.getElementById('description-box').innerHTML = thisRestaurantData["description"];
+	
+	var priceString = "";
+    for (var i = 0; i < thisRestaurantData.price; i++)
+         priceString = priceString.concat("\u00A3");
+	document.getElementById('price').innerHTML = "Price " + priceString;
+
+	var starString = "";
+    for (var i = 0; i < thisRestaurantData.stars; i++)
+         starString = starString.concat("\u2605");
+	document.getElementById('stars').innerHTML = "Rating " + starString;
+
+	//var tagsString = "People liked this restaurant for: ";
+   // for (String string:thisRestaurantData.keywords)
+     //    tagsString = tagsString.concat(string);
+	//document.getElementById('tags').innerHTML = tagsString;
 } 
+
 google.maps.event.addDomListener(window, 'load', initialize);
 
 var globalRestaurantData = {
-  "Ubiquitous Chip": {"lat" : 55.8748262,"lon":-4.2951635, "location": "12 Ashton Ln", "description": "Artistic brasserie dishes that display their provenance, served in a leafy space with fairy lights.", "price": 3, "stars": 4, "keywords": ["British", "chips", "Scottish", "family"] },
+  "Ubiquitous Chip": {"lat" : 55.874830,"lon":-4.293050, "location": "12 Ashton Ln", "description": "Artistic brasserie dishes that display their provenance, served in a leafy space with fairy lights.", "price": 3, "stars": 4, "keywords": ["British", "chips", "Scottish", "family"] },
   "Mother India": { "location": "28 Westminster Terrace", "description": "Cosy ground floor with bar, intimate cellar and Dickensian 1st floor dining rooms for Indian dishes.", "price": 2, "stars": 4, "keywords": ["Indian", "spicy", "family", "curry", "korma"] },
   "Stravaigin": { "location": "28 Gibson St", "description": "Gourmet concoctions from wild ingredients like grey squirrel, hedgerow herbs and sea urchins.", "price": 3, "stars": 4, "keywords": ["gourmet", "contemporary", "British", "Scottish", "herbs"] },
   "Rogano": { "location": "11 Exchange Pl", "description": "Classical fish recipes dishes in unusual Queen Mary ocean-liner-inspired room and basement cafe.", "price": 3, "stars": 4, "keywords": ["fish", "ocean", "cafe", "seafood", "elegant"] },
