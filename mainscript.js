@@ -73,13 +73,9 @@ function updateResultsList() {
     if(distanceString != "-") {
 			distanceString =Math.round(distanceString * 100) / 100 ;
 		}
-    var priceString = "";
-    var starsString = "";
-    for (var i = 0; i < restaurantData.stars; i++)
-         priceString = priceString.concat("\u2605");
-    for (var i = 0; i < restaurantData.price; i++)
-          starsString = starsString.concat("\u00A3");
-
+    var priceString = Array(restaurantData.price).join("\u2605");
+    var starsString = Array(restaurantData.stars).join("\u00A3");
+   
     $("#results-table-body").append("<tr><td>"
       + "T" + "</td><td>"
       + priceString
