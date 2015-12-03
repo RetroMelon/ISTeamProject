@@ -73,12 +73,12 @@ function updateResultsList() {
     if(distanceString != "-") {
 			distanceString =Math.round(distanceString * 100) / 100 ;
 		}
-    var priceString = Array(restaurantData.price).join("\u2605");
-    var starsString = Array(restaurantData.stars).join("\u00A3");
+    var priceString = Array(restaurantData.price).join("\u2605"); /* \u2605 */
+    var starsString = Array(restaurantData.stars).join("\u00A3"); /* \u00A3 */
     var typeString = "";
-    if (restaurantData.Takeaway == "T") typeString = "\uD83D\uDE97";
-    if (restaurantData.Takeaway == "R") typeString = "\uD83C\uDF74";
-    if (restaurantData.Takeaway == "RT")  typeString = "\uD83C\uDF74\uD83D\uDE97";
+    if (restaurantData.Takeaway == "T") typeString = "&#x1f374; \uDE97";
+    if (restaurantData.Takeaway == "R") typeString = "\uD83C \uDF74";
+    if (restaurantData.Takeaway == "RT")  typeString = "\uD83C \uDF74 &#x1f374;";
     $("#results-table-body").append("<tr><td>"
       + typeString + "</td><td>"
       + priceString
@@ -178,7 +178,7 @@ function getTableOfCommonKeywords(optionsList, keywordsToExclude) {
 		       table[keyword] = 1;
 		     }
 		  }
-  } 
+  }
   return table;
 }
 
@@ -268,7 +268,7 @@ function update() {
     // There are enough restaurants in the current list of options
     // to allow the user to keep using the pizza pie to choose keywords.
     pieData = makePizzaPieChartData(tableOfKeywords);
-        
+
     updateBreadcrumbs();
 		updatePizzaChart(pieData);
   }
@@ -335,7 +335,7 @@ function getGlobalRestaurantDataFromFileThenUpdate() {
 					var thisRestaurantData = globalRestaurantData[restaurantIndex];
 
 					// If there is no keyword data then there is nothing we can do.
-					if (thisRestaurantData.keywordData !== undefined) {	
+					if (thisRestaurantData.keywordData !== undefined) {
 						var keywordArray = thisRestaurantData.keywordData.split(" ")
 
 						// Remove any empty keywords.
@@ -359,10 +359,10 @@ function getGlobalRestaurantDataFromFileThenUpdate() {
 }
 
 $(function () {
-  // Setting up the distance slider here.
+  //setting up the distance slider here.
   $('#distance').bootstrapSlider({
     formatter: function(value) {
-
+      filterDistance = value;
       return value + " miles";
     }
   });
@@ -457,11 +457,4 @@ $(function () {
     update();
   });
 
-  //setting up the distance slider here.
-  $('#distance').bootstrapSlider({
-    formatter: function(value) {
-      filterDistance = value;
-      return value + " miles";
-    }
-  });
 });
