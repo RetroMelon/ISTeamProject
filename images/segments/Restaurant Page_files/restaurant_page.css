@@ -20,7 +20,7 @@ body>div {
 #image{
 	background-image: url('images/segments/pizza.jpg'); 
 	height: 350px; 
-	opacity: 0.8; 
+	opacity: 0.6; 
 	background-position: center;
 	background-size: cover;
 }
