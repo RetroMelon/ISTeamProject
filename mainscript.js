@@ -11,7 +11,7 @@ var numberOfRestaurantsToFinishPieChoices = 5;
 
 var pizzaChartContext;
 var thePieChart;
-
+var filterDistance;
 var tableOfKeywords = {};
 var keywordsChosenSoFar = [];
 
@@ -70,7 +70,9 @@ function updateResultsList() {
     var restaurantData = globalRestaurantData[restaurantIndex];
 
     var distanceString = (restaurantData.hasOwnProperty("distance") ? restaurantData.distance : "-");
-
+    if(distanceString != "-") {
+			distanceString =Math.round(distanceString * 100) / 100 ;
+		}
     var priceString = "";
     var starsString = "";
     for (var i = 0; i < restaurantData.stars; i++)
@@ -84,7 +86,7 @@ function updateResultsList() {
       + "</td><td>"
       + starsString
       + "</td><td>"
-      + "<a href=" + "https://www.google.com" + ">" +	"</a>" + currentRestaurantName
+      + "<a href=" + "./restaurant_page.html?restaurant_name="  + currentRestaurantName.replace(/\s/g, "+") + ">"+currentRestaurantName
       + "</td><td>" + distanceString + "</td>"
       + "</tr>");
   }
@@ -114,7 +116,7 @@ function updatePizzaChart(pieData) {
         --imagesStillToLoad;
 
         // Create a pattern with this image.
-        var pattern = pizzaChartContext.createPattern(imageObject, 'repeat');
+        var pattern = pizzaChartContext.createPattern(imageObject, "repeat");
         data[index].color = pattern;
 
         if (imagesStillToLoad < 1) {
@@ -385,16 +387,19 @@ $(function () {
     // Also, insert a new column into the table that's "distance from the user".
 
     // TODO: read the postcode from the input form.
-    var postcode = "G644DE";
+    var postcode = $( "#search" ).val();
 
     // Use Google maps to convert our postcode into a lat/lon.
     var googleMapsApiCallUrl = "http://maps.googleapis.com/maps/api/geocode/json?address=" + postcode + "&sensor=false";
-
     $.getJSON(googleMapsApiCallUrl, function (data) {
       if (data.status != "OK") {
-        alert("Invalid postcode. Please re-enter");
+        $('#alert').show();
+        //alert("Invalid postcode. Please re-enter" + postcode);
         return;
       }
+      else  $('#alert').hide();
+
+
 
       var userLocation = { "lat": 0, "lon": 0 };
 
@@ -452,4 +457,24 @@ $(function () {
 
     update();
   });
+
+  //setting up the distance slider here.
+  $('#distance').bootstrapSlider({
+    formatter: function(value) {
+      filterDistance = value;
+      return value + " miles";
+    }
+  });
+
+  //setting up the alert tooltip for the postcode
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+	});
+
+  //setting up the pie now that it is considered "visible"
+  pizzaChartContext = $("#pizza-chart")[0].getContext("2d");
+  resetChoicesAndPizzaPicker();
+
+  //setting up the results table to be sortable via the stupid table library
+  $("#results-table").stupidtable();
 });

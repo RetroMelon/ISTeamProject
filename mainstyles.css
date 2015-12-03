@@ -49,6 +49,14 @@ body {
 
 }
 
+#alert {
+    position: absolute;
+    top: 34px;
+    right: 27px;
+    color: red;
+    display: none;
+}
+
 .postcode input {
   width: 100%;
 }
@@ -209,10 +217,17 @@ ol>li:first-child>a:first-child:before {
   background-color: white;
 }
 
-#background-image {
-  width: 100%;
-  position: absolute;
-  z-index: -1000;
-  top:0px;
-  left:0px;
+th:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+th.sorting-asc:after {
+    content: " ▲";
+    font-size: 11px;
+}
+
+th.sorting-desc:after {
+    content: " ▼";
+    font-size: 11px;
 }
