@@ -101,7 +101,7 @@ function updateResultsList() {
 //"<a href=" + "https://www.google.co.uk/maps/place/" + currentRestaurantName.replace(/\s/g, "+") + ">" + currentRestaurantName
 function updateBreadcrumbs() {
   var breadcrumbList = [""].concat(keywordsChosenSoFar); //we put an empty string here because in the css we add a glyphicon
-  $("#breadcrumbs-area").html(('<li><a href="#"">' + breadcrumbList.join('</a></li><li><a href="#pie-scroll-point">')) + '</a></li>');
+  $("#breadcrumbs-area").html(('<li><a  class="breadcrumbs-link" href="#">' + breadcrumbList.join('</a></li><li><a class="breadcrumbs-link" href="#pie-scroll-point">')) + '</a></li>');
 }
 // This function creates or updates the
 // pie chart in the global variable "thePieChart"
@@ -373,6 +373,11 @@ $(function () {
       filterDistance = value;
       return value + " miles";
     }
+  });
+
+  //initialising the tooltip for the postcode
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
   });
 
   // Setting up the pie now that it is considered "visible"
