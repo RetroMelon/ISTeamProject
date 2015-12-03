@@ -465,16 +465,4 @@ $(function () {
       return value + " miles";
     }
   });
-
-  //setting up the alert tooltip for the postcode
-  $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-	});
-
-  //setting up the pie now that it is considered "visible"
-  pizzaChartContext = $("#pizza-chart")[0].getContext("2d");
-  resetChoicesAndPizzaPicker();
-
-  //setting up the results table to be sortable via the stupid table library
-  $("#results-table").stupidtable();
 });
