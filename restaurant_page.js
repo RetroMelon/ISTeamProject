@@ -15,9 +15,8 @@ var getURLParameter = function getURLParameter(sParam) {
 var globalRestaurantData;
 
 function getGlobalRestaurantDataFromFileThenUpdate() {
-   $.get('restaurants_new.csv', function (data) {
     // Set globalRestaurantData to be the objects read in from the CSV file.
-     globalRestaurantData = $.csv.toObjects(data);
+     globalRestaurantData = $.csv.toObjects(restaurantStringData);
 
 		 var newRestaurantData = {};
 		for (var i in globalRestaurantData) {
@@ -28,8 +27,6 @@ function getGlobalRestaurantDataFromFileThenUpdate() {
 		globalRestaurantData = newRestaurantData;
 
 		processGlobalData();
-
-  }, 'text');
 }
 
 function initialize() {
@@ -76,7 +73,7 @@ function processGlobalData() {
   }
 	document.getElementById('stars').innerHTML = "Rating (of 5): " + starString;
 
-	var tagsString = "tags: ".concat(thisRestaurantData.keywordData.join(", "));
+	var tagsString = "tags: ".concat(thisRestaurantData.keywordData);
 	document.getElementById('tags').innerHTML = tagsString;    
 }
 
