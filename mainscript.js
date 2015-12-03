@@ -367,6 +367,11 @@ $(function () {
     }
   });
 
+  //initialising the tooltip for the postcode
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+
   // Setting up the pie now that it is considered "visible"
   pizzaChartContext = $("#pizza-chart")[0].getContext("2d");
 
