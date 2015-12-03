@@ -43,14 +43,16 @@ function processGlobalData() {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   }
   
-	var myLatLng = {lat: thisRestaurantData.lat,lon: thisRestaurantData.lon};
-	
+	var myLatLng = new google.maps.LatLng(thisRestaurantData.lat,thisRestaurantData.lon);//{lat: thisRestaurantData.lat,lon: thisRestaurantData.lon};
+
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  
+  	
   var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
-    title: 'Hello World!'
+    title: thisRestaurantData.name
   });
-  var map = new google.maps.Map(mapCanvas, mapOptions);
 
 	var imageName = getURLParameter('image_name');
 	if (imageName === undefined) {
