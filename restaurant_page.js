@@ -29,32 +29,6 @@ function getGlobalRestaurantDataFromFileThenUpdate() {
 
 		processGlobalData();
 
-		/*
-    // Now go through each restaurant and split the keywords from a
-    // string of words seperated by spaces into an array of word strings.
-				var numberOfRestaurants = globalRestaurantData.length;
-				for (var restaurantIndex = 0; restaurantIndex < numberOfRestaurants;
-					++restaurantIndex) {
-					var thisRestaurantData = globalRestaurantData[restaurantIndex];
-
-					// If there is no keyword data then there is nothing we can do.
-					if (thisRestaurantData.keywordData !== undefined) {
-						var keywordArray = thisRestaurantData.keywordData.split(" ");
-
-						// Remove any empty keywords.
-						var numberOfKeywords = keywordArray.length;
-						for (var keywordIndex = 0; keywordIndex < numberOfKeywords; ++keywordIndex) {
-							var keywordName = keywordArray[keywordIndex];
-							if (keywordName == "") {
-								keywordArray.splice(keywordIndex, 1);
-							}
-						}
-
-						thisRestaurantData.keywords = keywordArray;
-						delete thisRestaurantData.keywordData;
-					}
-				} */
-
   }, 'text');
 }
 
@@ -73,6 +47,12 @@ function processGlobalData() {
   }
   var map = new google.maps.Map(mapCanvas, mapOptions);
   
+	var imageName = getURLParameter('image_name');
+	if (imageName === undefined) {
+		imageName = "family.jpg";	
+	}
+	$('#image').css("background-image", "url('images/segments/" + imageName + "')"); 
+
 	document.getElementById('restaurant-name').innerHTML = getURLParameter('restaurant_name').replace(/\+/g, " ");
 
 	document.getElementById('description-box').innerHTML = "Type: " +	 thisRestaurantData.type;

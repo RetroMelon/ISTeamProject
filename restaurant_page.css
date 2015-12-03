@@ -17,6 +17,14 @@ body>div {
 	left: 0px;
 }
 
+#image{
+	background-image: url('images/segments/pizza.jpg'); 
+	height: 350px; 
+	opacity: 0.8; 
+	background-position: center;
+	background-size: cover;
+}
+
 #map-container {
 	height: 100%;
 	width: 30%;
@@ -50,6 +58,7 @@ body>div {
 }
 
 #restaurant-name {
+
 	padding-top: 10%;
 	padding-left: 33%;
 	padding-right: 33%;

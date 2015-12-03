@@ -11,7 +11,7 @@ var numberOfRestaurantsToFinishPieChoices = 5;
 
 var pizzaChartContext;
 var thePieChart;
-var filterDistance;
+var filterDistance = 0;
 var tableOfKeywords = {};
 var keywordsChosenSoFar = [];
 
@@ -25,14 +25,14 @@ var pizzaPieChartOptions = {
 
   //this causes the tooltip to be shown permanently which is what we want.
   onAnimationComplete: function () {
-        this.showTooltip(this.segments, true);
+    this.showTooltip(this.segments, true);
   },
 
   tooltipEvents: [],
   showTooltips: true,
 
-  labelColor : 'white',
-  labelFontSize : '16',
+  labelColor: 'white',
+  labelFontSize: '16',
 };
 
 // This function should reset the entire page.
@@ -74,26 +74,28 @@ function updateResultsList() {
     var starsString = ""; //Array(restaurantData.stars).join("\u00A3"); /* \u00A3 */
     var typeString = "";
 
-    if(distanceString != "-") {
-			distanceString =Math.round(distanceString * 100) / 100 ;
-		}
-    for (var i =0; i < restaurantData.rating ;i++){
-	 priceString = priceString.concat("\u2605"); //Array(restaurantData.price).join("\u2605"); /* \u2605 */
+    if (distanceString != "-") {
+      distanceString = Math.round(distanceString * 100) / 100;
     }
-    for (var i =0; i < restaurantData.price;i++){
-	 starsString = starsString.concat("\u00A3");
+    for (var i = 0; i < restaurantData.rating ; i++) {
+      priceString = priceString.concat("\u2605"); //Array(restaurantData.price).join("\u2605"); /* \u2605 */
+    }
+    for (var i = 0; i < restaurantData.price; i++) {
+      starsString = starsString.concat("\u00A3");
     }
     if (restaurantData.Takeaway == "T") typeString = "Takeaway";
     if (restaurantData.Takeaway == "R") typeString = "Restaurant";
-    if (restaurantData.Takeaway == "RT")  typeString = "Restaurant/Takeaway ";
-
+    if (restaurantData.Takeaway == "RT") typeString = "Restaurant/Takeaway ";
+    var imageName = "family.jpg";
+    if (keywordsChosenSoFar.length > 0) imageName = keywordsChosenSoFar[keywordsChosenSoFar.length - 1].concat(".jpg");
     $("#results-table-body").append("<tr><td>"
       + typeString + "</td><td>"
       + priceString
       + "</td><td>"
       + starsString
       + "</td><td>"
-      + "<a href=" + "./restaurant_page.html?restaurant_name="  + currentRestaurantName.replace(/\s/g, "+") + ">"+currentRestaurantName
+      + "<a href=" + "./restaurant_page.html?restaurant_name="
+      + currentRestaurantName.replace(/\s/g, "+") + "&image_name=" + imageName + ">" + currentRestaurantName
       + "</td><td>" + distanceString + "</td>"
       + "</tr>");
   }
@@ -162,36 +164,36 @@ function getTableOfCommonKeywords(optionsList, keywordsToExclude) {
 
   for (var i = 0; i < optionsListLength; ++i) {
 
-		  // If there is restaurant data for this restaurant...
-		  var restaurantIndex = optionsList[i];
-		  if (restaurantIndex > globalRestaurantData.length || restaurantIndex < 0) {
-		    alert("currentOptions contains element " + restaurantIndex + " but that is not a valid index.");
-		  }
-      
-		  if (restaurantIndex === undefined) {
-		    alert("Somehow restaurant index is undefined...");
-		    continue;
-		  }
-    
-		  var restaurantName = globalRestaurantData[restaurantIndex].name;
+    // If there is restaurant data for this restaurant...
+    var restaurantIndex = optionsList[i];
+    if (restaurantIndex > globalRestaurantData.length || restaurantIndex < 0) {
+      alert("currentOptions contains element " + restaurantIndex + " but that is not a valid index.");
+    }
 
-		  // Now loop through the keywords for this restaurant.
-		  var keywordsLength = globalRestaurantData[restaurantIndex].keywords.length;
-		  for (var j = 0; j < keywordsLength; ++j) {
-		    var keyword = globalRestaurantData[restaurantIndex].keywords[j];
+    if (restaurantIndex === undefined) {
+      alert("Somehow restaurant index is undefined...");
+      continue;
+    }
 
-		     // Skip this keyword if it's one we should exclude.
-	      if (keywordsToExclude.indexOf(keyword) > -1) {
-		       continue;
-		     }
+    var restaurantName = globalRestaurantData[restaurantIndex].name;
 
-		     // Count keyword.
-		     if (table.hasOwnProperty(keyword)) {
-		       table[keyword] = table[keyword] + 1;
-		     } else {
-		       table[keyword] = 1;
-		     }
-		  }
+    // Now loop through the keywords for this restaurant.
+    var keywordsLength = globalRestaurantData[restaurantIndex].keywords.length;
+    for (var j = 0; j < keywordsLength; ++j) {
+      var keyword = globalRestaurantData[restaurantIndex].keywords[j];
+
+      // Skip this keyword if it's one we should exclude.
+      if (keywordsToExclude.indexOf(keyword) > -1) {
+        continue;
+      }
+
+      // Count keyword.
+      if (table.hasOwnProperty(keyword)) {
+        table[keyword] = table[keyword] + 1;
+      } else {
+        table[keyword] = 1;
+      }
+    }
   }
   return table;
 }
@@ -233,10 +235,10 @@ function makePizzaPieChartData(keywordTable) {
   }
   sortableList.sort(function (a, b) { return b[1] - a[1] });
 
-	// Crop "pieSegments" if we only have, say, 3 keywords left, to 3.
-	if (pieSegments > sortableList.length) {
-		pieSegments = sortableList.length;
-	}
+  // Crop "pieSegments" if we only have, say, 3 keywords left, to 3.
+  if (pieSegments > sortableList.length) {
+    pieSegments = sortableList.length;
+  }
 
   // Now we have a sorted list of keywords, choose the first "pieSegments".
   var topKeywords = sortableList.slice(0, pieSegments);
@@ -284,7 +286,7 @@ function update() {
     pieData = makePizzaPieChartData(tableOfKeywords);
 
     updateBreadcrumbs();
-		updatePizzaChart(pieData);
+    updatePizzaChart(pieData);
   }
 }
 
@@ -320,18 +322,23 @@ function recalculateDistancesAndFilter(forRestaurantsByIndex, restaurantData, lo
       continue;
     }
 
+    console.log(location.lat + " <-> " + location.lon);
+
     // Calculate the distance between the given location and this place.
     var distance = distanceBetweenLatLongs(thisRestaurantData.lat, thisRestaurantData.lon,
       location.lat, location.lon);
 
-    // If the calculated distance is greater than the filter distance,
-    // remove this restaurant from the "forRestaurantsByIndex" list.
-    if (distance > filterDistance) {
-      forRestaurantsByIndex.splice(restaurantChoiceIndex, 1);
-      continue;
-    }
+    // Quick fix for if the distance comes out as NaN
+    if (!isNaN(distance)) {
+      // If the calculated distance is greater than the filter distance,
+      // remove this restaurant from the "forRestaurantsByIndex" list.
+      if (distance > filterDistance) {
+        forRestaurantsByIndex.splice(restaurantChoiceIndex, 1);
+        continue;
+      }
 
-    thisRestaurantData.distance = distance;
+      thisRestaurantData.distance = distance;
+    }
   }
 }
 
@@ -343,44 +350,44 @@ function getGlobalRestaurantDataFromFileThenUpdate() {
 
     // Now go through each restaurant and split the keywords from a
     // string of words seperated by spaces into an array of word strings.
-				var numberOfRestaurants = globalRestaurantData.length;
-				for (var restaurantIndex = 0; restaurantIndex < numberOfRestaurants;
-					++restaurantIndex) {
-					var thisRestaurantData = globalRestaurantData[restaurantIndex];
+    var numberOfRestaurants = globalRestaurantData.length;
+    for (var restaurantIndex = 0; restaurantIndex < numberOfRestaurants;
+      ++restaurantIndex) {
+      var thisRestaurantData = globalRestaurantData[restaurantIndex];
 
-					// If there is no keyword data then there is nothing we can do.
-					if (thisRestaurantData.keywordData !== undefined) {
-						var keywordArray = thisRestaurantData.keywordData.split(" ");
+      // If there is no keyword data then there is nothing we can do.
+      if (thisRestaurantData.keywordData !== undefined) {
+        var keywordArray = thisRestaurantData.keywordData.split(" ");
 
-						// Remove any empty keywords.
-						var numberOfKeywords = keywordArray.length;
-						for (var keywordIndex = 0; keywordIndex < numberOfKeywords; ++keywordIndex) {
-							var keywordName = keywordArray[keywordIndex];
-							if (keywordName == "") {
-								keywordArray.splice(keywordIndex, 1);
-							}
-						}
+        // Remove any empty keywords.
+        var numberOfKeywords = keywordArray.length;
+        for (var keywordIndex = 0; keywordIndex < numberOfKeywords; ++keywordIndex) {
+          var keywordName = keywordArray[keywordIndex];
+          if (keywordName == "") {
+            keywordArray.splice(keywordIndex, 1);
+          }
+        }
 
-						thisRestaurantData.keywords = keywordArray;
-						delete thisRestaurantData.keywordData;
-					}
-				}
+        thisRestaurantData.keywords = keywordArray;
+        delete thisRestaurantData.keywordData;
+      }
+    }
 
-				// Now load the pizza picker.
-				resetChoicesAndPizzaPicker();
+    // Now load the pizza picker.
+    resetChoicesAndPizzaPicker();
 
   }, 'text');
 }
 
 $(function () {
 
-  $('#logo-image').click(function() {
+  $('#logo-image').click(function () {
     location.reload();
   });
 
   //setting up the distance slider here.
   $('#distance').bootstrapSlider({
-    formatter: function(value) {
+    formatter: function (value) {
       filterDistance = value;
       return value + " miles";
     }
@@ -410,7 +417,7 @@ $(function () {
     // Also, insert a new column into the table that's "distance from the user".
 
     // TODO: read the postcode from the input form.
-    var postcode = $( "#search" ).val();
+    var postcode = $("#search").val();
 
     // Use Google maps to convert our postcode into a lat/lon.
     var googleMapsApiCallUrl = "http://maps.googleapis.com/maps/api/geocode/json?address=" + postcode + "&sensor=false";
@@ -420,9 +427,7 @@ $(function () {
         //alert("Invalid postcode. Please re-enter" + postcode);
         return;
       }
-      else  $('#alert').hide();
-
-
+      else $('#alert').hide();
 
       var userLocation = { "lat": 0, "lon": 0 };
 
