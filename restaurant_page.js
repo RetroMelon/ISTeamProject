@@ -44,10 +44,11 @@ function initialize() {
          starString = starString.concat("\u2605");
 	document.getElementById('stars').innerHTML = "Rating " + starString;
 
-	//var tagsString = "People liked this restaurant for: ";
-   // for (String string:thisRestaurantData.keywords)
-     //    tagsString = tagsString.concat(string);
-	//document.getElementById('tags').innerHTML = tagsString;
+	var tagsString = "tags: ";
+  	for (var i = 0; i < (thisRestaurantData.keywords.length-1); i++)	
+  		tagsString = tagsString.concat(thisRestaurantData.keywords[i]	+", ");
+  	tagsString = tagsString.concat(thisRestaurantData.keywords[i]);
+	document.getElementById('tags').innerHTML = tagsString;
 } 
 
 
