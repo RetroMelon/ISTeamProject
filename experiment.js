@@ -92,6 +92,7 @@ function stopExperiment(){
 //A LIST OF ALL OF THE TARGETS WHICH ARE ACCEPTABLE FOR THE USER TO HAVE CLICKED ON.
 //NOTE THAT THESE IDENTIFIERS CAN'T HAVE SPACES IN THEM OTHERWISE THEY MESS UP PARSING THE EXPERIMENT OUTPUT.
 var validTargets = ["#search",
+                    "#postcode-search",
                     ".slider-handle",
                     ".breadcrumbs-link",
                     "ol>li:first-child>a:first-child:before",
